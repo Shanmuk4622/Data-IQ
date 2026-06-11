@@ -1,0 +1,1501 @@
+order_id,order_date,customer_id,customer_name,product_category,product_name,quantity,unit_price,discount_pct,shipping_country,payment_method,order_status,review_score,return_flag,notes
+10001,2022-03-14,391,Eve Davis,Clothing,Coffee Maker,10,255.24,10.0,France,Crypto,Delivered,,0,Wrong item sent
+10002,2022-03-06,350,Bob Smith,Beauty,Coffee Maker,3,122.78,5.0,Australia,PayPal,Delivered,4.0,0,Great product!
+10003,2022-06-11,78,Bob Smith,Sports,Running Shoes,1,363.28,0.0,Canada,Debit Card,Delivered,5.0,0,
+10004,2022-11-14,336,Bob Smith,Home & Garden,Desk Chair,2,324.21,25.0,USA,Bank Transfer,Delivered,,0,
+10005,2022-02-18,115,Eve Davis,Clothing,Coffee Maker,2,203.38,,Canada,Debit Card,Delivered,5.0,0,
+10006,2022-03-18,4,Alice Johnson,Home & Garden,Coffee Maker,1,362.66,0.0,USA,Bank Transfer,Delivered,5.0,1,
+10007,2022-11-21,131,Bob Smith,Books,LED Lamp,10,53.76,10.0,UK,Credit Card,Delivered,2.0,0,
+10008,2022-01-20,227,Bob Smith,Electronics,Wireless Headset,5,376.02,0.0,Germany,Credit Card,Delivered,5.0,0,Good value for money
+10009,2022-05-06,128,Dave Brown,Clothing,LED Lamp,1,303.44,15.0,USA,Credit Card,Delivered,,0,Great product!
+10010,2022-11-01,9,Dave Brown,Electronics,Python Book,1,$450.05,0.0,Canada,PayPal,Delivered,4.0,0,
+10011,2023-01-05,324,Alice Johnson,Clothing,Bluetooth Speaker,1,37.01,25.0,UK,Bank Transfer,Delivered,,0,Wrong item sent
+10012,2022-02-13,118,Carol White,Home & Garden,LED Lamp,2,310.98,25.0,USA,Bank Transfer,Delivered,,0,"Excellent quality, will buy again"
+10013,2022-08-04,344,Carol White,Electronics,Coffee Maker,3,249.59,0.0,UK,PayPal,Processing,,0,
+10014,2022-09-08,188,Dave Brown,Home & Garden,Coffee Maker,1,245.5,,USA,Credit Card,Delivered,,0,
+10015,2022-07-28,139,Dave Brown,Electronics,Bluetooth Speaker,5,164.32,25.0,UK,Credit Card,Processing,3.0,0,
+10016,2022-10-21,125,Alice Johnson,Clothing,Coffee Maker,2,8.77,20.0,USA,PayPal,Shipped,5.0,0,
+10017,2022-10-18,223,Alice Johnson,Books,Bluetooth Speaker,2,214.21,,Germany,PayPal,Delivered,5.0,0,
+10018,2022-08-11,328,Eve Davis,Home & Garden,Yoga Mat,5,203.45,10.0,USA,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+10019,2022-12-17,386,Carol White,Home & Garden,Laptop Pro,2,214.29,15.0,Germany,Credit Card,Delivered,5.0,0,
+10020,2022-03-06,306,Eve Davis,Clothing,LED Lamp,10,307.94,15.0,USA,Debit Card,Cancelled,5.0,0,"Excellent quality, will buy again"
+10021,2022-03-08,259,Bob Smith,Electronics,Laptop Pro,10,153.45,0.0,USA,Debit Card,Processing,2.0,0,
+10022,2022-05-12,67,Alice Johnson,Home & Garden,Wireless Headset,3,138.34,15.0,USA,Credit Card,Delivered,,0,
+10023,2022-04-15,85,Carol White,Clothing,Yoga Mat,5,251.4,0.0,USA,PayPal,Delivered,,0,
+10024,2022-10-27,371,Carol White,Clothing,Coffee Maker,2,298.2,15.0,USA,Debit Card,Delivered,,0,
+10025,2022-05-18,62,Eve Davis,Electronics,Wireless Headset,2,285.83,25.0,Canada,PayPal,Delivered,4.0,0,Packaging was damaged
+10026,2022-07-02,14,Dave Brown,Electronics,Yoga Mat,1,441.41,20.0,UK,Bank Transfer,Processing,4.0,0,Wrong item sent
+10027,2022-05-03,122,Dave Brown,Electronics,Skincare Set,1,385.73,15.0,UK,Credit Card,Delivered,5.0,1,
+10028,2022-11-11,279,Alice Johnson,Clothing,Running Shoes,3,30.83,5.0,France,Debit Card,Cancelled,4.0,0,Wrong item sent
+10029,2022-10-17,123,Dave Brown,Clothing,LED Lamp,10,283.92,0.0,USA,Credit Card,Delivered,4.0,0,
+10030,2022-10-23,77,Bob Smith,Books,Python Book,1,211.82,20.0,France,PayPal,Processing,4.0,0,
+10031,2022-04-08,272,Carol White,Clothing,Desk Chair,3,183.72,0.0,Germany,Credit Card,Delivered,,1,Good value for money
+10032,2022-06-09,146,Dave Brown,Toys,Bluetooth Speaker,2,479.16,20.0,USA,Bank Transfer,Delivered,2.0,0,
+10033,2022-06-19,269,Alice Johnson,Clothing,Skincare Set,2,231.11,0.0,Canada,Credit Card,Delivered,5.0,0,
+10034,2022-07-04,381,Bob Smith,Clothing,Running Shoes,1,361.12,5.0,USA,PayPal,Shipped,,0,Great product!
+10035,2022-04-07,56,Eve Davis,Electronics,Coffee Maker,1,483.71,25.0,Australia,Bank Transfer,Processing,4.0,0,Good value for money
+10036,2022-08-22,218,Eve Davis,Books,Bluetooth Speaker,1,79.75,5.0,UK,PayPal,Delivered,2.0,0,"Excellent quality, will buy again"
+10037,2022-12-19,173,Bob Smith,Books,Bluetooth Speaker,3,32.04,20.0,USA,Debit Card,Returned,5.0,0,
+10038,2022-12-04,40,Alice Johnson,Books,LED Lamp,2,160.24,10.0,Canada,Bank Transfer,Shipped,,0,
+10039,2022-04-18,359,Eve Davis,Toys,LED Lamp,1,27.0,0.0,Canada,Credit Card,Delivered,5.0,0,Arrived late
+10040,2022-03-13,159,Carol White,Home & Garden,Bluetooth Speaker,2,62.8,10.0,Canada,PayPal,Shipped,3.0,0,
+10041,2022-10-09,360,Carol White,Sports,Coffee Maker,1,495.9,15.0,USA,PayPal,Cancelled,4.0,0,
+10042,2022-03-10,32,Alice Johnson,Electronics,Bluetooth Speaker,2,480.29,,Germany,Debit Card,Shipped,,0,Arrived late
+10043,2022-11-30,248,Alice Johnson,Clothing,Yoga Mat,2,347.19,0.0,Australia,Credit Card,Delivered,4.0,0,
+10044,2022-08-03,129,Carol White,Clothing,Yoga Mat,1,377.73,5.0,Australia,PayPal,Delivered,3.0,0,
+10045,2022-04-04,291,Alice Johnson,Home & Garden,Desk Chair,2,74.54,,Canada,Credit Card,Delivered,4.0,0,
+10046,2022-05-10,36,Bob Smith,Clothing,Yoga Mat,2,299.64,25.0,France,Debit Card,Delivered,5.0,0,
+10047,2022-02-07,348,Alice Johnson,Home & Garden,Skincare Set,2,81.43,20.0,India,Credit Card,Returned,,0,
+10048,2022-12-20,66,Carol White,Clothing,Bluetooth Speaker,1,192.3,0.0,USA,Credit Card,Processing,4.0,0,Packaging was damaged
+10049,2022-05-03,285,Dave Brown,Electronics,Running Shoes,3,175.95,0.0,UK,Debit Card,Delivered,4.0,0,
+10050,2022-07-01,157,Alice Johnson,Electronics,Yoga Mat,3,308.91,0.0,USA,Debit Card,Delivered,,0,
+10051,2022-05-25,43,Eve Davis,Electronics,Desk Chair,2,44.45,20.0,UK,Credit Card,Delivered,,0,
+10052,2022-12-11,275,Bob Smith,Electronics,Coffee Maker,2,56.21,5.0,Australia,PayPal,Delivered,,0,
+10053,2022-11-30,121,Bob Smith,Electronics,Python Book,10,306.92,20.0,India,PayPal,Delivered,,0,
+10054,2022-03-07,192,Bob Smith,Electronics,LED Lamp,10,319.88,25.0,Australia,Debit Card,Delivered,5.0,0,
+10055,2022-04-26,354,Eve Davis,Home & Garden,Running Shoes,1,173.24,5.0,USA,Debit Card,Delivered,5.0,0,
+10056,2022-03-14,31,Eve Davis,Clothing,Wireless Headset,5,77.7,25.0,Germany,Credit Card,Cancelled,,0,
+10057,2022-05-28,357,Bob Smith,Electronics,Python Book,1,443.61,,Germany,PayPal,Delivered,5.0,0,
+10058,2022-10-14,19,Bob Smith,Clothing,Running Shoes,1,31.21,,UK,Credit Card,Delivered,3.0,0,
+10059,2022-09-30,285,Bob Smith,Toys,Skincare Set,5,360.1,,Canada,Bank Transfer,Delivered,4.0,1,
+10060,2022-06-22,73,Alice Johnson,Clothing,Python Book,1,74.32,15.0,Australia,Debit Card,Delivered,,0,
+10061,2022-05-18,391,Eve Davis,Beauty,Desk Chair,1,320.5,20.0,India,Credit Card,Processing,4.0,0,Good value for money
+10062,2022-07-17,76,Carol White,Books,Bluetooth Speaker,3,333.51,5.0,USA,Credit Card,Delivered,5.0,0,
+10063,2022-09-29,188,Alice Johnson,Beauty,Coffee Maker,1,403.11,0.0,USA,Credit Card,Shipped,5.0,0,Packaging was damaged
+10064,2022-03-26,179,Carol White,Electronics,Running Shoes,10,200.54,5.0,Australia,PayPal,Delivered,4.0,0,Packaging was damaged
+10065,2022-06-03,338,Alice Johnson,Electronics,Wireless Headset,5,15.79,10.0,USA,PayPal,Delivered,,1,Great product!
+10066,2022-11-07,306,Alice Johnson,Home & Garden,Yoga Mat,3,406.47,0.0,USA,Bank Transfer,Delivered,,0,
+10067,2022-03-30,137,Carol White,Beauty,Yoga Mat,2,$127.72,,USA,PayPal,Delivered,3.0,0,
+10068,2022-11-19,162,Bob Smith,Sports,Laptop Pro,3,424.31,15.0,UK,PayPal,Delivered,4.0,0,Packaging was damaged
+10069,2022-05-09,290,Carol White,Books,Skincare Set,5,389.11,10.0,USA,Debit Card,Delivered,1.0,0,
+10070,2022-02-01,47,Dave Brown,Electronics,Coffee Maker,1,251.66,5.0,Germany,PayPal,Delivered,4.0,0,
+10071,2022-01-05,24,Eve Davis,Clothing,Skincare Set,2,499.7,15.0,Canada,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+10072,2022-06-12,336,Dave Brown,Electronics,Python Book,2,233.73,5.0,USA,Bank Transfer,Delivered,4.0,0,
+10073,2022-09-26,284,Alice Johnson,Clothing,Coffee Maker,10,349.77,0.0,India,Credit Card,Delivered,,0,Packaging was damaged
+10074,2022-01-08,174,Carol White,Electronics,Skincare Set,10,336.55,20.0,France,Crypto,Processing,5.0,0,
+10075,2022-12-18,307,Bob Smith,Clothing,Yoga Mat,5,261.44,0.0,France,Credit Card,Delivered,5.0,0,
+10076,2022-02-01,367,Bob Smith,Sports,Laptop Pro,2,294.75,,UK,PayPal,Processing,4.0,0,
+10077,2022-04-24,262,Dave Brown,Electronics,Laptop Pro,1,400.31,25.0,Germany,PayPal,Delivered,4.0,0,
+10078,2022-01-27,230,Dave Brown,Clothing,Wireless Headset,1,287.95,10.0,USA,Credit Card,Processing,5.0,0,Good value for money
+10079,2022-04-13,191,Alice Johnson,Electronics,Running Shoes,1,227.82,25.0,USA,Bank Transfer,Delivered,5.0,0,Good value for money
+10080,2022-09-11,118,Eve Davis,Electronics,Laptop Pro,2,332.73,0.0,France,PayPal,Processing,5.0,0,Wrong item sent
+10081,2022-04-10,53,Alice Johnson,Clothing,Desk Chair,5,22.58,15.0,UK,PayPal,Delivered,5.0,0,Arrived late
+10082,2022-09-15,192,Bob Smith,Electronics,Wireless Headset,1,59.05,,USA,Credit Card,Delivered,4.0,0,
+10083,2022-10-02,60,Carol White,Toys,Wireless Headset,10,67.09,,France,Crypto,Delivered,3.0,0,
+10084,2022-05-15,11,Dave Brown,Clothing,Skincare Set,3,215.75,0.0,USA,Bank Transfer,Delivered,,1,Arrived late
+10085,2022-12-22,260,Bob Smith,Electronics,Yoga Mat,10,436.53,10.0,USA,PayPal,Delivered,,0,
+10086,2022-10-03,270,Alice Johnson,Clothing,Bluetooth Speaker,5,323.43,5.0,USA,Credit Card,Delivered,,0,
+10087,2022-11-28,141,Eve Davis,Electronics,Desk Chair,2,486.45,10.0,Canada,Credit Card,Delivered,,0,Great product!
+10088,2023-01-06,143,Carol White,Electronics,Coffee Maker,1,24.77,15.0,UK,Credit Card,Delivered,5.0,0,Great product!
+10089,2022-08-11,113,Eve Davis,Electronics,Running Shoes,1,362.39,5.0,USA,PayPal,Shipped,5.0,0,Packaging was damaged
+10090,2022-06-01,264,Alice Johnson,Electronics,Laptop Pro,1,160.53,15.0,USA,Debit Card,Cancelled,5.0,0,
+10091,2022-02-16,344,Alice Johnson,Home & Garden,Laptop Pro,1,16.53,5.0,USA,Credit Card,Shipped,5.0,0,
+10092,2022-05-04,11,Bob Smith,Sports,Wireless Headset,3,413.83,5.0,USA,PayPal,Cancelled,5.0,0,
+10093,2022-01-30,368,Carol White,Clothing,Running Shoes,5,$81.29,25.0,France,PayPal,Shipped,4.0,1,
+10094,2022-06-11,99,Alice Johnson,Home & Garden,Desk Chair,1,110.97,0.0,UK,Credit Card,Shipped,,0,
+10095,2022-11-01,23,Bob Smith,Clothing,Desk Chair,1,173.53,0.0,Canada,Credit Card,Delivered,,0,
+10096,2022-05-15,239,Alice Johnson,Electronics,Coffee Maker,1,395.24,10.0,UK,PayPal,Delivered,5.0,0,Good value for money
+10097,2022-08-08,109,Bob Smith,Clothing,Skincare Set,5,314.17,,UK,Credit Card,Shipped,1.0,0,
+10098,2022-12-26,263,Eve Davis,Books,Python Book,1,136.11,15.0,France,PayPal,Delivered,,0,Wrong item sent
+10099,2022-09-07,325,Bob Smith,Electronics,Desk Chair,1,88.4,0.0,Germany,Credit Card,Cancelled,5.0,0,
+10100,2022-09-16,160,Eve Davis,Home & Garden,Yoga Mat,2,59.23,25.0,USA,Debit Card,Shipped,5.0,0,
+10101,2022-08-22,220,Dave Brown,Home & Garden,Yoga Mat,10,79.16,15.0,Canada,Debit Card,Shipped,5.0,0,"Excellent quality, will buy again"
+10102,2022-04-26,172,Alice Johnson,Sports,Wireless Headset,3,$321.69,25.0,Canada,PayPal,Delivered,,0,Great product!
+10103,2022-08-10,387,Dave Brown,Electronics,Yoga Mat,10,461.73,,USA,PayPal,Delivered,5.0,0,Good value for money
+10104,2022-03-30,94,Carol White,Electronics,Coffee Maker,1,484.14,5.0,USA,Credit Card,Processing,4.0,0,
+10105,2022-05-31,122,Dave Brown,Electronics,Yoga Mat,2,418.19,15.0,USA,PayPal,Delivered,4.0,0,Great product!
+10106,2022-01-25,300,Bob Smith,Toys,Python Book,2,444.26,10.0,USA,Debit Card,Cancelled,4.0,0,Arrived late
+10107,2022-02-19,197,Bob Smith,Home & Garden,Laptop Pro,2,408.97,10.0,Canada,Debit Card,Shipped,4.0,0,
+10108,2022-12-01,51,Carol White,Sports,Bluetooth Speaker,10,479.24,10.0,Germany,Credit Card,Cancelled,4.0,0,
+10109,2022-08-10,317,Carol White,Clothing,Running Shoes,5,423.6,0.0,USA,Credit Card,Delivered,5.0,0,
+10110,2022-10-25,307,Alice Johnson,Books,Laptop Pro,2,233.69,,Canada,Credit Card,Delivered,5.0,1,
+10111,2022-05-20,20,Bob Smith,Electronics,Python Book,2,165.01,10.0,Canada,Credit Card,Shipped,3.0,0,
+10112,2022-12-25,30,Carol White,Sports,Skincare Set,10,294.18,,Canada,PayPal,Delivered,4.0,0,
+10113,2022-07-25,377,Dave Brown,Sports,Python Book,1,306.05,,UK,Credit Card,Cancelled,5.0,0,
+10114,2022-06-08,300,Bob Smith,Clothing,Python Book,1,289.58,10.0,Canada,Debit Card,Delivered,4.0,0,
+10115,2022-05-06,86,Carol White,Clothing,Bluetooth Speaker,1,354.83,0.0,France,PayPal,Delivered,,0,
+10116,2022-12-16,230,Alice Johnson,Home & Garden,Yoga Mat,3,350.99,20.0,Australia,Credit Card,Shipped,,0,
+10117,2022-08-07,157,Eve Davis,Electronics,Bluetooth Speaker,5,48.16,15.0,USA,Credit Card,Delivered,5.0,0,
+10118,2022-02-06,181,Bob Smith,Sports,Wireless Headset,1,146.33,5.0,USA,PayPal,Delivered,,0,
+10119,2022-10-19,112,Bob Smith,Clothing,Skincare Set,3,445.48,15.0,UK,PayPal,Delivered,3.0,0,
+10120,2022-09-19,139,Bob Smith,Clothing,Skincare Set,2,297.07,5.0,USA,Debit Card,Delivered,,0,
+10121,2022-10-17,10,Bob Smith,Home & Garden,LED Lamp,10,167.62,,UK,Bank Transfer,Delivered,5.0,0,"Excellent quality, will buy again"
+10122,2022-09-23,291,Eve Davis,Home & Garden,Desk Chair,2,425.98,0.0,UK,Debit Card,Processing,5.0,0,
+10123,2022-10-01,379,Eve Davis,Electronics,Bluetooth Speaker,1,128.28,10.0,France,PayPal,Processing,5.0,0,"Excellent quality, will buy again"
+10124,2022-08-14,370,Alice Johnson,Toys,LED Lamp,3,207.55,25.0,Canada,Credit Card,Delivered,,0,
+10125,2022-10-21,238,Bob Smith,Beauty,Wireless Headset,1,141.75,5.0,USA,Debit Card,Processing,5.0,0,
+10126,2022-04-24,132,Carol White,Books,Running Shoes,1,436.32,20.0,UK,Bank Transfer,Delivered,2.0,0,Good value for money
+10127,2022-12-02,330,Dave Brown,Books,Wireless Headset,1,365.5,5.0,France,PayPal,Delivered,,0,
+10128,2022-10-10,185,Bob Smith,Books,Laptop Pro,5,232.81,0.0,USA,PayPal,Delivered,3.0,0,
+10129,2022-09-03,295,Eve Davis,Clothing,Skincare Set,1,466.49,20.0,USA,Credit Card,Processing,,0,Arrived late
+10130,2022-02-18,208,Alice Johnson,Toys,LED Lamp,1,464.09,0.0,UK,Debit Card,Shipped,,0,
+10131,2022-05-22,250,Bob Smith,Electronics,Coffee Maker,5,357.2,,India,Debit Card,Processing,5.0,1,
+10132,2022-12-10,350,Alice Johnson,Electronics,Desk Chair,1,446.54,0.0,Germany,Credit Card,Processing,5.0,0,
+10133,2022-11-23,323,Carol White,Toys,Bluetooth Speaker,5,361.1,5.0,USA,Debit Card,Delivered,5.0,0,
+10134,2022-02-06,89,Carol White,Electronics,Python Book,3,315.96,5.0,USA,Bank Transfer,Delivered,3.0,0,
+10135,2022-09-07,358,Carol White,Home & Garden,Laptop Pro,1,213.29,5.0,UK,Credit Card,Delivered,,0,
+10136,2022-08-12,362,Carol White,Electronics,Python Book,10,140.37,,France,Credit Card,Shipped,2.0,0,
+10137,2022-01-30,36,Dave Brown,Beauty,Coffee Maker,1,34.83,,Canada,Debit Card,Processing,5.0,1,
+10138,2022-06-03,4,Alice Johnson,Sports,LED Lamp,1,401.43,15.0,UK,PayPal,Processing,,0,
+10139,2022-08-18,234,Bob Smith,Toys,Coffee Maker,1,65.47,15.0,Germany,Bank Transfer,Delivered,5.0,0,"Excellent quality, will buy again"
+10140,2022-06-28,330,Dave Brown,Beauty,Desk Chair,1,208.12,,India,Credit Card,Cancelled,3.0,0,
+10141,2022-11-12,269,Bob Smith,Electronics,Bluetooth Speaker,1,121.14,15.0,UK,PayPal,Delivered,,0,Packaging was damaged
+10142,2022-11-18,70,Eve Davis,Clothing,Yoga Mat,2,230.04,10.0,UK,PayPal,Shipped,3.0,0,
+10143,2022-06-12,7,Dave Brown,Home & Garden,LED Lamp,3,160.92,5.0,UK,Credit Card,Delivered,4.0,0,
+10144,2022-08-25,156,Dave Brown,Sports,Running Shoes,5,415.7,0.0,UK,Crypto,Delivered,4.0,0,
+10145,2022-04-21,378,Eve Davis,Electronics,Running Shoes,1,489.2,15.0,Canada,PayPal,Delivered,,0,"Excellent quality, will buy again"
+10146,2022-09-26,293,Dave Brown,Toys,Bluetooth Speaker,10,471.07,15.0,USA,PayPal,Processing,,0,
+10147,2022-05-26,399,Alice Johnson,Electronics,Yoga Mat,1,313.07,5.0,UK,Credit Card,Delivered,4.0,0,Wrong item sent
+10148,2022-11-23,286,Carol White,Sports,Python Book,2,489.74,5.0,USA,PayPal,Delivered,4.0,0,Good value for money
+10149,2022-05-15,360,Bob Smith,Clothing,LED Lamp,1,203.36,15.0,Australia,Debit Card,Delivered,2.0,0,
+10150,2022-11-08,74,Eve Davis,Clothing,Python Book,2,263.63,5.0,USA,Debit Card,Processing,5.0,0,Packaging was damaged
+10151,2022-08-03,12,Carol White,Clothing,Python Book,1,132.14,15.0,Australia,Bank Transfer,Delivered,,1,
+10152,2022-03-17,337,Dave Brown,Electronics,Skincare Set,1,449.5,0.0,India,Credit Card,Delivered,5.0,0,
+10153,2022-11-06,112,Alice Johnson,Clothing,Skincare Set,2,93.96,,UK,Credit Card,Delivered,3.0,0,
+10154,2022-05-20,30,Dave Brown,Clothing,LED Lamp,2,307.19,0.0,USA,Debit Card,Shipped,1.0,1,Packaging was damaged
+10155,2022-05-01,385,Eve Davis,Clothing,Desk Chair,5,400.73,10.0,USA,Debit Card,Processing,3.0,0,
+10156,2022-11-17,36,Dave Brown,Home & Garden,Skincare Set,3,299.72,15.0,USA,PayPal,Shipped,4.0,0,Great product!
+10157,2022-04-14,379,Alice Johnson,Clothing,LED Lamp,2,43.99,25.0,USA,Credit Card,Delivered,,0,Arrived late
+10158,2022-12-08,344,Dave Brown,Clothing,LED Lamp,3,307.67,0.0,UK,PayPal,Shipped,3.0,0,
+10159,2022-02-19,230,Dave Brown,Toys,Skincare Set,2,384.7,25.0,Germany,Debit Card,Returned,,0,
+10160,2022-11-14,277,Dave Brown,Home & Garden,Laptop Pro,1,97.97,0.0,USA,Credit Card,Delivered,,1,
+10161,2022-06-22,106,Dave Brown,Electronics,Python Book,2,369.79,20.0,Germany,Credit Card,Delivered,4.0,0,
+10162,2022-04-22,288,Alice Johnson,Sports,Running Shoes,3,439.9,25.0,UK,Credit Card,Processing,,0,Arrived late
+10163,2022-09-10,250,Bob Smith,Beauty,Bluetooth Speaker,1,493.3,0.0,USA,Credit Card,Delivered,4.0,1,
+10164,2022-12-20,63,Carol White,Toys,Desk Chair,2,207.98,10.0,USA,Credit Card,Processing,4.0,0,Arrived late
+10165,2022-11-25,397,Eve Davis,Sports,LED Lamp,2,17.46,0.0,UK,Credit Card,Delivered,,0,
+10166,2022-03-12,44,Bob Smith,Books,Bluetooth Speaker,2,212.44,5.0,USA,PayPal,Delivered,4.0,0,Great product!
+10167,2022-12-16,149,Alice Johnson,Electronics,Coffee Maker,2,331.81,20.0,Canada,Credit Card,Delivered,5.0,0,
+10168,2022-09-29,46,Eve Davis,Home & Garden,Coffee Maker,5,446.23,15.0,USA,PayPal,Delivered,5.0,0,
+10169,2022-10-22,175,Eve Davis,Home & Garden,Desk Chair,10,469.36,10.0,Canada,Credit Card,Processing,,0,
+10170,2022-08-16,154,Dave Brown,Electronics,Coffee Maker,2,455.24,25.0,USA,Credit Card,Delivered,,0,
+10171,2023-01-04,261,Carol White,Electronics,Wireless Headset,10,330.69,25.0,France,Bank Transfer,Delivered,,0,
+10172,2022-03-03,133,Carol White,Clothing,Skincare Set,1,342.85,0.0,USA,Debit Card,Delivered,,1,
+10173,2022-08-28,287,Alice Johnson,Home & Garden,LED Lamp,10,6.18,15.0,Germany,PayPal,Processing,4.0,1,
+10174,2022-12-03,156,Bob Smith,Electronics,Coffee Maker,1,185.05,0.0,USA,PayPal,Processing,3.0,0,
+10175,2022-06-20,333,Dave Brown,Books,LED Lamp,2,453.89,20.0,USA,Credit Card,Delivered,5.0,0,Packaging was damaged
+10176,2022-12-20,241,Carol White,Toys,Yoga Mat,2,346.36,15.0,USA,Debit Card,Delivered,,0,
+10177,2022-12-28,331,Dave Brown,Electronics,Python Book,3,236.62,5.0,USA,Credit Card,Delivered,4.0,0,
+10178,2022-06-18,127,Bob Smith,Beauty,Skincare Set,10,56.6,25.0,Australia,Credit Card,Delivered,4.0,0,
+10179,2022-08-31,193,Eve Davis,Clothing,LED Lamp,5,126.93,5.0,USA,PayPal,Cancelled,4.0,0,Arrived late
+10180,2022-01-21,269,Bob Smith,Electronics,Bluetooth Speaker,1,279.69,25.0,USA,Credit Card,Delivered,5.0,0,
+10181,2022-06-22,122,Eve Davis,Electronics,Coffee Maker,10,449.26,15.0,USA,PayPal,Delivered,3.0,0,
+10182,2022-08-19,146,Bob Smith,Clothing,Bluetooth Speaker,2,52.43,5.0,USA,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+10183,2022-01-23,152,Dave Brown,Electronics,LED Lamp,3,81.11,10.0,USA,Credit Card,Delivered,5.0,0,Packaging was damaged
+10184,2022-10-15,157,Bob Smith,Sports,Laptop Pro,1,329.23,25.0,Canada,Debit Card,Delivered,4.0,0,
+10185,2022-07-18,156,Carol White,Home & Garden,LED Lamp,1,150.6,20.0,USA,PayPal,Delivered,2.0,0,
+10186,2022-12-13,102,Carol White,Toys,LED Lamp,3,89.0,10.0,USA,Credit Card,Delivered,,0,Great product!
+10187,2022-06-09,373,Alice Johnson,Books,Skincare Set,10,93.33,15.0,Canada,Credit Card,Delivered,1.0,0,Great product!
+10188,2022-10-07,340,Carol White,Clothing,Laptop Pro,10,248.84,10.0,USA,Credit Card,Shipped,,0,
+10189,2022-06-16,252,Carol White,Electronics,Yoga Mat,3,293.95,25.0,USA,Debit Card,Delivered,4.0,0,
+10190,2022-10-06,267,Eve Davis,Books,Wireless Headset,2,452.65,20.0,India,PayPal,Delivered,5.0,0,Wrong item sent
+10191,2022-06-10,307,Dave Brown,Books,Yoga Mat,5,$361.99,20.0,UK,PayPal,Delivered,,0,
+10192,2022-10-31,59,Dave Brown,Clothing,Wireless Headset,2,347.18,25.0,Canada,Credit Card,Shipped,4.0,1,
+10193,2022-12-08,340,Eve Davis,Toys,Wireless Headset,2,94.44,15.0,France,PayPal,Delivered,5.0,0,Wrong item sent
+10194,2022-08-13,105,Carol White,Books,Skincare Set,1,358.16,,Australia,Credit Card,Returned,5.0,0,
+10195,2022-04-04,269,Bob Smith,Sports,Desk Chair,1,326.1,10.0,USA,PayPal,Cancelled,2.0,0,"Excellent quality, will buy again"
+10196,2022-02-27,47,Eve Davis,Books,Laptop Pro,10,112.01,25.0,USA,PayPal,Returned,5.0,0,
+10197,2022-09-20,88,Dave Brown,Clothing,Coffee Maker,1,336.34,20.0,Germany,Debit Card,Returned,,0,
+10198,2022-01-08,171,Alice Johnson,Home & Garden,Laptop Pro,1,109.69,15.0,Canada,Debit Card,Delivered,,0,
+10199,2022-08-27,152,Dave Brown,Electronics,Bluetooth Speaker,2,298.82,25.0,USA,Credit Card,Processing,5.0,1,
+10200,2022-08-07,176,Bob Smith,Books,Coffee Maker,5,336.08,20.0,USA,Bank Transfer,Delivered,4.0,0,Packaging was damaged
+10201,2022-04-22,319,Dave Brown,Clothing,Coffee Maker,5,348.21,25.0,Canada,Credit Card,Processing,5.0,0,"Excellent quality, will buy again"
+10202,2022-08-26,145,Eve Davis,Electronics,Python Book,1,455.09,0.0,Germany,Credit Card,Delivered,5.0,0,Wrong item sent
+10203,2022-03-19,325,Alice Johnson,Clothing,Running Shoes,1,474.18,0.0,Canada,Credit Card,Delivered,,0,
+10204,2022-04-22,310,Dave Brown,Clothing,LED Lamp,1,406.05,20.0,Germany,Debit Card,Cancelled,5.0,0,
+10205,2022-12-15,222,Eve Davis,Electronics,Skincare Set,1,439.98,15.0,USA,PayPal,Delivered,3.0,0,
+10206,2022-12-23,398,Eve Davis,Sports,Bluetooth Speaker,1,14.57,0.0,USA,Credit Card,Processing,5.0,0,
+10207,2022-05-14,15,Eve Davis,Clothing,Yoga Mat,2,184.52,,USA,Credit Card,Delivered,3.0,0,Wrong item sent
+10208,2022-04-09,138,Alice Johnson,Clothing,Laptop Pro,1,24.66,25.0,India,Credit Card,Processing,5.0,0,
+10209,2022-07-16,250,Eve Davis,Clothing,Coffee Maker,1,116.3,5.0,Germany,Bank Transfer,Delivered,3.0,1,Packaging was damaged
+10210,2022-06-15,150,Alice Johnson,Home & Garden,Coffee Maker,2,193.95,25.0,Canada,PayPal,Delivered,4.0,0,"Excellent quality, will buy again"
+10211,2022-03-15,351,Bob Smith,Electronics,Skincare Set,3,434.45,,USA,Credit Card,Shipped,2.0,0,
+10212,2022-04-18,269,Bob Smith,Books,Desk Chair,1,258.32,20.0,Canada,Bank Transfer,Delivered,4.0,0,Great product!
+10213,2022-06-25,81,Bob Smith,Clothing,Laptop Pro,5,326.19,0.0,France,Credit Card,Delivered,1.0,0,"Excellent quality, will buy again"
+10214,2022-10-01,65,Eve Davis,Toys,Laptop Pro,1,184.59,,Germany,PayPal,Delivered,4.0,0,
+10215,2022-04-19,142,Alice Johnson,Books,Yoga Mat,10,303.44,25.0,Germany,PayPal,Cancelled,5.0,0,
+10216,2022-11-08,300,Bob Smith,Electronics,Yoga Mat,1,$377.57,,USA,Credit Card,Delivered,3.0,0,
+10217,2022-07-04,247,Carol White,Clothing,Bluetooth Speaker,1,154.11,0.0,Germany,Credit Card,Delivered,4.0,0,
+10218,2022-12-02,373,Bob Smith,Books,Running Shoes,1,466.47,15.0,UK,PayPal,Delivered,4.0,0,
+10219,2022-07-08,193,Eve Davis,Electronics,Coffee Maker,1,110.59,15.0,USA,Bank Transfer,Delivered,4.0,0,Great product!
+10220,2022-11-18,283,Carol White,Toys,Coffee Maker,10,460.05,25.0,India,Debit Card,Delivered,5.0,0,
+10221,2022-01-23,254,Dave Brown,Electronics,Laptop Pro,1,19.01,15.0,USA,PayPal,Cancelled,,0,
+10222,2022-09-30,173,Carol White,Electronics,Yoga Mat,2,273.66,,France,Debit Card,Delivered,,0,
+10223,2022-05-04,313,Dave Brown,Electronics,Python Book,3,492.66,0.0,USA,PayPal,Delivered,,0,
+10224,2022-06-08,278,Carol White,Home & Garden,Yoga Mat,10,306.84,15.0,UK,Credit Card,Shipped,,0,Packaging was damaged
+10225,2022-09-09,290,Alice Johnson,Clothing,LED Lamp,2,279.66,5.0,USA,Bank Transfer,Delivered,4.0,0,Arrived late
+10226,2022-07-18,393,Carol White,Electronics,LED Lamp,3,342.82,10.0,UK,PayPal,Delivered,5.0,0,
+10227,2022-03-29,306,Bob Smith,Sports,Running Shoes,10,148.2,20.0,Germany,Credit Card,Processing,,0,Packaging was damaged
+10228,2022-06-18,310,Dave Brown,Electronics,Bluetooth Speaker,1,31.69,5.0,USA,Debit Card,Delivered,,0,
+10229,2022-06-06,186,Dave Brown,Clothing,Python Book,2,129.28,,Germany,PayPal,Delivered,5.0,0,
+10230,2022-10-23,356,Bob Smith,Electronics,Laptop Pro,2,92.24,10.0,USA,Credit Card,Delivered,5.0,0,Wrong item sent
+10231,2022-09-04,224,Alice Johnson,Toys,Bluetooth Speaker,2,$62.18,,Australia,Credit Card,Delivered,,0,
+10232,2022-04-23,62,Carol White,Home & Garden,Coffee Maker,2,426.87,5.0,UK,PayPal,Delivered,5.0,0,Arrived late
+10233,2022-08-12,84,Alice Johnson,Home & Garden,LED Lamp,1,162.27,5.0,USA,Credit Card,Delivered,,0,Wrong item sent
+10234,2022-05-29,27,Bob Smith,Electronics,Skincare Set,1,418.85,15.0,Australia,PayPal,Delivered,5.0,0,
+10235,2022-07-29,381,Carol White,Books,Coffee Maker,1,109.82,25.0,Australia,Credit Card,Returned,,0,
+10236,2022-07-25,320,Bob Smith,Books,LED Lamp,2,103.79,25.0,USA,PayPal,Processing,,0,Good value for money
+10237,2022-08-21,131,Dave Brown,Clothing,Laptop Pro,1,384.93,15.0,India,Crypto,Delivered,,0,
+10238,2022-12-02,127,Dave Brown,Clothing,Python Book,3,166.83,5.0,USA,Debit Card,Delivered,4.0,0,
+10239,2022-08-21,11,Dave Brown,Sports,Coffee Maker,1,37.07,0.0,Australia,PayPal,Delivered,4.0,0,
+10240,2022-08-09,280,Eve Davis,Electronics,Python Book,2,361.39,20.0,USA,Credit Card,Processing,,0,
+10241,2022-03-19,285,Eve Davis,Books,Yoga Mat,2,494.85,,USA,PayPal,Delivered,5.0,0,
+10242,2022-09-14,197,Dave Brown,Clothing,Bluetooth Speaker,1,285.16,0.0,Germany,Debit Card,Shipped,4.0,0,
+10243,2022-02-10,225,Eve Davis,Home & Garden,Laptop Pro,3,135.52,20.0,France,Credit Card,Cancelled,,0,Wrong item sent
+10244,2022-06-02,264,Eve Davis,Electronics,Desk Chair,2,189.59,,USA,Credit Card,Delivered,5.0,0,Packaging was damaged
+10245,2022-07-22,275,Bob Smith,Electronics,Wireless Headset,3,326.08,10.0,UK,PayPal,Delivered,5.0,0,"Excellent quality, will buy again"
+10246,2022-09-02,68,Carol White,Books,Laptop Pro,1,352.18,,France,PayPal,Processing,,0,
+10247,2022-05-05,233,Dave Brown,Beauty,Skincare Set,1,443.73,5.0,UK,Debit Card,Processing,2.0,0,
+10248,2022-05-08,99,Eve Davis,Beauty,Wireless Headset,2,454.87,,Germany,PayPal,Delivered,4.0,0,Wrong item sent
+10249,2022-07-26,222,Bob Smith,Electronics,Bluetooth Speaker,1,431.33,0.0,Canada,Debit Card,Delivered,3.0,0,
+10250,2022-06-26,124,Bob Smith,Electronics,LED Lamp,3,326.0,5.0,Germany,Credit Card,Delivered,5.0,0,
+10251,2022-12-05,304,Carol White,Books,Desk Chair,1,227.68,25.0,Australia,Credit Card,Cancelled,4.0,0,
+10252,2022-01-01,102,Bob Smith,Clothing,Laptop Pro,1,341.26,,USA,Debit Card,Delivered,5.0,0,
+10253,2023-01-01,320,Alice Johnson,Home & Garden,Running Shoes,2,334.95,0.0,Germany,Credit Card,Cancelled,5.0,1,Wrong item sent
+10254,2022-08-24,264,Alice Johnson,Books,Yoga Mat,1,112.9,0.0,Canada,Credit Card,Delivered,4.0,0,
+10255,2022-07-05,365,Dave Brown,Clothing,Running Shoes,2,256.24,0.0,USA,Credit Card,Delivered,5.0,0,Great product!
+10256,2022-10-12,389,Carol White,Home & Garden,Bluetooth Speaker,2,108.07,10.0,USA,Debit Card,Shipped,4.0,0,
+10257,2022-06-18,230,Alice Johnson,Electronics,Desk Chair,1,450.07,,France,Debit Card,Delivered,3.0,0,
+10258,2022-01-10,123,Carol White,Home & Garden,Desk Chair,1,165.01,5.0,USA,Credit Card,Delivered,5.0,0,Great product!
+10259,2022-10-18,227,Dave Brown,Clothing,Wireless Headset,10,403.69,0.0,USA,Bank Transfer,Processing,5.0,0,
+10260,2022-07-05,228,Bob Smith,Sports,Yoga Mat,1,191.73,25.0,India,Credit Card,Shipped,4.0,0,
+10261,2022-08-09,153,Bob Smith,Electronics,Wireless Headset,2,383.05,0.0,USA,Bank Transfer,Delivered,5.0,0,
+10262,2022-07-26,309,Bob Smith,Clothing,Running Shoes,1,114.35,10.0,France,Crypto,Cancelled,1.0,0,
+10263,2022-11-19,305,Alice Johnson,Beauty,Desk Chair,2,383.05,10.0,USA,Debit Card,Delivered,4.0,0,Good value for money
+10264,2022-09-21,328,Carol White,Books,Bluetooth Speaker,1,93.87,5.0,UK,Credit Card,Delivered,5.0,0,
+10265,2022-10-07,149,Alice Johnson,Toys,Bluetooth Speaker,1,247.95,,USA,Credit Card,Delivered,3.0,0,Packaging was damaged
+10266,2022-10-09,307,Eve Davis,Home & Garden,Wireless Headset,2,61.25,25.0,USA,PayPal,Delivered,,0,Good value for money
+10267,2022-07-30,9,Carol White,Toys,LED Lamp,2,266.31,0.0,Canada,Credit Card,Cancelled,,0,Great product!
+10268,2022-06-09,320,Dave Brown,Clothing,Running Shoes,1,411.25,25.0,India,Debit Card,Cancelled,5.0,0,
+10269,2022-04-05,224,Alice Johnson,Electronics,Wireless Headset,2,$374.31,25.0,France,Bank Transfer,Delivered,3.0,0,Packaging was damaged
+10270,2022-11-29,23,Bob Smith,Sports,Desk Chair,5,30.1,25.0,India,Crypto,Cancelled,4.0,0,Good value for money
+10271,2022-11-05,392,Bob Smith,Sports,LED Lamp,1,248.63,0.0,Canada,Credit Card,Delivered,4.0,0,
+10272,2022-09-22,192,Bob Smith,Books,Running Shoes,3,426.85,0.0,USA,Credit Card,Processing,5.0,0,
+10273,2022-12-31,227,Alice Johnson,Books,LED Lamp,2,326.8,0.0,UK,Credit Card,Delivered,4.0,0,Good value for money
+10274,2023-01-09,54,Alice Johnson,Toys,Yoga Mat,10,34.3,,Canada,Credit Card,Delivered,4.0,0,
+10275,2022-01-01,92,Bob Smith,Electronics,Laptop Pro,5,166.19,25.0,USA,Credit Card,Delivered,,1,
+10276,2022-01-14,15,Bob Smith,Books,Wireless Headset,5,280.51,10.0,France,Credit Card,Processing,3.0,0,Arrived late
+10277,2022-06-21,308,Bob Smith,Electronics,Wireless Headset,1,90.46,15.0,Germany,Credit Card,Delivered,2.0,0,
+10278,2022-09-15,179,Eve Davis,Electronics,Skincare Set,1,342.55,5.0,USA,Credit Card,Returned,,0,
+10279,2022-11-26,4,Alice Johnson,Clothing,Yoga Mat,2,319.25,10.0,USA,Debit Card,Processing,5.0,0,Great product!
+10280,2022-01-28,101,Bob Smith,Sports,Wireless Headset,1,105.21,20.0,USA,PayPal,Delivered,5.0,0,
+10281,2022-01-12,130,Dave Brown,Home & Garden,Laptop Pro,1,277.45,20.0,India,PayPal,Delivered,4.0,0,
+10282,2022-02-26,7,Bob Smith,Beauty,Coffee Maker,3,406.8,,Germany,PayPal,Delivered,2.0,0,
+10283,2022-03-02,184,Alice Johnson,Electronics,Wireless Headset,1,190.54,5.0,Canada,Credit Card,Processing,,0,Wrong item sent
+10284,2022-12-12,331,Dave Brown,Clothing,Desk Chair,1,127.26,0.0,Australia,Bank Transfer,Processing,3.0,0,
+10285,2022-01-12,332,Alice Johnson,Electronics,Desk Chair,2,352.1,20.0,USA,Credit Card,Delivered,2.0,0,
+10286,2022-10-04,35,Alice Johnson,Electronics,Yoga Mat,1,40.05,20.0,France,PayPal,Delivered,,0,
+10287,2022-11-13,232,Alice Johnson,Electronics,Wireless Headset,5,417.17,15.0,UK,Credit Card,Shipped,5.0,0,
+10288,2022-05-23,154,Carol White,Electronics,Bluetooth Speaker,1,472.01,,Australia,Crypto,Delivered,5.0,0,
+10289,2022-04-16,64,Dave Brown,Clothing,Coffee Maker,5,482.57,25.0,Canada,Bank Transfer,Delivered,5.0,0,
+10290,2022-08-27,247,Eve Davis,Electronics,Skincare Set,1,219.11,5.0,Germany,Credit Card,Delivered,5.0,0,Great product!
+10291,2022-03-25,378,Eve Davis,Clothing,Python Book,5,313.49,5.0,USA,Crypto,Shipped,4.0,0,
+10292,2022-12-07,56,Carol White,Toys,Wireless Headset,1,429.4,15.0,USA,PayPal,Delivered,3.0,0,
+10293,2022-12-17,229,Alice Johnson,Home & Garden,Running Shoes,2,115.59,20.0,USA,Debit Card,Shipped,4.0,0,
+10294,2022-09-02,311,Eve Davis,Sports,Coffee Maker,5,18.71,25.0,Canada,Credit Card,Cancelled,5.0,0,
+10295,2022-10-30,396,Dave Brown,Sports,Laptop Pro,3,195.36,25.0,USA,Credit Card,Delivered,,0,
+10296,2022-01-26,253,Bob Smith,Clothing,Python Book,2,442.76,15.0,France,Debit Card,Delivered,,0,
+10297,2022-05-31,293,Dave Brown,Home & Garden,Python Book,1,255.01,0.0,USA,Credit Card,Shipped,5.0,0,
+10298,2022-10-12,52,Alice Johnson,Home & Garden,Wireless Headset,3,267.46,20.0,Germany,Bank Transfer,Shipped,5.0,0,
+10299,2022-06-01,15,Dave Brown,Electronics,Bluetooth Speaker,10,347.28,25.0,Germany,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+10300,2022-11-10,383,Alice Johnson,Sports,Yoga Mat,1,289.39,5.0,Canada,Credit Card,Delivered,4.0,0,Arrived late
+10301,2022-09-03,342,Dave Brown,Clothing,Bluetooth Speaker,1,31.97,25.0,USA,PayPal,Delivered,5.0,0,Packaging was damaged
+10302,2022-12-14,340,Carol White,Electronics,Yoga Mat,1,282.63,10.0,USA,Credit Card,Shipped,,0,
+10303,2022-01-08,363,Dave Brown,Home & Garden,Wireless Headset,5,325.74,15.0,USA,Bank Transfer,Delivered,5.0,0,
+10304,2022-02-14,180,Eve Davis,Home & Garden,Laptop Pro,1,322.59,25.0,UK,Credit Card,Delivered,3.0,0,
+10305,2022-08-20,77,Bob Smith,Books,Python Book,5,365.53,25.0,Germany,Credit Card,Delivered,,0,
+10306,2022-09-18,215,Carol White,Electronics,Laptop Pro,2,262.36,25.0,USA,PayPal,Delivered,4.0,0,
+10307,2022-07-08,223,Dave Brown,Clothing,LED Lamp,3,450.53,15.0,USA,Debit Card,Returned,5.0,0,
+10308,2022-10-19,154,Alice Johnson,Clothing,Laptop Pro,2,234.81,,France,Bank Transfer,Delivered,,0,
+10309,2022-06-25,45,Carol White,Beauty,Coffee Maker,5,261.5,25.0,USA,Credit Card,Delivered,5.0,0,
+10310,2022-12-15,352,Eve Davis,Sports,Bluetooth Speaker,3,391.25,25.0,USA,Credit Card,Delivered,4.0,0,
+10311,2022-03-19,21,Bob Smith,Home & Garden,Laptop Pro,1,417.45,20.0,Germany,PayPal,Cancelled,5.0,0,
+10312,2022-03-31,81,Bob Smith,Electronics,Python Book,2,325.94,20.0,France,Credit Card,Delivered,4.0,0,
+10313,2022-07-07,53,Dave Brown,Clothing,LED Lamp,1,67.55,20.0,Germany,PayPal,Delivered,5.0,0,Packaging was damaged
+10314,2022-05-03,157,Eve Davis,Clothing,LED Lamp,1,169.32,25.0,USA,Debit Card,Delivered,3.0,0,Great product!
+10315,2022-10-21,369,Eve Davis,Clothing,Laptop Pro,1,14.98,25.0,USA,Credit Card,Delivered,,0,
+10316,2022-07-24,147,Bob Smith,Electronics,LED Lamp,2,151.25,25.0,Canada,Credit Card,Returned,,0,Great product!
+10317,2022-07-22,182,Bob Smith,Books,Running Shoes,3,287.27,10.0,USA,Credit Card,Returned,5.0,0,
+10318,2022-05-13,78,Eve Davis,Clothing,Skincare Set,2,403.59,10.0,USA,Debit Card,Returned,4.0,0,
+10319,2022-07-24,383,Bob Smith,Books,Desk Chair,2,294.9,20.0,Germany,Credit Card,Delivered,5.0,0,
+10320,2022-04-25,119,Alice Johnson,Electronics,Laptop Pro,3,24.75,10.0,UK,Credit Card,Cancelled,5.0,0,
+10321,2022-04-15,359,Bob Smith,Clothing,Coffee Maker,1,133.26,15.0,Germany,Credit Card,Delivered,,0,
+10322,2022-09-18,343,Alice Johnson,Home & Garden,Python Book,5,291.14,25.0,UK,Crypto,Delivered,4.0,0,
+10323,2022-11-26,105,Bob Smith,Clothing,Python Book,2,355.98,20.0,USA,PayPal,Delivered,,0,
+10324,2022-04-25,2,Carol White,Sports,Coffee Maker,10,433.89,10.0,UK,Credit Card,Delivered,4.0,1,
+10325,2022-05-10,115,Carol White,Home & Garden,Running Shoes,10,483.98,25.0,Germany,Credit Card,Delivered,5.0,0,
+10326,2022-11-09,32,Carol White,Sports,Skincare Set,3,446.43,25.0,USA,Credit Card,Shipped,4.0,0,
+10327,2022-05-01,358,Alice Johnson,Electronics,Wireless Headset,1,236.33,15.0,India,Credit Card,Shipped,,0,
+10328,2022-07-09,62,Alice Johnson,Electronics,Laptop Pro,3,374.73,15.0,USA,Debit Card,Delivered,4.0,0,
+10329,2022-12-22,97,Dave Brown,Books,Yoga Mat,1,124.06,10.0,USA,PayPal,Delivered,3.0,0,
+10330,2022-06-29,378,Dave Brown,Toys,Laptop Pro,1,36.6,20.0,Germany,Debit Card,Shipped,4.0,0,
+10331,2022-06-30,135,Bob Smith,Home & Garden,Skincare Set,2,32.26,20.0,Australia,Credit Card,Delivered,4.0,1,
+10332,2022-01-18,98,Alice Johnson,Clothing,LED Lamp,10,124.45,10.0,USA,Credit Card,Shipped,4.0,0,Wrong item sent
+10333,2023-01-09,215,Carol White,Electronics,Wireless Headset,10,23.58,10.0,USA,Credit Card,Shipped,,0,Arrived late
+10334,2022-06-18,84,Carol White,Clothing,Python Book,2,425.88,0.0,USA,PayPal,Shipped,,0,
+10335,2022-07-21,157,Carol White,Clothing,Skincare Set,2,247.51,15.0,Canada,Credit Card,Shipped,,0,
+10336,2022-08-02,107,Bob Smith,Home & Garden,Yoga Mat,1,$293.46,20.0,UK,PayPal,Shipped,,0,
+10337,2022-02-27,357,Alice Johnson,Clothing,Wireless Headset,1,470.25,5.0,Canada,Credit Card,Cancelled,4.0,0,
+10338,2022-09-17,131,Bob Smith,Clothing,Python Book,1,496.98,15.0,USA,Credit Card,Shipped,3.0,0,
+10339,2022-01-21,22,Eve Davis,Electronics,Running Shoes,1,468.9,25.0,USA,PayPal,Delivered,4.0,0,
+10340,2022-05-17,84,Eve Davis,Electronics,Bluetooth Speaker,1,359.7,20.0,USA,Credit Card,Delivered,3.0,1,Arrived late
+10341,2022-04-06,89,Dave Brown,Clothing,Yoga Mat,1,223.78,,Canada,Debit Card,Delivered,4.0,0,Great product!
+10342,2022-03-28,226,Alice Johnson,Clothing,Wireless Headset,2,301.0,,Canada,Bank Transfer,Cancelled,,0,
+10343,2022-02-19,106,Carol White,Books,Wireless Headset,1,409.17,15.0,Canada,Credit Card,Cancelled,4.0,0,Great product!
+10344,2022-02-23,349,Alice Johnson,Home & Garden,Running Shoes,5,449.29,15.0,UK,Crypto,Processing,4.0,0,Wrong item sent
+10345,2022-06-20,394,Dave Brown,Electronics,Coffee Maker,1,478.45,,Germany,Credit Card,Processing,4.0,0,
+10346,2022-10-05,359,Carol White,Clothing,Yoga Mat,1,366.65,20.0,Australia,Bank Transfer,Cancelled,3.0,0,
+10347,2022-06-14,101,Bob Smith,Sports,Coffee Maker,1,272.28,5.0,Canada,Crypto,Delivered,3.0,1,
+10348,2022-05-24,296,Carol White,Clothing,Laptop Pro,1,484.34,,Germany,Debit Card,Delivered,5.0,0,Good value for money
+10349,2022-06-28,370,Eve Davis,Books,Laptop Pro,3,479.52,5.0,Canada,Credit Card,Delivered,4.0,0,
+10350,2022-12-20,148,Bob Smith,Clothing,Skincare Set,1,241.39,25.0,Germany,PayPal,Cancelled,,0,
+10351,2022-08-23,381,Carol White,Clothing,Desk Chair,10,326.09,,Australia,Debit Card,Delivered,4.0,0,Arrived late
+10352,2022-02-28,230,Bob Smith,Electronics,Skincare Set,2,405.59,15.0,Canada,Credit Card,Delivered,3.0,0,
+10353,2022-04-08,87,Eve Davis,Electronics,Desk Chair,1,219.37,25.0,USA,Bank Transfer,Delivered,5.0,0,Wrong item sent
+10354,2022-11-17,11,Eve Davis,Electronics,Yoga Mat,10,415.54,25.0,Germany,Debit Card,Delivered,,0,
+10355,2022-09-23,136,Alice Johnson,Sports,Bluetooth Speaker,5,60.17,,Canada,Bank Transfer,Processing,4.0,0,Wrong item sent
+10356,2022-09-17,93,Eve Davis,Electronics,Wireless Headset,3,243.17,15.0,Australia,PayPal,Delivered,5.0,0,Wrong item sent
+10357,2022-01-11,292,Eve Davis,Toys,Laptop Pro,3,243.89,10.0,USA,Credit Card,Delivered,4.0,0,Great product!
+10358,2022-04-29,153,Eve Davis,Sports,Yoga Mat,2,343.91,5.0,India,PayPal,Processing,4.0,1,Packaging was damaged
+10359,2022-04-12,354,Dave Brown,Home & Garden,Yoga Mat,3,62.62,5.0,UK,Debit Card,Delivered,,0,
+10360,2022-12-24,367,Eve Davis,Home & Garden,Bluetooth Speaker,1,56.09,0.0,India,Credit Card,Delivered,5.0,0,
+10361,2022-10-23,96,Alice Johnson,Electronics,Desk Chair,3,450.79,20.0,Germany,Credit Card,Cancelled,5.0,0,
+10362,2022-02-28,62,Bob Smith,Books,Laptop Pro,5,155.35,10.0,France,Credit Card,Delivered,4.0,0,
+10363,2022-06-14,361,Dave Brown,Toys,Laptop Pro,10,166.83,25.0,USA,PayPal,Processing,,0,
+10364,2022-08-26,87,Bob Smith,Electronics,Desk Chair,1,389.55,10.0,USA,Credit Card,Delivered,4.0,0,
+10365,2023-01-07,211,Bob Smith,Electronics,Yoga Mat,3,210.38,20.0,Canada,PayPal,Delivered,4.0,0,
+10366,2022-03-29,389,Alice Johnson,Electronics,Coffee Maker,3,417.3,0.0,USA,PayPal,Delivered,5.0,0,
+10367,2022-06-04,383,Dave Brown,Books,Yoga Mat,1,203.73,25.0,India,Credit Card,Delivered,5.0,0,
+10368,2022-08-08,83,Carol White,Electronics,Yoga Mat,5,381.5,10.0,UK,PayPal,Delivered,4.0,0,
+10369,2022-03-10,227,Eve Davis,Clothing,Python Book,2,265.03,0.0,USA,Debit Card,Delivered,4.0,0,
+10370,2022-01-19,12,Bob Smith,Home & Garden,Desk Chair,3,468.23,20.0,UK,Bank Transfer,Shipped,4.0,0,Wrong item sent
+10371,2022-07-20,359,Bob Smith,Electronics,LED Lamp,5,167.06,20.0,UK,Credit Card,Delivered,3.0,0,
+10372,2022-11-12,153,Alice Johnson,Home & Garden,Coffee Maker,3,184.53,20.0,USA,PayPal,Shipped,,0,
+10373,2022-06-02,5,Alice Johnson,Electronics,Yoga Mat,2,485.14,10.0,USA,Debit Card,Processing,,0,Wrong item sent
+10374,2022-06-16,76,Alice Johnson,Electronics,Wireless Headset,2,370.07,20.0,USA,Credit Card,Delivered,,0,Great product!
+10375,2022-07-23,4,Dave Brown,Electronics,Laptop Pro,1,387.42,10.0,UK,Credit Card,Delivered,,0,
+10376,2022-11-27,372,Eve Davis,Sports,LED Lamp,1,151.51,,USA,PayPal,Delivered,,0,Packaging was damaged
+10377,2022-06-27,83,Dave Brown,Sports,Yoga Mat,1,268.36,15.0,USA,Credit Card,Shipped,,0,Wrong item sent
+10378,2022-05-09,362,Alice Johnson,Electronics,Bluetooth Speaker,2,160.2,0.0,France,PayPal,Returned,5.0,0,
+10379,2023-01-06,35,Alice Johnson,Electronics,Coffee Maker,3,133.64,10.0,USA,Bank Transfer,Processing,4.0,0,
+10380,2022-01-21,242,Bob Smith,Sports,LED Lamp,5,269.94,5.0,Canada,Credit Card,Cancelled,3.0,0,
+10381,2022-09-05,144,Dave Brown,Home & Garden,Skincare Set,1,493.94,5.0,UK,Credit Card,Delivered,4.0,0,Good value for money
+10382,2023-01-02,396,Dave Brown,Electronics,Desk Chair,2,111.24,25.0,Germany,Credit Card,Delivered,,0,
+10383,2022-03-09,80,Eve Davis,Books,Laptop Pro,2,125.05,15.0,USA,Credit Card,Delivered,4.0,0,
+10384,2022-07-01,75,Dave Brown,Sports,Skincare Set,1,125.35,20.0,France,PayPal,Delivered,5.0,0,Great product!
+10385,2022-03-22,299,Eve Davis,Electronics,Python Book,3,396.89,0.0,USA,Credit Card,Processing,5.0,0,
+10386,2022-10-08,284,Carol White,Electronics,Yoga Mat,1,257.69,0.0,USA,Bank Transfer,Delivered,3.0,1,
+10387,2022-09-12,215,Eve Davis,Electronics,Bluetooth Speaker,1,195.46,10.0,Canada,Debit Card,Delivered,5.0,0,Arrived late
+10388,2022-01-01,246,Alice Johnson,Home & Garden,Bluetooth Speaker,10,422.68,,France,Credit Card,Processing,,0,
+10389,2022-10-07,238,Carol White,Electronics,Bluetooth Speaker,1,152.26,15.0,USA,Credit Card,Delivered,4.0,0,
+10390,2022-01-26,337,Bob Smith,Sports,Coffee Maker,5,199.15,20.0,UK,Credit Card,Shipped,3.0,0,
+10391,2022-10-25,19,Bob Smith,Home & Garden,Python Book,1,41.44,,USA,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+10392,2022-11-22,74,Bob Smith,Books,Yoga Mat,1,63.86,5.0,USA,Credit Card,Delivered,,0,Packaging was damaged
+10393,2022-02-26,379,Alice Johnson,Electronics,Desk Chair,10,72.68,,Germany,PayPal,Delivered,5.0,0,
+10394,2022-09-19,55,Bob Smith,Beauty,Coffee Maker,2,176.75,15.0,Australia,PayPal,Delivered,,0,
+10395,2022-06-29,83,Eve Davis,Clothing,Desk Chair,5,264.42,20.0,USA,Bank Transfer,Delivered,3.0,0,
+10396,2022-01-22,164,Alice Johnson,Clothing,Coffee Maker,5,5.37,25.0,USA,Debit Card,Delivered,,0,
+10397,2022-01-11,318,Dave Brown,Beauty,LED Lamp,2,99.02,20.0,UK,Credit Card,Returned,,0,
+10398,2022-03-16,363,Alice Johnson,Sports,Desk Chair,10,91.95,0.0,Australia,Debit Card,Delivered,,0,
+10399,2022-01-07,167,Alice Johnson,Clothing,Coffee Maker,2,130.41,,Canada,Credit Card,Delivered,5.0,0,
+10400,2022-11-22,116,Dave Brown,Clothing,Laptop Pro,2,87.21,20.0,USA,Credit Card,Delivered,4.0,0,Great product!
+10401,2022-12-06,297,Eve Davis,Electronics,Coffee Maker,1,101.59,0.0,UK,PayPal,Delivered,2.0,0,
+10402,2022-09-29,188,Carol White,Toys,Coffee Maker,2,492.02,,USA,PayPal,Delivered,4.0,0,
+10403,2022-01-07,255,Dave Brown,Sports,Coffee Maker,2,299.39,,USA,PayPal,Processing,4.0,0,
+10404,2022-05-22,342,Alice Johnson,Clothing,Running Shoes,2,382.53,20.0,Australia,Debit Card,Delivered,4.0,0,
+10405,2022-03-23,322,Bob Smith,Home & Garden,Bluetooth Speaker,5,410.57,0.0,Germany,Debit Card,Delivered,,1,
+10406,2022-03-17,353,Dave Brown,Home & Garden,Coffee Maker,1,335.5,5.0,Australia,Credit Card,Processing,,0,
+10407,2022-05-09,19,Dave Brown,Electronics,Wireless Headset,1,353.52,25.0,Canada,PayPal,Delivered,5.0,0,
+10408,2022-08-25,311,Carol White,Books,Coffee Maker,2,317.98,20.0,USA,Bank Transfer,Delivered,4.0,0,
+10409,2022-04-21,368,Alice Johnson,Electronics,Bluetooth Speaker,10,$265.57,,UK,Debit Card,Returned,,0,
+10410,2022-07-03,302,Bob Smith,Sports,LED Lamp,1,464.58,25.0,USA,PayPal,Delivered,4.0,0,
+10411,2022-01-24,4,Bob Smith,Electronics,Yoga Mat,3,96.94,,USA,Crypto,Shipped,,0,Wrong item sent
+10412,2022-10-08,190,Carol White,Home & Garden,Bluetooth Speaker,2,140.99,25.0,USA,Credit Card,Processing,5.0,1,
+10413,2022-04-09,281,Bob Smith,Clothing,Skincare Set,1,51.16,10.0,UK,Credit Card,Delivered,,0,
+10414,2022-01-28,63,Eve Davis,Electronics,Wireless Headset,2,419.48,5.0,Canada,Debit Card,Returned,4.0,0,"Excellent quality, will buy again"
+10415,2022-01-09,367,Dave Brown,Electronics,Laptop Pro,3,227.13,20.0,USA,PayPal,Delivered,,0,"Excellent quality, will buy again"
+10416,2022-04-02,269,Dave Brown,Home & Garden,Running Shoes,5,454.02,15.0,Australia,Credit Card,Delivered,5.0,0,
+10417,2022-08-31,254,Bob Smith,Electronics,Python Book,1,208.78,20.0,Canada,Credit Card,Delivered,4.0,0,
+10418,2022-01-06,115,Bob Smith,Books,Bluetooth Speaker,10,224.09,15.0,USA,Credit Card,Delivered,,0,
+10419,2022-07-21,342,Bob Smith,Clothing,Coffee Maker,1,226.94,15.0,USA,PayPal,Delivered,,0,
+10420,2022-05-11,260,Dave Brown,Home & Garden,Wireless Headset,2,308.18,20.0,USA,Credit Card,Delivered,5.0,1,
+10421,2022-02-13,2,Bob Smith,Clothing,Desk Chair,1,384.23,,India,Credit Card,Delivered,5.0,0,
+10422,2022-07-27,67,Eve Davis,Clothing,Coffee Maker,3,178.89,0.0,USA,Credit Card,Delivered,3.0,0,
+10423,2022-12-13,366,Eve Davis,Electronics,Wireless Headset,1,316.93,10.0,USA,Credit Card,Delivered,5.0,1,Arrived late
+10424,2022-01-07,286,Dave Brown,Clothing,Bluetooth Speaker,10,105.96,0.0,USA,Credit Card,Delivered,5.0,0,Wrong item sent
+10425,2022-12-06,132,Alice Johnson,Books,Yoga Mat,2,279.25,10.0,USA,Credit Card,Shipped,5.0,0,
+10426,2022-12-03,48,Alice Johnson,Home & Garden,Coffee Maker,1,275.56,0.0,Canada,PayPal,Processing,,1,
+10427,2022-10-29,43,Alice Johnson,Electronics,Wireless Headset,2,444.91,20.0,USA,PayPal,Processing,3.0,0,
+10428,2022-03-18,93,Eve Davis,Home & Garden,Skincare Set,2,448.44,20.0,USA,Credit Card,Delivered,,0,
+10429,2022-10-10,141,Carol White,Electronics,Skincare Set,2,246.17,15.0,India,PayPal,Processing,5.0,0,
+10430,2022-03-24,47,Alice Johnson,Electronics,Wireless Headset,10,17.18,5.0,Canada,Bank Transfer,Delivered,,0,
+10431,2022-09-27,231,Carol White,Books,Desk Chair,1,423.09,,USA,Credit Card,Delivered,2.0,0,Great product!
+10432,2022-06-16,224,Dave Brown,Electronics,Yoga Mat,10,5.31,,UK,Bank Transfer,Delivered,4.0,1,
+10433,2023-01-04,284,Eve Davis,Home & Garden,Desk Chair,1,241.74,15.0,USA,Credit Card,Processing,1.0,0,
+10434,2022-01-27,37,Alice Johnson,Beauty,Desk Chair,5,14.8,10.0,India,Credit Card,Delivered,5.0,0,
+10435,2022-04-18,28,Eve Davis,Electronics,Running Shoes,1,179.53,0.0,USA,Credit Card,Processing,5.0,0,Good value for money
+10436,2022-10-25,158,Dave Brown,Books,LED Lamp,1,320.2,5.0,USA,PayPal,Cancelled,5.0,0,
+10437,2022-01-10,390,Eve Davis,Toys,Coffee Maker,2,188.74,20.0,Canada,Credit Card,Delivered,5.0,0,
+10438,2022-03-18,222,Bob Smith,Electronics,LED Lamp,1,463.81,0.0,USA,Credit Card,Delivered,5.0,0,
+10439,2022-06-26,376,Alice Johnson,Clothing,Skincare Set,5,322.18,15.0,UK,Bank Transfer,Delivered,,0,
+10440,2022-12-10,9,Eve Davis,Electronics,LED Lamp,1,324.99,10.0,France,Credit Card,Delivered,4.0,0,
+10441,2022-04-08,390,Eve Davis,Home & Garden,Laptop Pro,2,$281.22,25.0,USA,Debit Card,Delivered,,0,
+10442,2022-08-04,70,Eve Davis,Home & Garden,Yoga Mat,2,24.08,5.0,UK,Credit Card,Cancelled,4.0,0,
+10443,2022-03-21,342,Dave Brown,Home & Garden,Running Shoes,2,370.4,20.0,USA,Debit Card,Delivered,5.0,1,
+10444,2022-08-04,66,Alice Johnson,Books,Coffee Maker,1,359.54,10.0,Canada,Bank Transfer,Delivered,,0,
+10445,2022-11-26,95,Alice Johnson,Home & Garden,Wireless Headset,1,267.41,20.0,USA,Credit Card,Cancelled,,0,Packaging was damaged
+10446,2022-03-01,181,Bob Smith,Electronics,Python Book,5,211.05,20.0,USA,PayPal,Delivered,4.0,0,
+10447,2022-05-10,70,Bob Smith,Beauty,Yoga Mat,1,271.47,10.0,France,Credit Card,Processing,5.0,0,
+10448,2022-03-14,234,Eve Davis,Electronics,Laptop Pro,5,374.67,20.0,USA,Credit Card,Shipped,4.0,0,Good value for money
+10449,2022-04-17,261,Alice Johnson,Electronics,Wireless Headset,10,$371.98,,France,Debit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+10450,2022-08-24,20,Alice Johnson,Toys,Wireless Headset,1,330.76,5.0,Canada,PayPal,Delivered,4.0,0,
+10451,2022-09-05,396,Eve Davis,Sports,Bluetooth Speaker,2,452.37,0.0,USA,Debit Card,Delivered,2.0,0,
+10452,2022-02-24,358,Carol White,Home & Garden,Coffee Maker,2,306.89,5.0,USA,PayPal,Delivered,,0,
+10453,2022-03-09,358,Alice Johnson,Electronics,Coffee Maker,1,12.18,0.0,Canada,Credit Card,Cancelled,5.0,0,Good value for money
+10454,2023-01-07,392,Eve Davis,Sports,Yoga Mat,10,310.94,15.0,Germany,PayPal,Delivered,2.0,0,Wrong item sent
+10455,2022-09-09,376,Eve Davis,Books,Desk Chair,10,308.22,5.0,Canada,Credit Card,Delivered,4.0,0,
+10456,2022-03-25,186,Carol White,Home & Garden,Running Shoes,5,39.47,15.0,Canada,Credit Card,Returned,3.0,0,
+10457,2022-08-08,305,Bob Smith,Beauty,Bluetooth Speaker,1,216.73,10.0,USA,Credit Card,Delivered,4.0,0,
+10458,2022-11-09,64,Eve Davis,Electronics,Running Shoes,1,327.29,0.0,USA,Debit Card,Delivered,2.0,0,
+10459,2022-01-17,178,Alice Johnson,Clothing,Python Book,10,353.73,10.0,UK,Credit Card,Delivered,5.0,0,
+10460,2022-10-28,235,Bob Smith,Home & Garden,Bluetooth Speaker,3,447.06,10.0,UK,Credit Card,Processing,,0,
+10461,2022-07-21,353,Bob Smith,Clothing,Desk Chair,2,421.48,5.0,Canada,Credit Card,Processing,3.0,1,
+10462,2022-09-19,250,Bob Smith,Electronics,LED Lamp,1,62.69,20.0,USA,PayPal,Processing,,0,
+10463,2022-03-12,295,Eve Davis,Electronics,Yoga Mat,3,306.35,20.0,USA,Credit Card,Processing,3.0,0,Packaging was damaged
+10464,2022-11-30,40,Alice Johnson,Books,LED Lamp,1,300.26,15.0,France,Credit Card,Shipped,3.0,0,
+10465,2022-07-27,287,Carol White,Electronics,Laptop Pro,5,155.36,5.0,France,Credit Card,Processing,4.0,0,
+10466,2023-01-06,259,Dave Brown,Electronics,Python Book,10,96.13,10.0,India,PayPal,Delivered,4.0,0,Wrong item sent
+10467,2022-01-28,240,Dave Brown,Clothing,Desk Chair,3,$307.38,25.0,USA,PayPal,Processing,,0,
+10468,2022-09-14,72,Bob Smith,Electronics,Python Book,1,92.89,15.0,USA,Credit Card,Delivered,4.0,0,
+10469,2022-05-14,30,Dave Brown,Electronics,Wireless Headset,10,404.1,10.0,UK,Credit Card,Delivered,5.0,0,
+10470,2022-02-23,351,Dave Brown,Electronics,Wireless Headset,5,78.45,15.0,UK,Debit Card,Shipped,5.0,0,
+10471,2022-01-07,29,Eve Davis,Toys,Desk Chair,2,135.87,25.0,USA,PayPal,Processing,,0,
+10472,2022-02-17,312,Carol White,Electronics,Bluetooth Speaker,2,112.81,0.0,UK,PayPal,Delivered,,0,
+10473,2022-01-20,87,Dave Brown,Home & Garden,Yoga Mat,2,357.86,15.0,USA,PayPal,Delivered,,0,Great product!
+10474,2022-05-19,108,Carol White,Home & Garden,Skincare Set,3,83.41,15.0,USA,Credit Card,Delivered,5.0,0,
+10475,2022-10-28,319,Dave Brown,Books,Python Book,5,16.91,10.0,Canada,Credit Card,Delivered,,0,Packaging was damaged
+10476,2022-02-17,30,Bob Smith,Electronics,Running Shoes,1,190.24,20.0,USA,Credit Card,Delivered,4.0,0,
+10477,2022-06-11,309,Bob Smith,Sports,Running Shoes,1,156.02,10.0,UK,Debit Card,Shipped,4.0,0,
+10478,2022-08-19,46,Carol White,Clothing,Coffee Maker,3,201.86,,USA,PayPal,Delivered,,0,"Excellent quality, will buy again"
+10479,2022-09-14,359,Carol White,Electronics,Yoga Mat,1,378.14,10.0,USA,PayPal,Delivered,4.0,0,
+10480,2022-01-09,137,Carol White,Clothing,Wireless Headset,5,11.12,25.0,France,Debit Card,Delivered,,0,
+10481,2022-08-16,263,Carol White,Electronics,Skincare Set,2,23.67,20.0,Canada,PayPal,Delivered,4.0,0,
+10482,2022-06-05,63,Alice Johnson,Clothing,Skincare Set,10,131.54,,France,Debit Card,Delivered,3.0,0,Good value for money
+10483,2022-03-06,44,Bob Smith,Clothing,Laptop Pro,5,445.16,25.0,Germany,Crypto,Processing,3.0,0,Good value for money
+10484,2022-06-24,251,Dave Brown,Clothing,Skincare Set,2,88.69,,Canada,PayPal,Processing,5.0,0,
+10485,2022-01-13,335,Alice Johnson,Home & Garden,Python Book,1,498.53,5.0,France,Credit Card,Shipped,5.0,0,
+10486,2022-08-05,207,Carol White,Toys,Python Book,1,403.82,10.0,USA,Debit Card,Delivered,3.0,0,
+10487,2022-09-12,59,Dave Brown,Clothing,Running Shoes,5,230.79,20.0,USA,PayPal,Shipped,3.0,0,
+10488,2022-08-07,206,Bob Smith,Clothing,Bluetooth Speaker,2,375.19,25.0,India,PayPal,Processing,5.0,0,Wrong item sent
+10489,2022-12-30,331,Carol White,Home & Garden,Running Shoes,1,$268.53,25.0,USA,Bank Transfer,Processing,,0,Great product!
+10490,2022-11-11,84,Eve Davis,Books,Python Book,2,285.17,20.0,Canada,PayPal,Delivered,2.0,0,
+10491,2022-03-31,13,Carol White,Clothing,Running Shoes,3,292.48,,Germany,PayPal,Processing,,0,Great product!
+10492,2022-06-05,237,Dave Brown,Sports,LED Lamp,2,326.12,25.0,Australia,Credit Card,Delivered,5.0,0,
+10493,2022-06-21,158,Bob Smith,Toys,LED Lamp,2,35.08,0.0,France,PayPal,Delivered,,0,
+10494,2022-05-18,104,Carol White,Books,Desk Chair,1,310.17,,Canada,Bank Transfer,Delivered,4.0,0,
+10495,2022-04-28,359,Bob Smith,Electronics,LED Lamp,1,359.89,15.0,Canada,PayPal,Delivered,4.0,0,Packaging was damaged
+10496,2022-09-25,340,Alice Johnson,Clothing,Coffee Maker,1,158.81,0.0,USA,Bank Transfer,Delivered,5.0,1,Wrong item sent
+10497,2022-11-29,365,Eve Davis,Clothing,Skincare Set,3,489.4,20.0,USA,Credit Card,Delivered,,0,
+10498,2022-12-09,43,Alice Johnson,Clothing,Running Shoes,2,76.5,,Australia,Credit Card,Cancelled,5.0,0,Wrong item sent
+10499,2022-12-31,179,Eve Davis,Electronics,LED Lamp,5,455.67,10.0,India,PayPal,Delivered,,0,
+10500,2022-12-27,358,Alice Johnson,Clothing,Desk Chair,1,339.84,15.0,USA,Credit Card,Delivered,,0,
+10501,2022-01-04,264,Bob Smith,Clothing,Wireless Headset,1,333.84,25.0,USA,Credit Card,Shipped,,1,
+10502,2022-12-31,243,Bob Smith,Electronics,LED Lamp,3,438.63,5.0,UK,Credit Card,Delivered,3.0,0,
+10503,2022-11-01,37,Alice Johnson,Toys,Yoga Mat,3,416.71,15.0,UK,PayPal,Delivered,4.0,0,
+10504,2022-09-27,362,Dave Brown,Toys,Wireless Headset,2,175.99,0.0,France,Bank Transfer,Shipped,3.0,0,
+10505,2022-05-26,353,Alice Johnson,Home & Garden,Yoga Mat,1,354.16,10.0,USA,Credit Card,Processing,5.0,0,Packaging was damaged
+10506,2022-09-16,346,Carol White,Clothing,Desk Chair,2,30.05,5.0,France,Credit Card,Delivered,1.0,0,"Excellent quality, will buy again"
+10507,2022-05-28,364,Dave Brown,Clothing,Wireless Headset,2,234.69,15.0,Canada,Bank Transfer,Delivered,4.0,0,Arrived late
+10508,2022-08-29,250,Bob Smith,Home & Garden,Running Shoes,1,469.2,10.0,India,Bank Transfer,Delivered,3.0,0,Arrived late
+10509,2022-02-05,120,Alice Johnson,Books,Coffee Maker,1,140.67,0.0,Canada,Debit Card,Delivered,,0,Great product!
+10510,2022-07-05,192,Dave Brown,Books,Laptop Pro,10,29.74,10.0,USA,Credit Card,Delivered,5.0,1,"Excellent quality, will buy again"
+10511,2022-10-31,295,Carol White,Electronics,Bluetooth Speaker,5,293.56,10.0,Australia,PayPal,Delivered,5.0,0,
+10512,2022-06-17,392,Eve Davis,Books,Desk Chair,1,180.77,5.0,USA,Credit Card,Delivered,5.0,0,Packaging was damaged
+10513,2022-08-14,62,Bob Smith,Toys,Running Shoes,1,192.94,20.0,India,PayPal,Shipped,5.0,0,Packaging was damaged
+10514,2022-11-21,210,Dave Brown,Electronics,Laptop Pro,5,293.32,0.0,USA,PayPal,Processing,,0,Great product!
+10515,2022-12-05,295,Dave Brown,Clothing,Yoga Mat,2,312.69,,Canada,PayPal,Returned,5.0,0,
+10516,2022-03-14,398,Dave Brown,Clothing,Laptop Pro,2,221.47,5.0,USA,PayPal,Delivered,,0,
+10517,2022-02-02,52,Alice Johnson,Home & Garden,Running Shoes,1,256.24,5.0,USA,Bank Transfer,Returned,,0,Great product!
+10518,2022-10-21,210,Bob Smith,Electronics,Skincare Set,10,496.66,,UK,Credit Card,Delivered,,0,
+10519,2022-01-20,313,Bob Smith,Sports,Python Book,1,478.79,20.0,USA,Credit Card,Delivered,,0,
+10520,2022-08-11,279,Alice Johnson,Electronics,Bluetooth Speaker,1,355.12,15.0,India,Debit Card,Delivered,,1,
+10521,2022-03-23,388,Alice Johnson,Sports,Skincare Set,1,84.93,15.0,Germany,Debit Card,Delivered,4.0,0,Wrong item sent
+10522,2022-09-27,202,Alice Johnson,Electronics,Coffee Maker,1,183.18,0.0,France,Credit Card,Cancelled,,0,
+10523,2022-07-24,139,Carol White,Electronics,Bluetooth Speaker,1,442.13,25.0,India,Credit Card,Returned,,1,
+10524,2022-03-10,340,Dave Brown,Sports,Running Shoes,1,214.67,0.0,Canada,Credit Card,Delivered,,0,
+10525,2022-01-02,19,Carol White,Sports,LED Lamp,3,477.91,20.0,USA,PayPal,Delivered,2.0,0,
+10526,2022-01-04,321,Bob Smith,Beauty,LED Lamp,2,246.71,20.0,Germany,Credit Card,Cancelled,3.0,0,
+10527,2022-02-07,95,Alice Johnson,Electronics,Python Book,3,431.58,,UK,Debit Card,Processing,5.0,0,
+10528,2022-02-09,130,Dave Brown,Books,Laptop Pro,3,22.51,5.0,USA,PayPal,Delivered,4.0,0,
+10529,2022-05-06,105,Eve Davis,Electronics,Python Book,1,219.91,,USA,Bank Transfer,Delivered,5.0,0,Good value for money
+10530,2022-01-27,197,Dave Brown,Electronics,Bluetooth Speaker,1,351.63,5.0,Canada,Credit Card,Delivered,3.0,0,
+10531,2022-06-07,260,Eve Davis,Electronics,Desk Chair,10,432.46,5.0,USA,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+10532,2022-01-18,39,Dave Brown,Electronics,Laptop Pro,1,306.77,,USA,Debit Card,Delivered,,0,Great product!
+10533,2022-03-11,305,Alice Johnson,Toys,Running Shoes,10,90.76,10.0,USA,Credit Card,Delivered,,0,
+10534,2022-02-04,131,Eve Davis,Electronics,LED Lamp,5,443.47,,USA,Credit Card,Delivered,2.0,0,
+10535,2022-01-27,154,Eve Davis,Books,Running Shoes,5,289.53,15.0,France,PayPal,Cancelled,,0,
+10536,2022-04-03,41,Bob Smith,Books,Wireless Headset,2,58.47,0.0,Canada,PayPal,Delivered,4.0,0,
+10537,2022-09-07,321,Dave Brown,Electronics,Laptop Pro,2,234.6,0.0,USA,Credit Card,Shipped,5.0,0,
+10538,2022-04-09,122,Carol White,Beauty,Bluetooth Speaker,2,350.98,20.0,Australia,PayPal,Shipped,,0,
+10539,2022-04-27,244,Carol White,Clothing,Desk Chair,1,228.25,20.0,USA,Credit Card,Cancelled,,0,
+10540,2022-10-30,245,Bob Smith,Toys,Running Shoes,1,436.04,20.0,UK,Credit Card,Delivered,3.0,0,
+10541,2022-05-12,144,Bob Smith,Toys,Skincare Set,1,214.73,5.0,UK,Bank Transfer,Delivered,,0,
+10542,2022-06-07,186,Bob Smith,Toys,Desk Chair,3,293.81,5.0,USA,Credit Card,Delivered,3.0,0,
+10543,2022-11-16,35,Alice Johnson,Home & Garden,Running Shoes,1,109.53,,USA,Debit Card,Delivered,4.0,0,
+10544,2022-12-28,211,Alice Johnson,Electronics,LED Lamp,5,258.78,5.0,USA,PayPal,Delivered,5.0,0,Wrong item sent
+10545,2022-07-12,33,Alice Johnson,Electronics,Bluetooth Speaker,10,115.31,0.0,USA,Credit Card,Delivered,4.0,0,
+10546,2022-08-09,159,Alice Johnson,Books,LED Lamp,5,116.47,20.0,Germany,Debit Card,Delivered,5.0,0,
+10547,2022-02-15,317,Bob Smith,Clothing,Coffee Maker,1,143.55,15.0,USA,PayPal,Delivered,4.0,0,
+10548,2022-04-06,364,Bob Smith,Sports,Desk Chair,3,26.88,15.0,USA,PayPal,Delivered,4.0,0,Arrived late
+10549,2022-03-06,192,Alice Johnson,Home & Garden,Wireless Headset,1,85.84,25.0,Canada,Credit Card,Cancelled,4.0,0,
+10550,2022-10-22,163,Alice Johnson,Electronics,Yoga Mat,3,215.06,,Germany,Credit Card,Cancelled,5.0,0,
+10551,2022-06-15,252,Eve Davis,Electronics,LED Lamp,2,69.87,15.0,UK,Debit Card,Delivered,4.0,0,
+10552,2022-01-09,39,Dave Brown,Electronics,Wireless Headset,5,71.03,20.0,Australia,Debit Card,Processing,3.0,0,
+10553,2022-10-12,131,Eve Davis,Books,Yoga Mat,3,484.13,15.0,France,Debit Card,Delivered,3.0,0,"Excellent quality, will buy again"
+10554,2022-12-22,96,Dave Brown,Electronics,Skincare Set,1,216.41,,UK,Credit Card,Processing,5.0,0,Wrong item sent
+10555,2022-10-04,141,Alice Johnson,Home & Garden,Bluetooth Speaker,2,204.85,5.0,Germany,Credit Card,Processing,,0,
+10556,2022-01-30,270,Alice Johnson,Home & Garden,Bluetooth Speaker,3,137.53,15.0,USA,Crypto,Delivered,2.0,0,
+10557,2022-06-25,169,Alice Johnson,Electronics,Wireless Headset,1,258.66,5.0,Canada,Credit Card,Processing,,0,
+10558,2022-09-01,392,Eve Davis,Books,Laptop Pro,1,300.05,0.0,India,Credit Card,Shipped,,1,Packaging was damaged
+10559,2022-10-26,367,Bob Smith,Books,Skincare Set,2,212.0,15.0,Germany,Debit Card,Delivered,4.0,0,
+10560,2022-08-29,275,Dave Brown,Clothing,Yoga Mat,1,199.94,25.0,USA,Credit Card,Delivered,1.0,1,Great product!
+10561,2022-08-14,365,Eve Davis,Beauty,Desk Chair,10,351.71,20.0,Australia,Credit Card,Delivered,3.0,0,
+10562,2022-06-22,398,Alice Johnson,Electronics,Desk Chair,1,475.14,,France,Credit Card,Delivered,4.0,0,
+10563,2022-03-25,99,Bob Smith,Clothing,Desk Chair,1,439.52,15.0,USA,Credit Card,Shipped,4.0,0,
+10564,2022-02-16,61,Eve Davis,Toys,Python Book,10,63.72,0.0,Germany,Credit Card,Delivered,4.0,0,
+10565,2022-10-20,323,Dave Brown,Clothing,Bluetooth Speaker,1,327.89,25.0,India,PayPal,Delivered,4.0,0,
+10566,2022-08-14,217,Alice Johnson,Clothing,Laptop Pro,1,8.49,,USA,Credit Card,Processing,5.0,0,
+10567,2022-05-02,77,Dave Brown,Home & Garden,Skincare Set,3,318.38,10.0,USA,Credit Card,Delivered,4.0,0,
+10568,2022-06-03,208,Alice Johnson,Home & Garden,Coffee Maker,2,234.86,25.0,Canada,Bank Transfer,Delivered,5.0,0,
+10569,2022-10-14,348,Alice Johnson,Electronics,Coffee Maker,5,248.1,15.0,USA,Debit Card,Delivered,5.0,0,
+10570,2022-09-20,45,Carol White,Clothing,Yoga Mat,10,$396.25,5.0,Canada,Debit Card,Delivered,,0,Good value for money
+10571,2022-03-02,347,Dave Brown,Clothing,Wireless Headset,1,$485.65,0.0,USA,Debit Card,Cancelled,5.0,1,
+10572,2022-09-30,202,Bob Smith,Books,Running Shoes,5,366.08,15.0,UK,PayPal,Processing,4.0,0,
+10573,2022-01-25,210,Alice Johnson,Books,Bluetooth Speaker,2,27.02,,France,Credit Card,Processing,5.0,0,
+10574,2022-06-25,328,Bob Smith,Home & Garden,Python Book,2,369.56,20.0,Germany,Credit Card,Delivered,4.0,0,Good value for money
+10575,2022-10-08,135,Eve Davis,Home & Garden,Yoga Mat,5,415.76,10.0,USA,Credit Card,Delivered,5.0,0,
+10576,2022-11-07,369,Alice Johnson,Electronics,Running Shoes,5,38.75,10.0,Germany,Crypto,Delivered,3.0,0,
+10577,2023-01-10,22,Alice Johnson,Electronics,Running Shoes,5,164.86,,USA,PayPal,Delivered,,0,
+10578,2022-10-10,358,Alice Johnson,Clothing,Bluetooth Speaker,1,397.07,10.0,India,Bank Transfer,Delivered,,0,
+10579,2022-02-16,393,Bob Smith,Electronics,Bluetooth Speaker,1,249.09,10.0,USA,Credit Card,Delivered,,0,
+10580,2022-07-28,60,Carol White,Home & Garden,Running Shoes,1,348.97,25.0,UK,PayPal,Cancelled,,1,
+10581,2022-10-13,298,Dave Brown,Books,Running Shoes,5,253.65,20.0,USA,Debit Card,Returned,4.0,0,
+10582,2023-01-10,59,Alice Johnson,Electronics,Yoga Mat,1,489.22,,UK,Credit Card,Delivered,5.0,0,
+10583,2022-06-15,231,Dave Brown,Toys,Laptop Pro,10,468.42,25.0,USA,PayPal,Processing,2.0,0,Wrong item sent
+10584,2022-09-29,285,Dave Brown,Clothing,Coffee Maker,3,144.17,,Australia,Credit Card,Delivered,5.0,0,
+10585,2022-09-28,183,Dave Brown,Electronics,Bluetooth Speaker,1,196.01,,Canada,Credit Card,Delivered,5.0,1,
+10586,2022-10-29,101,Bob Smith,Electronics,Bluetooth Speaker,1,218.52,0.0,Australia,Debit Card,Delivered,4.0,0,
+10587,2022-02-01,114,Dave Brown,Books,LED Lamp,1,56.58,,Canada,PayPal,Cancelled,3.0,0,
+10588,2022-08-15,368,Eve Davis,Clothing,Yoga Mat,3,205.02,10.0,USA,Bank Transfer,Shipped,,0,Wrong item sent
+10589,2022-01-15,42,Bob Smith,Sports,Bluetooth Speaker,2,388.55,0.0,USA,Credit Card,Delivered,5.0,0,
+10590,2022-05-17,29,Bob Smith,Clothing,Running Shoes,5,424.21,20.0,USA,Credit Card,Delivered,,0,
+10591,2022-07-06,277,Eve Davis,Toys,Bluetooth Speaker,1,443.64,10.0,India,Credit Card,Processing,5.0,0,Good value for money
+10592,2022-03-19,97,Carol White,Electronics,LED Lamp,1,12.21,20.0,France,Debit Card,Delivered,5.0,1,
+10593,2022-04-06,191,Carol White,Home & Garden,Laptop Pro,3,395.46,5.0,France,Debit Card,Delivered,,0,
+10594,2022-11-24,379,Alice Johnson,Toys,Bluetooth Speaker,1,253.8,15.0,UK,Credit Card,Processing,2.0,0,
+10595,2022-11-08,319,Carol White,Electronics,LED Lamp,2,107.05,15.0,USA,Debit Card,Delivered,5.0,0,
+10596,2022-05-04,38,Alice Johnson,Electronics,LED Lamp,1,251.88,,USA,Credit Card,Delivered,,0,Good value for money
+10597,2022-10-14,207,Dave Brown,Clothing,Yoga Mat,5,422.91,10.0,France,Credit Card,Delivered,4.0,0,
+10598,2022-03-03,194,Alice Johnson,Beauty,Bluetooth Speaker,2,219.95,20.0,USA,Debit Card,Delivered,,0,
+10599,2022-08-28,140,Carol White,Books,LED Lamp,5,495.28,15.0,USA,Debit Card,Delivered,5.0,1,
+10600,2022-08-03,289,Alice Johnson,Home & Garden,Wireless Headset,5,310.26,,Canada,Credit Card,Shipped,5.0,0,
+10601,2022-04-27,257,Bob Smith,Home & Garden,Yoga Mat,1,247.43,25.0,USA,Credit Card,Delivered,3.0,0,"Excellent quality, will buy again"
+10602,2022-01-05,225,Carol White,Electronics,LED Lamp,10,150.97,15.0,Germany,Debit Card,Delivered,,1,
+10603,2022-11-04,28,Alice Johnson,Clothing,Yoga Mat,1,10.47,25.0,USA,Credit Card,Delivered,5.0,0,Arrived late
+10604,2022-11-28,190,Carol White,Electronics,Bluetooth Speaker,2,307.22,15.0,USA,Debit Card,Processing,5.0,0,
+10605,2022-07-15,245,Eve Davis,Clothing,Coffee Maker,1,290.86,0.0,USA,PayPal,Delivered,5.0,0,Packaging was damaged
+10606,2022-02-26,334,Carol White,Sports,LED Lamp,1,260.82,10.0,Germany,PayPal,Delivered,4.0,0,
+10607,2022-06-23,373,Eve Davis,Home & Garden,Desk Chair,2,271.16,25.0,UK,PayPal,Delivered,5.0,0,
+10608,2022-05-29,315,Alice Johnson,Beauty,Wireless Headset,3,422.54,25.0,USA,PayPal,Returned,5.0,0,
+10609,2022-06-20,49,Eve Davis,Electronics,Coffee Maker,5,161.85,,USA,Credit Card,Delivered,,1,Wrong item sent
+10610,2022-02-11,301,Carol White,Clothing,Laptop Pro,1,277.38,25.0,India,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+10611,2023-01-06,204,Bob Smith,Sports,Coffee Maker,1,341.57,10.0,Canada,PayPal,Delivered,4.0,0,
+10612,2022-05-07,379,Eve Davis,Electronics,Skincare Set,3,108.86,,Canada,Credit Card,Processing,,0,
+10613,2022-05-20,390,Carol White,Electronics,Laptop Pro,1,462.79,10.0,UK,PayPal,Delivered,5.0,0,Packaging was damaged
+10614,2022-12-28,115,Bob Smith,Clothing,Desk Chair,3,369.88,0.0,USA,Credit Card,Processing,5.0,0,
+10615,2022-05-21,20,Dave Brown,Clothing,Running Shoes,1,31.38,15.0,Germany,PayPal,Delivered,4.0,0,
+10616,2022-08-30,85,Eve Davis,Beauty,Yoga Mat,1,433.23,,France,Credit Card,Delivered,2.0,0,
+10617,2022-04-18,396,Eve Davis,Clothing,Laptop Pro,3,465.29,25.0,USA,Credit Card,Delivered,5.0,0,Wrong item sent
+10618,2022-06-19,253,Alice Johnson,Sports,Running Shoes,2,397.87,15.0,France,Bank Transfer,Cancelled,,0,
+10619,2022-09-28,52,Dave Brown,Toys,LED Lamp,1,215.98,15.0,Germany,Debit Card,Delivered,4.0,0,
+10620,2022-07-27,148,Alice Johnson,Electronics,Bluetooth Speaker,5,497.22,0.0,UK,PayPal,Delivered,5.0,0,
+10621,2022-03-23,186,Alice Johnson,Home & Garden,Skincare Set,1,66.6,5.0,UK,PayPal,Delivered,,1,
+10622,2022-01-06,173,Carol White,Electronics,Python Book,10,270.62,,France,PayPal,Processing,,0,
+10623,2022-04-25,353,Alice Johnson,Electronics,Skincare Set,1,89.34,0.0,Germany,Bank Transfer,Delivered,,1,
+10624,2022-07-14,114,Eve Davis,Sports,Skincare Set,2,222.48,25.0,USA,Debit Card,Delivered,4.0,0,
+10625,2022-05-29,2,Alice Johnson,Electronics,Skincare Set,3,464.08,20.0,UK,Credit Card,Delivered,5.0,0,Wrong item sent
+10626,2022-10-07,34,Bob Smith,Clothing,LED Lamp,10,398.16,15.0,India,Credit Card,Delivered,,1,Wrong item sent
+10627,2022-01-08,282,Eve Davis,Clothing,Python Book,1,392.13,15.0,Germany,Credit Card,Delivered,3.0,0,
+10628,2022-01-24,161,Carol White,Electronics,Python Book,3,180.16,20.0,India,Credit Card,Delivered,3.0,0,
+10629,2022-07-19,170,Alice Johnson,Clothing,Bluetooth Speaker,1,467.46,25.0,Germany,PayPal,Delivered,4.0,0,
+10630,2022-04-05,94,Bob Smith,Clothing,LED Lamp,5,187.29,5.0,UK,Credit Card,Delivered,5.0,0,
+10631,2022-04-13,248,Bob Smith,Clothing,Python Book,3,24.79,10.0,Canada,Credit Card,Cancelled,5.0,0,"Excellent quality, will buy again"
+10632,2023-01-03,321,Eve Davis,Toys,Yoga Mat,5,320.71,,Canada,Credit Card,Delivered,,0,Arrived late
+10633,2022-12-29,366,Alice Johnson,Clothing,Bluetooth Speaker,1,184.51,15.0,Germany,Bank Transfer,Delivered,,0,Great product!
+10634,2022-03-29,8,Bob Smith,Electronics,Yoga Mat,1,81.09,0.0,Germany,Credit Card,Cancelled,1.0,0,
+10635,2022-03-31,321,Alice Johnson,Electronics,Coffee Maker,5,467.66,,Australia,Credit Card,Cancelled,5.0,0,Wrong item sent
+10636,2022-03-04,110,Eve Davis,Home & Garden,Skincare Set,5,320.43,5.0,USA,Credit Card,Delivered,3.0,0,
+10637,2022-03-24,394,Dave Brown,Books,Wireless Headset,1,470.56,25.0,France,Credit Card,Shipped,5.0,0,Packaging was damaged
+10638,2022-01-03,32,Bob Smith,Beauty,LED Lamp,10,293.57,5.0,UK,Bank Transfer,Shipped,1.0,0,Great product!
+10639,2022-09-04,51,Carol White,Home & Garden,Skincare Set,1,36.61,5.0,France,Credit Card,Delivered,4.0,0,
+10640,2022-12-27,168,Alice Johnson,Electronics,Yoga Mat,3,19.82,20.0,Canada,PayPal,Delivered,,0,Wrong item sent
+10641,2022-07-13,66,Eve Davis,Electronics,Running Shoes,5,450.78,0.0,Australia,PayPal,Processing,,0,
+10642,2022-01-25,31,Eve Davis,Books,Bluetooth Speaker,1,24.17,25.0,USA,PayPal,Delivered,,0,"Excellent quality, will buy again"
+10643,2022-09-02,324,Carol White,Home & Garden,Wireless Headset,2,309.51,20.0,USA,PayPal,Delivered,4.0,0,
+10644,2022-11-06,12,Dave Brown,Electronics,Python Book,1,152.5,20.0,Canada,PayPal,Delivered,4.0,0,
+10645,2022-08-02,287,Alice Johnson,Books,Wireless Headset,10,345.39,10.0,Germany,Debit Card,Delivered,3.0,0,Wrong item sent
+10646,2022-10-05,23,Dave Brown,Sports,Yoga Mat,1,145.94,0.0,Canada,Bank Transfer,Processing,,0,Great product!
+10647,2022-12-15,161,Eve Davis,Home & Garden,Skincare Set,3,23.42,,Germany,PayPal,Shipped,5.0,0,
+10648,2022-06-21,264,Bob Smith,Home & Garden,Bluetooth Speaker,1,366.77,25.0,USA,PayPal,Returned,4.0,0,
+10649,2022-12-21,190,Dave Brown,Sports,Yoga Mat,1,158.9,0.0,India,PayPal,Delivered,,0,
+10650,2022-08-06,380,Bob Smith,Electronics,Yoga Mat,10,277.65,5.0,USA,Debit Card,Delivered,3.0,1,Great product!
+10651,2022-07-02,241,Carol White,Electronics,Coffee Maker,1,388.06,10.0,USA,PayPal,Delivered,,0,
+10652,2022-03-20,80,Eve Davis,Electronics,Desk Chair,2,352.9,15.0,USA,PayPal,Delivered,,0,Arrived late
+10653,2022-11-30,271,Bob Smith,Electronics,Desk Chair,1,177.54,,Australia,Credit Card,Shipped,,0,Arrived late
+10654,2022-10-03,104,Alice Johnson,Toys,Python Book,1,375.17,10.0,Germany,Crypto,Delivered,1.0,0,Packaging was damaged
+10655,2022-02-09,78,Eve Davis,Electronics,Desk Chair,10,463.21,20.0,Canada,Debit Card,Processing,,0,Good value for money
+10656,2022-12-05,12,Carol White,Home & Garden,Python Book,1,306.94,25.0,USA,Credit Card,Delivered,4.0,0,
+10657,2022-07-29,283,Alice Johnson,Home & Garden,Python Book,2,353.24,5.0,USA,Credit Card,Delivered,,1,
+10658,2022-02-04,111,Eve Davis,Home & Garden,Coffee Maker,5,433.62,25.0,UK,Bank Transfer,Delivered,5.0,0,"Excellent quality, will buy again"
+10659,2022-04-19,260,Dave Brown,Books,Laptop Pro,2,422.6,5.0,USA,PayPal,Cancelled,,1,Great product!
+10660,2022-04-27,310,Eve Davis,Clothing,Wireless Headset,1,179.04,10.0,UK,Credit Card,Processing,4.0,0,Packaging was damaged
+10661,2022-02-20,351,Alice Johnson,Clothing,Running Shoes,1,495.89,,USA,Credit Card,Delivered,4.0,0,
+10662,2022-01-17,196,Bob Smith,Toys,Skincare Set,1,19.14,,France,Credit Card,Delivered,5.0,0,
+10663,2022-11-20,340,Bob Smith,Electronics,Laptop Pro,1,493.42,,France,Credit Card,Delivered,5.0,0,
+10664,2022-12-14,184,Eve Davis,Electronics,Running Shoes,1,126.77,5.0,UK,PayPal,Processing,3.0,0,
+10665,2022-09-01,146,Eve Davis,Clothing,Skincare Set,2,223.02,5.0,USA,Debit Card,Delivered,4.0,1,
+10666,2022-09-11,175,Carol White,Clothing,Yoga Mat,10,442.43,15.0,USA,PayPal,Shipped,,0,
+10667,2022-10-20,200,Dave Brown,Clothing,Wireless Headset,5,125.94,5.0,Canada,PayPal,Delivered,4.0,0,
+10668,2022-05-30,188,Carol White,Beauty,Python Book,1,116.27,,Germany,PayPal,Delivered,,0,Great product!
+10669,2022-07-20,106,Carol White,Home & Garden,Laptop Pro,2,323.34,5.0,Germany,Credit Card,Delivered,,0,
+10670,2022-04-11,386,Bob Smith,Sports,Coffee Maker,10,354.2,,UK,Credit Card,Delivered,5.0,0,
+10671,2022-12-29,377,Bob Smith,Clothing,Wireless Headset,3,8.7,15.0,USA,Credit Card,Delivered,,0,
+10672,2022-09-06,73,Alice Johnson,Electronics,LED Lamp,10,227.97,15.0,USA,Bank Transfer,Delivered,,0,Packaging was damaged
+10673,2022-10-23,272,Carol White,Home & Garden,Desk Chair,2,247.11,25.0,USA,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+10674,2022-08-20,214,Alice Johnson,Sports,Yoga Mat,3,139.56,25.0,USA,Credit Card,Cancelled,,0,
+10675,2022-10-17,186,Eve Davis,Books,Laptop Pro,2,275.32,0.0,USA,Credit Card,Delivered,,0,
+10676,2022-11-03,140,Alice Johnson,Toys,Wireless Headset,5,81.52,25.0,USA,Bank Transfer,Delivered,4.0,0,
+10677,2022-08-13,389,Bob Smith,Beauty,Python Book,1,165.18,15.0,Canada,Debit Card,Delivered,,0,
+10678,2022-11-27,167,Carol White,Clothing,Running Shoes,1,358.05,15.0,USA,Debit Card,Delivered,1.0,0,
+10679,2022-11-20,143,Bob Smith,Electronics,Bluetooth Speaker,1,437.52,25.0,Canada,Credit Card,Delivered,5.0,0,Arrived late
+10680,2022-08-01,72,Eve Davis,Clothing,Laptop Pro,2,296.74,0.0,USA,Credit Card,Delivered,5.0,1,
+10681,2022-04-21,344,Dave Brown,Beauty,Skincare Set,10,42.05,5.0,Germany,Credit Card,Delivered,5.0,0,Arrived late
+10682,2023-01-08,147,Carol White,Electronics,Bluetooth Speaker,1,340.98,,USA,Debit Card,Delivered,,0,Great product!
+10683,2022-03-13,101,Bob Smith,Books,Bluetooth Speaker,1,449.31,20.0,USA,Credit Card,Delivered,5.0,0,
+10684,2022-04-07,338,Dave Brown,Home & Garden,Yoga Mat,10,254.64,5.0,USA,Bank Transfer,Processing,3.0,0,
+10685,2022-12-30,85,Eve Davis,Electronics,Skincare Set,10,249.38,15.0,India,PayPal,Delivered,4.0,0,
+10686,2022-06-26,305,Dave Brown,Books,LED Lamp,3,495.75,20.0,UK,Debit Card,Delivered,5.0,0,Arrived late
+10687,2022-08-27,379,Bob Smith,Clothing,Running Shoes,3,319.97,20.0,Canada,PayPal,Delivered,5.0,0,Packaging was damaged
+10688,2022-09-16,295,Bob Smith,Sports,Coffee Maker,2,403.98,25.0,India,Bank Transfer,Cancelled,5.0,0,
+10689,2022-08-03,334,Eve Davis,Home & Garden,Python Book,1,325.01,25.0,Germany,Credit Card,Delivered,3.0,1,Good value for money
+10690,2022-11-15,143,Eve Davis,Sports,Bluetooth Speaker,10,114.35,5.0,USA,PayPal,Delivered,3.0,1,
+10691,2022-12-25,379,Dave Brown,Electronics,Bluetooth Speaker,5,145.62,20.0,USA,Credit Card,Delivered,,1,
+10692,2022-09-13,311,Dave Brown,Electronics,Python Book,1,334.52,0.0,France,PayPal,Delivered,5.0,0,
+10693,2022-07-15,369,Bob Smith,Sports,Wireless Headset,1,230.76,20.0,Canada,Bank Transfer,Delivered,,0,
+10694,2022-05-24,195,Eve Davis,Clothing,Laptop Pro,10,205.15,10.0,USA,Credit Card,Processing,,0,
+10695,2022-09-04,184,Alice Johnson,Electronics,Running Shoes,2,16.11,,Germany,PayPal,Delivered,3.0,1,
+10696,2022-05-16,301,Eve Davis,Electronics,Wireless Headset,2,442.76,15.0,UK,PayPal,Delivered,4.0,0,
+10697,2022-02-05,67,Carol White,Clothing,Coffee Maker,1,442.83,5.0,Germany,Bank Transfer,Delivered,5.0,0,
+10698,2022-09-22,222,Carol White,Electronics,Yoga Mat,2,233.18,5.0,Canada,Credit Card,Delivered,,0,
+10699,2022-05-02,262,Eve Davis,Books,Bluetooth Speaker,3,351.87,25.0,UK,PayPal,Delivered,,1,
+10700,2022-01-02,326,Dave Brown,Home & Garden,Python Book,10,93.02,10.0,Germany,Crypto,Delivered,3.0,1,Packaging was damaged
+10701,2022-02-09,22,Carol White,Books,Python Book,1,254.39,5.0,France,Debit Card,Shipped,3.0,0,
+10702,2022-04-29,341,Bob Smith,Toys,Python Book,2,222.24,15.0,UK,Debit Card,Delivered,4.0,0,Packaging was damaged
+10703,2022-08-20,166,Bob Smith,Electronics,Laptop Pro,2,330.02,20.0,USA,Debit Card,Delivered,5.0,0,
+10704,2022-12-14,102,Bob Smith,Clothing,Running Shoes,1,237.47,5.0,UK,PayPal,Delivered,3.0,0,
+10705,2022-10-16,314,Eve Davis,Electronics,Python Book,2,251.72,15.0,USA,PayPal,Processing,5.0,0,Great product!
+10706,2022-01-19,110,Carol White,Sports,Laptop Pro,1,151.38,25.0,USA,Credit Card,Delivered,2.0,0,
+10707,2022-03-08,395,Dave Brown,Toys,Coffee Maker,2,28.97,,UK,PayPal,Processing,,0,
+10708,2022-10-16,342,Bob Smith,Clothing,Desk Chair,2,458.93,15.0,USA,Credit Card,Delivered,2.0,0,
+10709,2022-12-13,316,Dave Brown,Clothing,Bluetooth Speaker,10,11.05,25.0,USA,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+10710,2022-10-19,179,Bob Smith,Electronics,Laptop Pro,2,144.26,10.0,USA,Credit Card,Delivered,4.0,0,Great product!
+10711,2022-02-24,167,Eve Davis,Sports,Skincare Set,1,226.57,,USA,Credit Card,Processing,,0,
+10712,2022-07-12,134,Bob Smith,Home & Garden,Wireless Headset,2,162.95,5.0,USA,Debit Card,Processing,,0,Great product!
+10713,2022-09-08,30,Eve Davis,Toys,Desk Chair,5,278.2,20.0,USA,Credit Card,Delivered,4.0,0,
+10714,2022-06-29,363,Carol White,Electronics,Bluetooth Speaker,1,$481.49,,Canada,Debit Card,Processing,4.0,0,
+10715,2022-04-29,385,Carol White,Clothing,Python Book,1,131.46,10.0,Canada,Debit Card,Delivered,,0,
+10716,2022-10-22,86,Dave Brown,Home & Garden,Running Shoes,1,48.57,0.0,Germany,PayPal,Cancelled,5.0,1,Good value for money
+10717,2023-01-03,9,Bob Smith,Toys,Skincare Set,1,73.08,10.0,USA,PayPal,Delivered,5.0,0,
+10718,2022-10-30,136,Carol White,Clothing,Yoga Mat,1,245.73,25.0,Canada,PayPal,Delivered,3.0,0,
+10719,2022-04-10,290,Alice Johnson,Clothing,Desk Chair,3,423.74,0.0,USA,PayPal,Delivered,4.0,0,
+10720,2022-11-10,136,Alice Johnson,Toys,LED Lamp,1,54.82,15.0,USA,Credit Card,Returned,5.0,0,"Excellent quality, will buy again"
+10721,2022-07-01,140,Dave Brown,Electronics,Bluetooth Speaker,10,340.22,20.0,UK,PayPal,Delivered,5.0,0,
+10722,2022-02-02,43,Carol White,Clothing,Skincare Set,5,397.09,10.0,UK,PayPal,Processing,,0,
+10723,2022-10-15,105,Eve Davis,Clothing,Yoga Mat,5,142.0,20.0,Canada,Credit Card,Delivered,5.0,0,
+10724,2022-05-09,312,Alice Johnson,Electronics,LED Lamp,1,335.78,25.0,UK,Credit Card,Processing,4.0,0,
+10725,2022-03-25,31,Carol White,Clothing,Bluetooth Speaker,1,344.9,15.0,Canada,PayPal,Delivered,,0,
+10726,2022-07-02,170,Eve Davis,Home & Garden,LED Lamp,3,355.36,20.0,India,Bank Transfer,Processing,4.0,0,
+10727,2022-10-05,161,Bob Smith,Clothing,Yoga Mat,1,445.95,20.0,Germany,Crypto,Delivered,,0,
+10728,2022-06-19,275,Carol White,Clothing,LED Lamp,5,202.27,10.0,USA,Debit Card,Delivered,3.0,0,
+10729,2022-12-21,253,Bob Smith,Sports,Bluetooth Speaker,1,125.63,15.0,UK,Debit Card,Delivered,5.0,0,
+10730,2022-11-17,219,Alice Johnson,Beauty,Yoga Mat,5,274.2,20.0,USA,Credit Card,Delivered,5.0,0,
+10731,2022-12-17,113,Bob Smith,Home & Garden,Yoga Mat,10,35.96,0.0,UK,PayPal,Delivered,5.0,0,
+10732,2022-10-13,220,Alice Johnson,Sports,Wireless Headset,2,$369.48,5.0,Canada,Credit Card,Delivered,4.0,0,
+10733,2022-02-13,183,Dave Brown,Toys,Bluetooth Speaker,3,442.2,0.0,USA,Debit Card,Delivered,5.0,0,
+10734,2022-05-02,260,Dave Brown,Sports,LED Lamp,2,268.37,25.0,USA,Credit Card,Delivered,5.0,0,
+10735,2022-12-21,12,Alice Johnson,Beauty,Coffee Maker,2,221.15,20.0,USA,Credit Card,Returned,,0,
+10736,2022-11-22,340,Eve Davis,Home & Garden,Desk Chair,1,136.51,15.0,USA,Debit Card,Shipped,,0,
+10737,2022-10-06,360,Dave Brown,Home & Garden,Running Shoes,1,128.94,0.0,Germany,Bank Transfer,Delivered,,1,"Excellent quality, will buy again"
+10738,2022-01-15,246,Eve Davis,Home & Garden,Bluetooth Speaker,1,$267.63,15.0,USA,PayPal,Delivered,,0,
+10739,2023-01-01,250,Eve Davis,Toys,Desk Chair,2,415.47,25.0,UK,Credit Card,Cancelled,,0,
+10740,2022-08-29,58,Eve Davis,Home & Garden,Skincare Set,1,492.59,,UK,PayPal,Delivered,4.0,0,
+10741,2022-11-12,304,Carol White,Home & Garden,Bluetooth Speaker,2,269.73,15.0,USA,PayPal,Delivered,5.0,0,
+10742,2022-02-06,376,Carol White,Electronics,Skincare Set,1,44.52,20.0,USA,Bank Transfer,Processing,4.0,0,"Excellent quality, will buy again"
+10743,2022-03-28,380,Eve Davis,Toys,LED Lamp,1,376.76,,Australia,Debit Card,Delivered,4.0,0,Wrong item sent
+10744,2022-04-01,1,Alice Johnson,Clothing,Desk Chair,5,439.14,0.0,UK,Credit Card,Cancelled,5.0,0,
+10745,2022-04-15,361,Dave Brown,Electronics,Coffee Maker,2,465.96,25.0,USA,Credit Card,Delivered,5.0,0,
+10746,2022-08-20,203,Bob Smith,Sports,Desk Chair,5,$334.35,,Germany,Debit Card,Delivered,5.0,0,
+10747,2022-05-24,44,Carol White,Clothing,Desk Chair,3,255.91,,USA,Bank Transfer,Delivered,,0,
+10748,2022-06-17,319,Carol White,Electronics,Yoga Mat,2,312.16,15.0,France,Credit Card,Delivered,5.0,0,Arrived late
+10749,2022-02-08,95,Bob Smith,Electronics,LED Lamp,10,11.41,15.0,Canada,PayPal,Processing,5.0,0,
+10750,2022-08-18,294,Eve Davis,Electronics,Skincare Set,1,329.43,10.0,USA,Credit Card,Delivered,,0,
+10751,2022-09-03,9,Bob Smith,Electronics,Laptop Pro,2,356.27,15.0,USA,Credit Card,Delivered,,0,
+10752,2022-11-19,262,Eve Davis,Books,Desk Chair,10,362.41,0.0,USA,Debit Card,Shipped,,0,
+10753,2022-11-01,326,Carol White,Sports,Python Book,1,283.72,,USA,Debit Card,Processing,4.0,0,
+10754,2022-12-24,253,Bob Smith,Clothing,LED Lamp,2,351.52,20.0,USA,Credit Card,Delivered,5.0,0,
+10755,2022-10-09,308,Alice Johnson,Books,Bluetooth Speaker,2,321.22,25.0,USA,Credit Card,Delivered,5.0,1,
+10756,2022-08-16,323,Dave Brown,Sports,Yoga Mat,5,62.19,5.0,USA,Crypto,Delivered,4.0,0,Packaging was damaged
+10757,2022-09-24,96,Dave Brown,Clothing,Python Book,2,449.69,15.0,UK,PayPal,Delivered,5.0,0,
+10758,2022-01-19,355,Dave Brown,Home & Garden,Wireless Headset,1,313.25,5.0,USA,Debit Card,Shipped,4.0,0,Good value for money
+10759,2022-05-19,130,Bob Smith,Clothing,Bluetooth Speaker,1,365.26,,USA,Credit Card,Cancelled,3.0,0,Wrong item sent
+10760,2022-06-08,36,Eve Davis,Home & Garden,Laptop Pro,2,174.73,25.0,UK,PayPal,Delivered,,0,Wrong item sent
+10761,2022-01-11,105,Carol White,Electronics,Coffee Maker,2,460.02,5.0,Canada,PayPal,Delivered,2.0,0,Good value for money
+10762,2022-12-08,199,Dave Brown,Beauty,LED Lamp,1,$88.15,15.0,Australia,Debit Card,Shipped,3.0,0,Wrong item sent
+10763,2022-09-13,291,Bob Smith,Electronics,Python Book,10,341.11,0.0,UK,Credit Card,Delivered,,1,
+10764,2022-02-14,376,Dave Brown,Clothing,Laptop Pro,3,476.33,25.0,USA,PayPal,Delivered,,0,
+10765,2022-03-27,30,Eve Davis,Electronics,Python Book,5,458.46,25.0,UK,Debit Card,Delivered,1.0,0,
+10766,2022-12-17,93,Alice Johnson,Books,Coffee Maker,1,324.18,10.0,India,Debit Card,Processing,,0,
+10767,2022-01-31,236,Alice Johnson,Clothing,Coffee Maker,10,$384.66,25.0,France,PayPal,Processing,5.0,0,Good value for money
+10768,2022-03-22,385,Carol White,Clothing,Laptop Pro,2,475.53,15.0,Germany,PayPal,Delivered,,0,
+10769,2022-04-20,361,Alice Johnson,Electronics,Wireless Headset,5,492.15,15.0,Germany,Credit Card,Shipped,4.0,0,
+10770,2022-06-12,195,Alice Johnson,Electronics,Yoga Mat,2,56.18,10.0,Germany,PayPal,Delivered,3.0,0,Wrong item sent
+10771,2022-10-05,256,Bob Smith,Sports,Desk Chair,1,227.9,10.0,USA,Debit Card,Cancelled,,0,
+10772,2022-05-30,356,Bob Smith,Electronics,Coffee Maker,1,276.39,25.0,UK,Bank Transfer,Cancelled,5.0,0,
+10773,2022-10-03,359,Carol White,Home & Garden,Bluetooth Speaker,1,50.58,,Canada,Credit Card,Processing,5.0,0,
+10774,2022-01-06,31,Carol White,Clothing,Skincare Set,2,98.89,10.0,USA,Bank Transfer,Shipped,5.0,0,
+10775,2022-06-29,25,Bob Smith,Electronics,Coffee Maker,1,271.16,10.0,Australia,Credit Card,Delivered,5.0,0,
+10776,2022-02-03,303,Alice Johnson,Electronics,Bluetooth Speaker,1,481.73,15.0,USA,Credit Card,Delivered,5.0,0,
+10777,2022-04-30,1,Eve Davis,Toys,Laptop Pro,2,18.77,5.0,USA,Credit Card,Delivered,,0,
+10778,2022-07-31,358,Alice Johnson,Books,Running Shoes,5,456.66,0.0,USA,Crypto,Delivered,,0,"Excellent quality, will buy again"
+10779,2022-07-06,118,Alice Johnson,Electronics,Wireless Headset,2,449.81,15.0,USA,PayPal,Delivered,,0,"Excellent quality, will buy again"
+10780,2022-05-26,165,Eve Davis,Home & Garden,Skincare Set,1,429.3,20.0,UK,Credit Card,Shipped,4.0,0,
+10781,2023-01-10,113,Carol White,Sports,Bluetooth Speaker,1,191.89,25.0,USA,Credit Card,Delivered,5.0,0,Great product!
+10782,2022-02-23,195,Bob Smith,Clothing,Wireless Headset,2,247.96,15.0,Germany,Bank Transfer,Processing,,0,
+10783,2022-03-27,140,Carol White,Books,Yoga Mat,1,204.78,25.0,USA,Bank Transfer,Delivered,5.0,0,
+10784,2023-01-09,20,Carol White,Electronics,Wireless Headset,3,474.06,15.0,UK,Credit Card,Cancelled,5.0,0,Packaging was damaged
+10785,2022-02-25,286,Carol White,Electronics,Running Shoes,1,263.07,,UK,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+10786,2022-08-13,231,Bob Smith,Clothing,Laptop Pro,2,44.9,,Australia,Debit Card,Processing,4.0,0,"Excellent quality, will buy again"
+10787,2022-07-09,79,Carol White,Home & Garden,Yoga Mat,10,140.66,10.0,France,Bank Transfer,Returned,5.0,0,
+10788,2022-05-16,128,Carol White,Clothing,Wireless Headset,2,233.71,25.0,USA,Debit Card,Shipped,4.0,1,
+10789,2022-04-30,85,Dave Brown,Clothing,Running Shoes,1,477.01,20.0,UK,Bank Transfer,Delivered,3.0,1,
+10790,2022-11-21,64,Alice Johnson,Clothing,Yoga Mat,1,286.63,5.0,India,PayPal,Shipped,3.0,0,
+10791,2022-10-11,274,Dave Brown,Clothing,Yoga Mat,2,349.56,0.0,USA,Debit Card,Processing,2.0,0,
+10792,2022-05-25,288,Bob Smith,Clothing,Python Book,1,48.82,20.0,USA,Bank Transfer,Processing,4.0,0,
+10793,2022-09-19,253,Eve Davis,Books,Laptop Pro,1,439.28,20.0,Canada,Bank Transfer,Delivered,,0,
+10794,2022-06-04,94,Eve Davis,Electronics,Skincare Set,2,271.81,5.0,UK,PayPal,Delivered,5.0,0,Packaging was damaged
+10795,2022-03-16,289,Dave Brown,Sports,Wireless Headset,2,461.01,20.0,Australia,Debit Card,Delivered,4.0,0,
+10796,2022-02-14,150,Dave Brown,Electronics,Yoga Mat,2,225.51,15.0,UK,Debit Card,Delivered,4.0,0,
+10797,2022-10-11,365,Dave Brown,Books,Skincare Set,2,343.13,15.0,UK,Debit Card,Shipped,4.0,0,Great product!
+10798,2022-08-23,157,Alice Johnson,Clothing,Wireless Headset,2,$482.57,10.0,Australia,Credit Card,Delivered,3.0,0,Wrong item sent
+10799,2022-03-15,216,Bob Smith,Home & Garden,Yoga Mat,10,75.57,5.0,USA,Credit Card,Delivered,5.0,0,Great product!
+10800,2022-08-17,260,Carol White,Sports,Laptop Pro,2,139.66,15.0,UK,PayPal,Delivered,,0,
+10801,2022-04-01,100,Dave Brown,Electronics,Yoga Mat,1,38.29,20.0,France,Debit Card,Delivered,5.0,0,
+10802,2022-12-23,122,Alice Johnson,Home & Garden,LED Lamp,1,222.93,20.0,UK,Credit Card,Delivered,,1,Good value for money
+10803,2022-04-02,132,Eve Davis,Electronics,LED Lamp,1,326.42,15.0,USA,PayPal,Delivered,,0,
+10804,2022-02-24,5,Eve Davis,Electronics,Skincare Set,3,125.64,5.0,UK,Credit Card,Returned,,0,
+10805,2022-03-30,233,Eve Davis,Toys,Python Book,2,247.74,5.0,USA,Debit Card,Delivered,,0,
+10806,2022-10-20,167,Dave Brown,Electronics,Python Book,1,$122.1,0.0,India,Credit Card,Delivered,3.0,0,
+10807,2022-07-19,57,Eve Davis,Electronics,Coffee Maker,2,269.04,5.0,USA,Debit Card,Delivered,4.0,0,
+10808,2022-12-05,31,Eve Davis,Electronics,LED Lamp,3,96.37,,Germany,PayPal,Delivered,5.0,0,Great product!
+10809,2022-06-01,7,Eve Davis,Clothing,Python Book,2,269.32,,USA,Bank Transfer,Processing,,0,Wrong item sent
+10810,2023-01-02,12,Carol White,Toys,Bluetooth Speaker,2,185.28,,Canada,Bank Transfer,Shipped,4.0,0,
+10811,2022-05-27,10,Eve Davis,Electronics,Running Shoes,10,146.59,15.0,USA,Debit Card,Shipped,4.0,0,
+10812,2022-11-06,157,Alice Johnson,Books,Bluetooth Speaker,3,295.06,,Australia,PayPal,Delivered,,0,Great product!
+10813,2022-07-09,213,Dave Brown,Clothing,Wireless Headset,10,78.28,20.0,UK,Credit Card,Processing,5.0,0,
+10814,2022-12-25,141,Carol White,Clothing,Yoga Mat,3,450.83,15.0,France,Credit Card,Delivered,5.0,0,
+10815,2022-07-23,127,Carol White,Books,Coffee Maker,1,467.75,10.0,Canada,Credit Card,Delivered,4.0,0,
+10816,2022-12-09,198,Dave Brown,Books,Coffee Maker,2,332.0,10.0,USA,Debit Card,Returned,5.0,0,
+10817,2022-07-16,137,Eve Davis,Clothing,Yoga Mat,3,155.06,5.0,USA,PayPal,Shipped,1.0,0,
+10818,2022-03-26,179,Eve Davis,Sports,Desk Chair,1,314.87,0.0,USA,PayPal,Delivered,,0,
+10819,2022-01-16,88,Bob Smith,Electronics,Skincare Set,1,302.75,0.0,USA,PayPal,Delivered,3.0,0,
+10820,2022-11-06,267,Eve Davis,Electronics,Python Book,1,198.67,20.0,USA,Debit Card,Delivered,4.0,0,Packaging was damaged
+10821,2022-11-15,164,Alice Johnson,Beauty,Python Book,3,147.19,5.0,USA,Credit Card,Delivered,5.0,0,Arrived late
+10822,2022-06-02,249,Eve Davis,Home & Garden,Bluetooth Speaker,1,88.38,0.0,UK,PayPal,Cancelled,3.0,0,Wrong item sent
+10823,2022-05-11,1,Dave Brown,Sports,Python Book,10,112.61,15.0,India,PayPal,Delivered,3.0,1,
+10824,2022-11-03,277,Eve Davis,Books,LED Lamp,1,328.25,20.0,Canada,PayPal,Shipped,4.0,0,
+10825,2022-11-24,172,Dave Brown,Clothing,Desk Chair,5,443.52,0.0,USA,PayPal,Returned,5.0,0,"Excellent quality, will buy again"
+10826,2022-07-26,356,Carol White,Books,Laptop Pro,2,195.55,10.0,Canada,Credit Card,Processing,4.0,0,
+10827,2022-03-04,262,Bob Smith,Electronics,Python Book,5,65.34,10.0,UK,PayPal,Cancelled,5.0,0,Packaging was damaged
+10828,2022-05-29,142,Carol White,Home & Garden,Wireless Headset,5,11.34,0.0,Canada,PayPal,Delivered,4.0,0,
+10829,2022-01-22,93,Dave Brown,Books,Desk Chair,1,205.92,25.0,Canada,Debit Card,Delivered,,0,
+10830,2022-05-31,129,Bob Smith,Beauty,Coffee Maker,1,120.12,25.0,USA,Debit Card,Delivered,,0,
+10831,2022-05-15,136,Carol White,Books,Wireless Headset,3,164.67,10.0,Australia,Credit Card,Processing,,0,
+10832,2022-01-29,111,Eve Davis,Electronics,Skincare Set,10,124.63,15.0,UK,PayPal,Processing,5.0,0,Packaging was damaged
+10833,2022-02-26,44,Eve Davis,Clothing,Desk Chair,10,333.75,20.0,Canada,PayPal,Processing,4.0,0,
+10834,2022-11-12,379,Bob Smith,Electronics,Skincare Set,10,321.06,15.0,USA,PayPal,Delivered,4.0,0,
+10835,2022-07-25,211,Carol White,Home & Garden,Bluetooth Speaker,10,456.59,,USA,PayPal,Shipped,2.0,0,Great product!
+10836,2022-01-03,343,Alice Johnson,Clothing,Python Book,2,351.37,0.0,Canada,Credit Card,Shipped,5.0,0,
+10837,2022-10-24,359,Alice Johnson,Clothing,Coffee Maker,2,86.65,0.0,Australia,Credit Card,Processing,,0,
+10838,2022-03-31,361,Alice Johnson,Beauty,Running Shoes,1,377.04,20.0,UK,PayPal,Shipped,5.0,0,"Excellent quality, will buy again"
+10839,2022-08-21,331,Carol White,Toys,Skincare Set,2,94.73,10.0,USA,Debit Card,Delivered,,0,Wrong item sent
+10840,2022-11-09,247,Carol White,Beauty,Coffee Maker,2,281.51,10.0,Canada,Credit Card,Delivered,4.0,0,
+10841,2022-05-22,232,Carol White,Electronics,Bluetooth Speaker,10,43.15,,USA,PayPal,Shipped,,0,
+10842,2022-07-17,292,Dave Brown,Home & Garden,Skincare Set,3,28.43,5.0,USA,Crypto,Cancelled,,0,
+10843,2022-08-01,170,Alice Johnson,Toys,Python Book,1,234.79,0.0,Australia,Debit Card,Delivered,,0,Packaging was damaged
+10844,2022-07-16,234,Alice Johnson,Books,Skincare Set,1,56.97,10.0,Germany,PayPal,Delivered,2.0,0,
+10845,2022-12-04,8,Alice Johnson,Electronics,Laptop Pro,2,156.8,20.0,UK,Credit Card,Processing,,0,Good value for money
+10846,2022-11-16,302,Dave Brown,Sports,Wireless Headset,2,172.72,25.0,USA,Credit Card,Delivered,,0,
+10847,2022-01-04,100,Dave Brown,Sports,Running Shoes,1,385.87,,USA,Credit Card,Delivered,4.0,0,Wrong item sent
+10848,2022-06-13,253,Carol White,Home & Garden,Coffee Maker,1,169.68,10.0,USA,Bank Transfer,Delivered,5.0,0,
+10849,2022-10-01,308,Alice Johnson,Electronics,Coffee Maker,1,249.68,0.0,UK,PayPal,Delivered,,0,
+10850,2022-04-25,282,Alice Johnson,Electronics,Skincare Set,3,387.43,25.0,USA,Debit Card,Delivered,4.0,0,
+10851,2022-08-15,291,Eve Davis,Books,Bluetooth Speaker,2,106.42,5.0,USA,Bank Transfer,Delivered,4.0,0,Great product!
+10852,2022-03-03,188,Eve Davis,Clothing,Desk Chair,2,403.42,15.0,UK,PayPal,Shipped,,0,
+10853,2022-05-27,387,Eve Davis,Home & Garden,Bluetooth Speaker,1,416.74,20.0,Canada,Credit Card,Returned,5.0,1,Wrong item sent
+10854,2022-12-29,123,Dave Brown,Electronics,Yoga Mat,3,494.48,0.0,Germany,PayPal,Delivered,3.0,0,
+10855,2022-04-30,132,Carol White,Electronics,Skincare Set,2,224.8,15.0,USA,Debit Card,Delivered,,1,
+10856,2022-11-21,236,Bob Smith,Clothing,LED Lamp,2,$465.22,0.0,USA,Credit Card,Delivered,5.0,0,Arrived late
+10857,2022-08-05,221,Alice Johnson,Electronics,Python Book,5,352.49,20.0,USA,Bank Transfer,Delivered,5.0,0,
+10858,2022-10-31,62,Eve Davis,Books,Skincare Set,1,33.78,,UK,Crypto,Delivered,5.0,0,Great product!
+10859,2022-01-31,320,Alice Johnson,Clothing,Yoga Mat,1,24.68,15.0,UK,PayPal,Delivered,3.0,0,Wrong item sent
+10860,2022-03-27,178,Alice Johnson,Home & Garden,LED Lamp,2,170.82,,USA,PayPal,Delivered,5.0,1,
+10861,2022-11-10,220,Alice Johnson,Home & Garden,Laptop Pro,1,366.11,5.0,Germany,PayPal,Shipped,5.0,0,Arrived late
+10862,2022-07-17,171,Carol White,Electronics,Coffee Maker,1,62.64,10.0,Canada,PayPal,Delivered,,0,Wrong item sent
+10863,2022-01-29,82,Alice Johnson,Toys,Running Shoes,1,$491.37,20.0,France,Credit Card,Delivered,5.0,0,
+10864,2023-01-02,14,Carol White,Sports,Bluetooth Speaker,2,138.41,25.0,USA,Credit Card,Cancelled,5.0,0,
+10865,2022-05-13,270,Bob Smith,Books,Bluetooth Speaker,5,327.58,5.0,UK,Credit Card,Delivered,5.0,0,
+10866,2022-06-24,54,Bob Smith,Toys,Running Shoes,1,231.2,15.0,Canada,Credit Card,Shipped,5.0,0,
+10867,2022-03-21,131,Dave Brown,Electronics,Desk Chair,1,62.0,0.0,USA,Credit Card,Delivered,,0,Arrived late
+10868,2022-03-03,98,Alice Johnson,Clothing,Wireless Headset,10,127.4,20.0,Australia,Bank Transfer,Delivered,4.0,0,
+10869,2022-02-10,201,Eve Davis,Electronics,Coffee Maker,5,$332.71,5.0,Germany,PayPal,Delivered,5.0,1,
+10870,2022-07-16,360,Dave Brown,Clothing,Python Book,1,86.47,25.0,USA,Credit Card,Delivered,3.0,0,
+10871,2022-12-19,261,Dave Brown,Clothing,Skincare Set,1,$22.54,10.0,Canada,Debit Card,Shipped,,0,"Excellent quality, will buy again"
+10872,2022-07-17,221,Bob Smith,Books,LED Lamp,2,477.56,,USA,PayPal,Shipped,5.0,0,
+10873,2022-04-06,5,Eve Davis,Electronics,Python Book,5,330.75,0.0,France,Credit Card,Returned,5.0,0,Good value for money
+10874,2022-05-01,117,Alice Johnson,Electronics,Running Shoes,3,418.82,5.0,USA,Bank Transfer,Processing,3.0,0,Arrived late
+10875,2022-04-29,301,Alice Johnson,Clothing,Bluetooth Speaker,2,490.63,20.0,Australia,Credit Card,Delivered,4.0,0,
+10876,2022-10-18,192,Bob Smith,Electronics,LED Lamp,1,272.61,0.0,France,Credit Card,Delivered,5.0,0,
+10877,2022-03-04,116,Carol White,Home & Garden,Skincare Set,2,122.84,5.0,UK,Credit Card,Delivered,,0,
+10878,2022-08-29,236,Bob Smith,Home & Garden,LED Lamp,2,464.27,,Canada,Bank Transfer,Processing,3.0,0,
+10879,2022-11-13,51,Eve Davis,Clothing,LED Lamp,2,351.0,25.0,USA,Debit Card,Delivered,2.0,0,Great product!
+10880,2022-07-03,13,Carol White,Electronics,Desk Chair,10,479.68,20.0,USA,Bank Transfer,Delivered,,0,
+10881,2022-07-10,218,Eve Davis,Electronics,LED Lamp,5,327.26,10.0,USA,Bank Transfer,Shipped,3.0,0,
+10882,2022-04-16,329,Alice Johnson,Home & Garden,Laptop Pro,10,388.7,,UK,Credit Card,Processing,,1,
+10883,2022-06-23,68,Carol White,Beauty,Python Book,2,445.86,25.0,USA,Debit Card,Delivered,,0,Good value for money
+10884,2022-04-24,231,Eve Davis,Clothing,Desk Chair,3,380.83,5.0,USA,PayPal,Delivered,4.0,0,
+10885,2022-07-30,325,Alice Johnson,Sports,Skincare Set,5,283.51,25.0,USA,Crypto,Shipped,,0,
+10886,2022-11-11,391,Eve Davis,Sports,Yoga Mat,1,238.6,25.0,France,Debit Card,Cancelled,,1,Packaging was damaged
+10887,2022-11-25,92,Carol White,Electronics,Running Shoes,2,412.57,25.0,UK,Debit Card,Delivered,5.0,0,
+10888,2022-11-25,104,Alice Johnson,Toys,Running Shoes,2,387.13,20.0,Germany,Debit Card,Cancelled,4.0,0,Arrived late
+10889,2022-04-03,78,Eve Davis,Clothing,Python Book,1,186.38,5.0,France,PayPal,Delivered,3.0,0,
+10890,2022-04-01,102,Dave Brown,Beauty,Desk Chair,2,251.67,20.0,USA,PayPal,Cancelled,,0,
+10891,2022-07-06,261,Carol White,Books,Yoga Mat,1,319.32,,Germany,Bank Transfer,Processing,5.0,0,Packaging was damaged
+10892,2022-11-13,304,Carol White,Electronics,Laptop Pro,3,19.04,5.0,Canada,Bank Transfer,Cancelled,,0,
+10893,2022-07-12,379,Carol White,Beauty,Desk Chair,1,127.55,,UK,PayPal,Delivered,4.0,0,
+10894,2022-02-22,226,Alice Johnson,Electronics,Python Book,1,128.86,25.0,USA,Credit Card,Delivered,3.0,0,
+10895,2022-09-01,348,Carol White,Toys,Bluetooth Speaker,2,442.2,,UK,PayPal,Delivered,,0,
+10896,2022-12-07,175,Eve Davis,Electronics,Skincare Set,2,169.09,0.0,USA,Debit Card,Delivered,3.0,0,
+10897,2022-09-24,392,Dave Brown,Home & Garden,Yoga Mat,1,274.85,25.0,Germany,Credit Card,Delivered,3.0,0,
+10898,2022-02-25,88,Eve Davis,Clothing,Coffee Maker,1,416.64,20.0,Australia,PayPal,Delivered,5.0,0,
+10899,2022-08-24,118,Eve Davis,Beauty,Wireless Headset,10,133.55,10.0,UK,Credit Card,Delivered,5.0,0,
+10900,2022-06-30,280,Carol White,Electronics,Wireless Headset,1,66.26,10.0,USA,PayPal,Delivered,4.0,0,
+10901,2022-04-26,141,Dave Brown,Clothing,Yoga Mat,2,474.44,20.0,UK,Bank Transfer,Delivered,5.0,0,Packaging was damaged
+10902,2022-10-11,113,Dave Brown,Books,Bluetooth Speaker,1,353.82,0.0,USA,Credit Card,Cancelled,4.0,0,
+10903,2022-08-12,399,Dave Brown,Beauty,Bluetooth Speaker,2,92.64,25.0,USA,Crypto,Cancelled,3.0,0,
+10904,2022-11-20,249,Dave Brown,Clothing,Laptop Pro,10,410.76,15.0,Australia,Credit Card,Returned,4.0,1,
+10905,2023-01-03,366,Bob Smith,Clothing,Skincare Set,3,394.63,15.0,USA,Credit Card,Processing,5.0,0,
+10906,2022-02-08,89,Dave Brown,Clothing,Skincare Set,3,419.58,0.0,UK,Credit Card,Cancelled,3.0,0,
+10907,2022-01-16,365,Carol White,Electronics,Desk Chair,10,141.73,10.0,Canada,Debit Card,Processing,4.0,0,
+10908,2022-05-16,309,Dave Brown,Sports,Wireless Headset,1,227.05,20.0,France,Credit Card,Cancelled,3.0,0,
+10909,2022-03-22,220,Eve Davis,Electronics,Desk Chair,2,348.37,5.0,USA,Debit Card,Delivered,5.0,0,
+10910,2022-05-06,51,Bob Smith,Home & Garden,Python Book,1,198.38,20.0,France,PayPal,Cancelled,,0,Good value for money
+10911,2022-12-23,175,Eve Davis,Books,LED Lamp,3,39.64,20.0,USA,Debit Card,Delivered,,0,
+10912,2022-07-11,209,Carol White,Electronics,Yoga Mat,2,72.54,,Australia,Debit Card,Delivered,5.0,0,
+10913,2022-06-06,117,Carol White,Clothing,Skincare Set,2,300.57,20.0,USA,Credit Card,Delivered,4.0,0,
+10914,2022-04-08,313,Dave Brown,Sports,Desk Chair,2,190.71,15.0,USA,Credit Card,Delivered,3.0,0,Great product!
+10915,2022-08-28,371,Carol White,Clothing,Yoga Mat,1,7.66,,USA,Credit Card,Processing,5.0,0,Great product!
+10916,2022-03-05,313,Bob Smith,Electronics,Bluetooth Speaker,2,384.59,20.0,India,Credit Card,Delivered,4.0,0,
+10917,2022-04-12,291,Eve Davis,Electronics,Desk Chair,1,211.27,0.0,USA,Credit Card,Processing,4.0,0,
+10918,2022-05-30,86,Carol White,Home & Garden,Desk Chair,10,160.32,20.0,UK,PayPal,Delivered,2.0,0,
+10919,2022-11-04,135,Carol White,Clothing,Bluetooth Speaker,1,358.19,25.0,UK,Credit Card,Delivered,4.0,0,
+10920,2022-06-05,309,Bob Smith,Toys,Yoga Mat,1,230.28,25.0,USA,Credit Card,Delivered,5.0,0,Great product!
+10921,2022-06-01,266,Alice Johnson,Books,Yoga Mat,1,348.94,0.0,USA,Bank Transfer,Delivered,4.0,0,
+10922,2022-01-16,220,Alice Johnson,Clothing,Bluetooth Speaker,5,11.53,15.0,UK,Debit Card,Delivered,,0,
+10923,2022-04-14,295,Bob Smith,Books,Desk Chair,1,9.66,20.0,USA,PayPal,Delivered,5.0,0,
+10924,2022-11-11,186,Carol White,Clothing,Bluetooth Speaker,1,282.15,15.0,Germany,PayPal,Delivered,,0,
+10925,2022-02-25,163,Bob Smith,Toys,Running Shoes,1,491.19,0.0,USA,PayPal,Shipped,,0,
+10926,2022-12-03,127,Bob Smith,Clothing,Skincare Set,3,139.82,15.0,USA,PayPal,Delivered,,0,Great product!
+10927,2022-06-14,315,Alice Johnson,Electronics,Running Shoes,1,343.03,,USA,Bank Transfer,Delivered,3.0,0,
+10928,2022-03-20,117,Dave Brown,Books,Python Book,1,90.27,,Canada,Credit Card,Delivered,5.0,0,Arrived late
+10929,2022-02-11,137,Carol White,Books,Bluetooth Speaker,10,159.22,0.0,Germany,Credit Card,Delivered,4.0,0,Good value for money
+10930,2022-08-09,256,Eve Davis,Home & Garden,Desk Chair,1,43.65,15.0,USA,Credit Card,Delivered,4.0,0,Arrived late
+10931,2022-12-28,356,Bob Smith,Toys,LED Lamp,1,440.99,20.0,UK,Credit Card,Shipped,1.0,0,
+10932,2022-02-06,264,Alice Johnson,Clothing,Yoga Mat,1,158.67,15.0,USA,Credit Card,Delivered,5.0,0,
+10933,2023-01-09,222,Dave Brown,Clothing,Yoga Mat,2,119.08,5.0,France,Credit Card,Cancelled,5.0,1,
+10934,2022-09-21,376,Carol White,Clothing,LED Lamp,1,366.65,0.0,Australia,PayPal,Delivered,5.0,0,
+10935,2022-07-30,314,Bob Smith,Toys,Wireless Headset,2,$376.33,15.0,Canada,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+10936,2022-11-02,383,Alice Johnson,Beauty,Coffee Maker,1,123.94,25.0,UK,Credit Card,Shipped,,0,
+10937,2022-05-07,351,Bob Smith,Beauty,Skincare Set,3,56.29,10.0,Germany,Credit Card,Delivered,3.0,0,
+10938,2022-07-29,150,Eve Davis,Electronics,Running Shoes,1,481.62,25.0,UK,Credit Card,Delivered,,0,
+10939,2022-02-03,236,Carol White,Clothing,LED Lamp,10,127.58,5.0,USA,Debit Card,Shipped,5.0,0,
+10940,2022-07-18,351,Carol White,Electronics,Running Shoes,1,497.85,0.0,Canada,PayPal,Cancelled,5.0,1,
+10941,2022-01-23,168,Carol White,Clothing,Python Book,3,92.19,5.0,UK,Credit Card,Shipped,3.0,0,
+10942,2022-05-14,69,Carol White,Electronics,Desk Chair,5,15.22,20.0,USA,Credit Card,Delivered,1.0,0,Arrived late
+10943,2022-04-07,209,Alice Johnson,Electronics,Desk Chair,1,448.37,10.0,USA,PayPal,Processing,4.0,0,Good value for money
+10944,2022-01-06,52,Eve Davis,Clothing,Yoga Mat,2,292.11,20.0,USA,Credit Card,Delivered,,1,
+10945,2022-11-23,267,Bob Smith,Clothing,Yoga Mat,5,178.95,25.0,Germany,Credit Card,Shipped,5.0,0,
+10946,2022-07-19,150,Alice Johnson,Electronics,Wireless Headset,1,259.1,,UK,Credit Card,Delivered,3.0,0,
+10947,2022-04-20,303,Dave Brown,Electronics,Wireless Headset,3,134.06,15.0,USA,PayPal,Cancelled,5.0,0,
+10948,2022-08-17,345,Carol White,Home & Garden,Running Shoes,1,319.21,5.0,France,Credit Card,Delivered,5.0,0,
+10949,2022-10-04,13,Carol White,Electronics,Running Shoes,2,310.15,,Canada,Credit Card,Delivered,3.0,0,
+10950,2022-07-14,382,Bob Smith,Home & Garden,Python Book,2,44.7,15.0,Germany,Crypto,Delivered,5.0,1,
+10951,2022-09-14,100,Carol White,Clothing,Python Book,10,455.79,10.0,Australia,Bank Transfer,Delivered,5.0,0,Good value for money
+10952,2022-08-25,374,Carol White,Sports,Python Book,5,232.96,25.0,USA,PayPal,Delivered,,0,
+10953,2022-08-26,173,Bob Smith,Electronics,Desk Chair,3,101.6,20.0,UK,Debit Card,Delivered,,0,Packaging was damaged
+10954,2022-11-04,237,Eve Davis,Electronics,Desk Chair,1,157.16,5.0,Germany,PayPal,Processing,,0,Arrived late
+10955,2022-12-01,75,Alice Johnson,Home & Garden,Running Shoes,1,433.78,20.0,UK,Credit Card,Processing,,0,
+10956,2022-08-30,325,Eve Davis,Toys,Laptop Pro,2,194.68,,UK,PayPal,Shipped,,0,
+10957,2022-12-27,377,Bob Smith,Electronics,Bluetooth Speaker,1,283.17,15.0,Australia,Credit Card,Delivered,3.0,0,
+10958,2022-09-13,250,Carol White,Electronics,Wireless Headset,3,474.11,20.0,USA,PayPal,Delivered,4.0,0,
+10959,2022-04-23,78,Carol White,Toys,Running Shoes,10,327.6,,Canada,Credit Card,Delivered,4.0,0,Wrong item sent
+10960,2022-08-10,278,Eve Davis,Electronics,Wireless Headset,3,339.48,,India,Credit Card,Delivered,3.0,0,
+10961,2022-05-23,242,Dave Brown,Electronics,Yoga Mat,3,128.04,0.0,USA,Debit Card,Cancelled,4.0,0,
+10962,2022-09-18,314,Alice Johnson,Toys,Yoga Mat,2,335.81,15.0,UK,Debit Card,Delivered,,0,"Excellent quality, will buy again"
+10963,2022-01-17,216,Carol White,Sports,Laptop Pro,10,$203.15,25.0,India,Bank Transfer,Shipped,2.0,0,Packaging was damaged
+10964,2022-10-24,220,Bob Smith,Clothing,Python Book,1,455.97,0.0,USA,Bank Transfer,Cancelled,5.0,0,
+10965,2022-12-19,21,Eve Davis,Beauty,Desk Chair,10,69.12,0.0,Canada,Bank Transfer,Delivered,5.0,0,
+10966,2022-10-31,305,Alice Johnson,Books,Coffee Maker,1,146.39,25.0,USA,Credit Card,Delivered,5.0,0,
+10967,2022-07-05,353,Dave Brown,Electronics,Yoga Mat,10,37.67,10.0,Germany,PayPal,Processing,5.0,0,Wrong item sent
+10968,2022-01-13,92,Carol White,Home & Garden,Coffee Maker,3,193.55,10.0,USA,Debit Card,Delivered,4.0,0,Good value for money
+10969,2022-04-05,295,Eve Davis,Books,Running Shoes,2,78.44,,USA,Credit Card,Delivered,,0,
+10970,2022-02-03,100,Carol White,Books,Running Shoes,1,423.35,25.0,UK,Crypto,Delivered,5.0,0,Good value for money
+10971,2022-03-11,266,Eve Davis,Beauty,Running Shoes,10,462.9,15.0,USA,Credit Card,Delivered,,0,
+10972,2022-05-20,168,Dave Brown,Electronics,Yoga Mat,2,336.37,15.0,USA,PayPal,Shipped,4.0,0,
+10973,2022-06-11,58,Bob Smith,Home & Garden,Python Book,5,$140.58,10.0,USA,Debit Card,Delivered,3.0,0,
+10974,2022-02-21,89,Bob Smith,Clothing,Python Book,2,$279.09,10.0,Australia,Credit Card,Delivered,4.0,0,
+10975,2022-08-24,173,Alice Johnson,Electronics,Running Shoes,2,482.42,0.0,USA,PayPal,Processing,,0,"Excellent quality, will buy again"
+10976,2022-11-22,145,Carol White,Home & Garden,Python Book,5,72.47,10.0,France,Debit Card,Delivered,,0,
+10977,2022-04-20,121,Carol White,Home & Garden,LED Lamp,1,280.46,20.0,USA,PayPal,Processing,4.0,0,Great product!
+10978,2022-10-06,245,Carol White,Sports,Running Shoes,1,179.7,15.0,Canada,Credit Card,Cancelled,4.0,0,Arrived late
+10979,2022-01-31,324,Bob Smith,Sports,Desk Chair,1,499.59,5.0,Germany,Bank Transfer,Delivered,5.0,0,Packaging was damaged
+10980,2022-09-05,266,Alice Johnson,Books,Running Shoes,3,146.27,0.0,USA,PayPal,Delivered,5.0,0,
+10981,2022-11-16,373,Bob Smith,Clothing,Yoga Mat,1,28.65,,UK,Credit Card,Delivered,1.0,0,Arrived late
+10982,2022-05-18,62,Eve Davis,Books,Laptop Pro,1,352.58,10.0,USA,Debit Card,Delivered,4.0,0,
+10983,2022-03-29,89,Carol White,Clothing,Desk Chair,3,166.74,,Australia,PayPal,Delivered,,0,
+10984,2022-07-06,72,Eve Davis,Electronics,Yoga Mat,3,330.5,10.0,UK,Credit Card,Shipped,5.0,0,Good value for money
+10985,2022-11-03,170,Dave Brown,Books,Bluetooth Speaker,10,56.8,25.0,USA,Credit Card,Cancelled,1.0,0,
+10986,2022-09-28,173,Eve Davis,Home & Garden,Running Shoes,10,263.92,20.0,Canada,Credit Card,Processing,3.0,0,
+10987,2022-05-07,76,Eve Davis,Books,Wireless Headset,2,190.74,25.0,France,Credit Card,Processing,4.0,0,Great product!
+10988,2022-05-12,365,Eve Davis,Beauty,Running Shoes,3,270.7,,Germany,Credit Card,Processing,,1,Great product!
+10989,2022-04-03,384,Bob Smith,Electronics,Running Shoes,10,427.47,5.0,USA,Credit Card,Delivered,4.0,0,Wrong item sent
+10990,2022-09-22,158,Eve Davis,Clothing,Wireless Headset,1,486.51,25.0,UK,PayPal,Delivered,,0,Good value for money
+10991,2022-06-13,330,Carol White,Home & Garden,Python Book,10,377.8,10.0,Germany,Bank Transfer,Processing,3.0,0,
+10992,2022-11-02,213,Alice Johnson,Books,LED Lamp,2,384.59,20.0,Germany,Bank Transfer,Delivered,,0,
+10993,2022-09-09,385,Dave Brown,Electronics,Skincare Set,10,266.82,20.0,USA,Debit Card,Shipped,4.0,0,Good value for money
+10994,2022-01-28,9,Carol White,Clothing,Desk Chair,1,53.21,5.0,USA,PayPal,Delivered,4.0,0,
+10995,2022-08-26,3,Alice Johnson,Electronics,Bluetooth Speaker,2,335.19,25.0,France,Bank Transfer,Delivered,4.0,0,
+10996,2022-03-30,369,Carol White,Sports,LED Lamp,3,78.15,25.0,USA,Credit Card,Processing,,0,
+10997,2022-07-20,309,Eve Davis,Sports,Skincare Set,1,126.6,20.0,UK,Credit Card,Delivered,,0,Packaging was damaged
+10998,2022-10-01,170,Dave Brown,Electronics,Yoga Mat,5,355.25,10.0,Canada,PayPal,Delivered,5.0,0,Arrived late
+10999,2022-03-23,147,Carol White,Electronics,Running Shoes,1,330.21,5.0,India,Debit Card,Shipped,5.0,0,
+11000,2022-10-02,6,Dave Brown,Electronics,Desk Chair,1,160.59,25.0,USA,PayPal,Delivered,4.0,0,
+11001,2022-03-20,391,Bob Smith,Electronics,Python Book,5,387.16,,UK,Debit Card,Delivered,4.0,0,Good value for money
+11002,2022-04-23,171,Bob Smith,Electronics,LED Lamp,1,$462.47,0.0,UK,Credit Card,Processing,1.0,0,
+11003,2022-10-06,80,Eve Davis,Electronics,Wireless Headset,2,274.9,20.0,USA,Credit Card,Processing,,0,Arrived late
+11004,2022-11-20,292,Eve Davis,Clothing,Yoga Mat,5,340.45,10.0,USA,Debit Card,Delivered,5.0,0,
+11005,2022-03-01,224,Bob Smith,Clothing,Laptop Pro,2,139.53,5.0,USA,Credit Card,Delivered,5.0,1,
+11006,2022-10-19,352,Carol White,Books,Skincare Set,2,485.55,25.0,USA,PayPal,Delivered,2.0,0,Wrong item sent
+11007,2022-04-27,295,Alice Johnson,Clothing,Python Book,2,140.48,,USA,Debit Card,Delivered,5.0,0,
+11008,2022-11-27,43,Alice Johnson,Sports,Laptop Pro,2,444.27,0.0,USA,Credit Card,Cancelled,3.0,0,
+11009,2022-02-27,245,Bob Smith,Beauty,Coffee Maker,1,464.3,15.0,UK,Credit Card,Shipped,5.0,0,
+11010,2022-02-20,50,Alice Johnson,Clothing,Coffee Maker,5,361.22,,Australia,Credit Card,Processing,5.0,0,Good value for money
+11011,2022-07-04,295,Carol White,Electronics,Yoga Mat,1,406.74,15.0,India,Bank Transfer,Processing,,0,
+11012,2022-02-05,130,Alice Johnson,Electronics,LED Lamp,1,231.64,25.0,Canada,Credit Card,Delivered,3.0,0,"Excellent quality, will buy again"
+11013,2022-03-11,381,Alice Johnson,Electronics,Python Book,5,460.18,5.0,France,Credit Card,Processing,5.0,0,
+11014,2022-07-31,252,Bob Smith,Clothing,Skincare Set,1,372.61,,Australia,PayPal,Delivered,4.0,0,Arrived late
+11015,2022-06-07,165,Dave Brown,Home & Garden,Python Book,1,166.74,25.0,France,Credit Card,Delivered,,0,Wrong item sent
+11016,2022-09-01,101,Dave Brown,Clothing,Wireless Headset,1,22.3,10.0,UK,Debit Card,Processing,,0,"Excellent quality, will buy again"
+11017,2022-03-16,371,Carol White,Electronics,LED Lamp,1,272.69,20.0,Canada,PayPal,Delivered,5.0,0,
+11018,2022-05-19,275,Dave Brown,Home & Garden,Coffee Maker,5,421.12,10.0,USA,Credit Card,Processing,,0,Good value for money
+11019,2022-07-13,69,Eve Davis,Electronics,Desk Chair,2,$362.32,,Canada,PayPal,Cancelled,4.0,0,
+11020,2022-06-15,44,Bob Smith,Electronics,Python Book,3,418.38,15.0,USA,Credit Card,Processing,,0,
+11021,2022-08-22,397,Dave Brown,Home & Garden,Wireless Headset,10,111.3,15.0,Canada,Credit Card,Delivered,,0,"Excellent quality, will buy again"
+11022,2022-08-23,150,Alice Johnson,Electronics,Skincare Set,2,215.94,20.0,Canada,Credit Card,Delivered,,0,
+11023,2022-05-08,135,Dave Brown,Home & Garden,Coffee Maker,1,308.84,5.0,USA,Credit Card,Processing,,0,
+11024,2022-02-21,386,Bob Smith,Beauty,Bluetooth Speaker,10,335.44,10.0,France,PayPal,Delivered,,0,Arrived late
+11025,2022-06-03,318,Alice Johnson,Sports,Skincare Set,1,170.62,15.0,USA,Credit Card,Delivered,3.0,0,
+11026,2022-01-14,345,Alice Johnson,Electronics,Bluetooth Speaker,1,347.86,5.0,USA,Credit Card,Delivered,5.0,0,Wrong item sent
+11027,2022-09-30,218,Bob Smith,Books,Desk Chair,2,297.49,15.0,USA,Bank Transfer,Processing,,0,Great product!
+11028,2022-12-10,389,Carol White,Clothing,Desk Chair,5,285.55,10.0,USA,Credit Card,Shipped,,0,Packaging was damaged
+11029,2022-02-08,148,Carol White,Beauty,Coffee Maker,10,$251.12,0.0,Australia,PayPal,Processing,,0,
+11030,2022-08-06,126,Bob Smith,Beauty,Yoga Mat,1,303.67,15.0,USA,Bank Transfer,Delivered,4.0,0,
+11031,2022-02-28,249,Bob Smith,Electronics,LED Lamp,3,87.6,5.0,USA,Credit Card,Delivered,,0,
+11032,2022-09-26,54,Bob Smith,Toys,Desk Chair,2,437.84,20.0,USA,Bank Transfer,Delivered,,0,Arrived late
+11033,2022-11-05,332,Alice Johnson,Electronics,Yoga Mat,1,124.08,20.0,USA,PayPal,Processing,4.0,0,
+11034,2022-01-19,223,Alice Johnson,Clothing,Python Book,2,373.52,,USA,Debit Card,Delivered,4.0,0,
+11035,2022-11-08,209,Bob Smith,Clothing,Wireless Headset,3,92.35,25.0,UK,PayPal,Delivered,,0,
+11036,2022-09-11,144,Alice Johnson,Electronics,Yoga Mat,3,332.18,0.0,USA,PayPal,Delivered,,0,"Excellent quality, will buy again"
+11037,2022-09-16,313,Eve Davis,Sports,Bluetooth Speaker,10,448.36,,Germany,Debit Card,Delivered,5.0,0,
+11038,2022-09-06,320,Bob Smith,Clothing,LED Lamp,10,9.81,,Germany,Credit Card,Delivered,3.0,0,
+11039,2022-04-07,138,Alice Johnson,Sports,Running Shoes,1,489.94,,USA,Credit Card,Processing,3.0,0,Good value for money
+11040,2022-02-10,355,Carol White,Beauty,Coffee Maker,1,19.69,0.0,India,Bank Transfer,Delivered,1.0,0,
+11041,2022-10-24,225,Bob Smith,Sports,Yoga Mat,1,10.63,10.0,Germany,Credit Card,Delivered,,0,
+11042,2022-09-08,102,Bob Smith,Clothing,Skincare Set,1,429.49,10.0,USA,Credit Card,Shipped,3.0,0,
+11043,2022-01-01,99,Bob Smith,Home & Garden,Wireless Headset,1,355.81,5.0,India,PayPal,Delivered,5.0,0,
+11044,2022-05-01,307,Dave Brown,Books,Yoga Mat,5,57.38,,France,Credit Card,Delivered,,0,Packaging was damaged
+11045,2023-01-08,283,Bob Smith,Sports,Wireless Headset,2,469.02,5.0,Canada,PayPal,Delivered,4.0,0,
+11046,2022-10-04,391,Carol White,Electronics,LED Lamp,3,337.61,,Canada,Debit Card,Delivered,1.0,0,
+11047,2022-03-09,91,Alice Johnson,Books,Skincare Set,2,59.97,,Canada,Debit Card,Processing,2.0,1,
+11048,2022-02-04,297,Bob Smith,Home & Garden,Wireless Headset,10,430.97,20.0,India,PayPal,Delivered,3.0,0,
+11049,2022-08-31,374,Eve Davis,Home & Garden,Python Book,2,243.05,10.0,UK,PayPal,Delivered,,0,
+11050,2022-05-22,204,Alice Johnson,Beauty,Skincare Set,3,142.68,0.0,USA,Debit Card,Delivered,4.0,1,Great product!
+11051,2022-11-05,382,Carol White,Electronics,Bluetooth Speaker,3,413.4,,USA,Credit Card,Delivered,,0,
+11052,2022-12-01,238,Dave Brown,Clothing,Running Shoes,2,370.53,,USA,PayPal,Processing,5.0,0,"Excellent quality, will buy again"
+11053,2022-03-07,97,Carol White,Clothing,Desk Chair,10,313.41,25.0,USA,Bank Transfer,Delivered,,0,Wrong item sent
+11054,2022-08-19,121,Dave Brown,Clothing,Desk Chair,1,449.76,10.0,USA,PayPal,Delivered,5.0,0,
+11055,2022-02-22,397,Alice Johnson,Clothing,LED Lamp,2,431.33,5.0,USA,Credit Card,Delivered,3.0,1,
+11056,2022-06-21,117,Dave Brown,Electronics,Bluetooth Speaker,3,117.26,15.0,USA,PayPal,Delivered,3.0,0,
+11057,2022-03-26,66,Alice Johnson,Sports,LED Lamp,2,439.95,,Canada,Debit Card,Processing,,1,
+11058,2022-01-22,131,Carol White,Toys,Python Book,3,190.15,15.0,Canada,Credit Card,Delivered,5.0,0,
+11059,2022-12-16,267,Carol White,Electronics,Python Book,2,218.73,20.0,USA,Debit Card,Delivered,2.0,0,"Excellent quality, will buy again"
+11060,2022-10-02,389,Dave Brown,Electronics,Skincare Set,1,486.3,10.0,USA,Credit Card,Delivered,5.0,0,"Excellent quality, will buy again"
+11061,2022-03-22,316,Eve Davis,Electronics,Python Book,1,381.14,5.0,USA,PayPal,Processing,5.0,0,Wrong item sent
+11062,2022-06-27,386,Carol White,Clothing,Desk Chair,5,164.14,25.0,UK,Bank Transfer,Delivered,4.0,0,
+11063,2022-03-07,92,Dave Brown,Sports,Desk Chair,1,325.72,0.0,USA,Crypto,Delivered,4.0,0,Great product!
+11064,2022-11-23,77,Bob Smith,Electronics,Skincare Set,1,271.97,10.0,France,PayPal,Delivered,2.0,0,
+11065,2022-10-14,238,Alice Johnson,Books,Bluetooth Speaker,1,62.72,5.0,France,PayPal,Delivered,4.0,0,Arrived late
+11066,2022-08-27,252,Bob Smith,Electronics,Bluetooth Speaker,1,444.44,0.0,USA,Credit Card,Delivered,4.0,1,
+11067,2022-08-05,227,Bob Smith,Beauty,Bluetooth Speaker,10,411.83,,USA,Credit Card,Delivered,,0,
+11068,2022-02-17,360,Bob Smith,Toys,Desk Chair,2,389.97,20.0,France,PayPal,Delivered,5.0,0,
+11069,2022-11-28,320,Dave Brown,Toys,Desk Chair,10,281.78,15.0,UK,Debit Card,Delivered,4.0,0,
+11070,2022-01-24,141,Carol White,Electronics,Yoga Mat,1,114.31,15.0,USA,Debit Card,Delivered,5.0,0,Great product!
+11071,2022-11-14,54,Bob Smith,Clothing,Laptop Pro,1,442.53,20.0,USA,Credit Card,Cancelled,3.0,0,
+11072,2022-12-01,140,Dave Brown,Electronics,LED Lamp,1,179.72,10.0,Canada,PayPal,Cancelled,,0,
+11073,2022-02-15,146,Carol White,Books,Yoga Mat,3,14.96,25.0,USA,PayPal,Delivered,4.0,0,
+11074,2022-12-11,274,Alice Johnson,Electronics,Skincare Set,1,490.98,5.0,USA,Bank Transfer,Delivered,5.0,0,
+11075,2023-01-01,145,Carol White,Home & Garden,Wireless Headset,1,431.27,25.0,USA,Debit Card,Delivered,4.0,1,
+11076,2022-08-04,167,Carol White,Home & Garden,Running Shoes,10,313.23,,UK,Debit Card,Processing,3.0,0,
+11077,2022-02-22,86,Bob Smith,Books,Yoga Mat,2,11.14,15.0,USA,PayPal,Shipped,4.0,0,
+11078,2022-06-10,141,Dave Brown,Sports,Running Shoes,2,117.72,25.0,Canada,Credit Card,Delivered,5.0,0,
+11079,2022-10-26,45,Eve Davis,Clothing,Coffee Maker,5,228.76,20.0,USA,Credit Card,Delivered,4.0,0,Wrong item sent
+11080,2022-03-28,128,Alice Johnson,Electronics,Python Book,3,315.9,15.0,USA,PayPal,Delivered,1.0,0,
+11081,2022-09-11,358,Dave Brown,Books,Coffee Maker,3,355.54,15.0,USA,PayPal,Delivered,2.0,0,
+11082,2022-01-14,117,Bob Smith,Beauty,LED Lamp,10,395.19,15.0,UK,Debit Card,Delivered,3.0,0,
+11083,2022-02-25,147,Dave Brown,Books,Python Book,1,280.05,10.0,Canada,Credit Card,Delivered,5.0,0,
+11084,2022-02-18,147,Eve Davis,Books,Bluetooth Speaker,10,329.81,20.0,France,Bank Transfer,Processing,3.0,0,
+11085,2022-06-14,21,Alice Johnson,Toys,Running Shoes,2,406.57,,USA,Credit Card,Processing,,0,Packaging was damaged
+11086,2022-12-16,24,Carol White,Clothing,Skincare Set,2,361.32,15.0,Australia,Credit Card,Cancelled,5.0,1,
+11087,2023-01-05,158,Alice Johnson,Beauty,Skincare Set,2,477.63,,UK,Credit Card,Shipped,4.0,0,
+11088,2022-03-21,48,Eve Davis,Electronics,Laptop Pro,10,437.95,,USA,PayPal,Delivered,4.0,0,
+11089,2022-05-08,110,Alice Johnson,Books,Running Shoes,1,88.83,25.0,USA,Debit Card,Delivered,4.0,0,
+11090,2022-05-05,59,Alice Johnson,Electronics,Desk Chair,3,473.97,,USA,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+11091,2022-09-22,17,Bob Smith,Clothing,Laptop Pro,2,106.07,10.0,USA,PayPal,Delivered,5.0,0,
+11092,2022-10-08,304,Carol White,Electronics,LED Lamp,1,$371.89,25.0,France,Debit Card,Processing,3.0,0,Great product!
+11093,2023-01-05,55,Eve Davis,Electronics,Desk Chair,1,352.16,5.0,USA,Credit Card,Delivered,4.0,0,Wrong item sent
+11094,2022-04-11,137,Bob Smith,Electronics,Coffee Maker,2,315.63,,USA,Credit Card,Cancelled,2.0,0,
+11095,2022-08-11,77,Alice Johnson,Clothing,Python Book,10,165.54,,UK,PayPal,Cancelled,4.0,0,
+11096,2022-10-12,270,Alice Johnson,Electronics,Running Shoes,1,70.89,0.0,USA,Credit Card,Delivered,2.0,0,
+11097,2022-07-13,180,Dave Brown,Sports,Skincare Set,2,67.46,5.0,USA,PayPal,Delivered,1.0,0,Great product!
+11098,2022-10-11,85,Bob Smith,Electronics,LED Lamp,1,433.95,15.0,USA,Credit Card,Shipped,5.0,0,
+11099,2022-02-07,300,Eve Davis,Clothing,LED Lamp,1,219.06,15.0,USA,Bank Transfer,Delivered,,0,
+11100,2022-01-03,139,Eve Davis,Electronics,Laptop Pro,2,282.13,25.0,France,PayPal,Processing,,0,
+11101,2022-07-10,307,Eve Davis,Electronics,Skincare Set,1,466.26,,USA,PayPal,Processing,2.0,0,
+11102,2022-09-17,170,Eve Davis,Toys,Coffee Maker,10,131.4,25.0,USA,PayPal,Delivered,3.0,0,
+11103,2022-02-21,242,Alice Johnson,Sports,Wireless Headset,5,383.15,10.0,USA,Debit Card,Delivered,,0,
+11104,2022-11-02,64,Alice Johnson,Sports,LED Lamp,10,237.88,0.0,USA,Debit Card,Processing,,0,
+11105,2022-01-26,240,Bob Smith,Clothing,Wireless Headset,3,110.31,15.0,UK,Credit Card,Delivered,5.0,0,Arrived late
+11106,2022-10-10,95,Carol White,Electronics,Yoga Mat,2,427.22,0.0,Germany,Debit Card,Delivered,4.0,0,Wrong item sent
+11107,2022-03-07,146,Eve Davis,Electronics,Coffee Maker,2,341.57,5.0,USA,PayPal,Delivered,,0,
+11108,2022-09-05,398,Alice Johnson,Books,Yoga Mat,10,51.99,20.0,Canada,Debit Card,Delivered,5.0,0,Arrived late
+11109,2022-02-24,376,Bob Smith,Sports,Desk Chair,1,273.17,,Canada,Bank Transfer,Delivered,5.0,0,
+11110,2022-07-24,49,Eve Davis,Toys,LED Lamp,3,426.62,,Canada,Credit Card,Delivered,4.0,0,Good value for money
+11111,2022-11-04,145,Carol White,Electronics,Bluetooth Speaker,5,38.13,,Canada,PayPal,Processing,1.0,0,
+11112,2022-02-20,398,Eve Davis,Clothing,Running Shoes,2,211.06,,UK,Debit Card,Delivered,5.0,0,
+11113,2022-01-17,259,Dave Brown,Electronics,Running Shoes,5,403.58,5.0,UK,Crypto,Delivered,2.0,0,
+11114,2022-10-28,159,Eve Davis,Home & Garden,Skincare Set,1,429.89,5.0,UK,PayPal,Delivered,4.0,0,
+11115,2022-01-02,217,Dave Brown,Electronics,Running Shoes,3,388.8,15.0,USA,Debit Card,Cancelled,4.0,0,Great product!
+11116,2022-05-27,303,Carol White,Clothing,Desk Chair,3,156.33,20.0,UK,Debit Card,Delivered,,0,
+11117,2022-07-12,17,Dave Brown,Toys,Coffee Maker,3,255.93,20.0,UK,Debit Card,Delivered,5.0,0,
+11118,2023-01-04,81,Carol White,Home & Garden,Desk Chair,5,371.93,0.0,USA,Bank Transfer,Delivered,4.0,0,
+11119,2022-06-19,184,Bob Smith,Electronics,Python Book,1,80.53,,USA,Credit Card,Processing,4.0,0,Wrong item sent
+11120,2022-10-18,283,Dave Brown,Electronics,Bluetooth Speaker,1,299.52,,USA,Bank Transfer,Delivered,5.0,1,
+11121,2022-12-09,71,Eve Davis,Sports,LED Lamp,1,361.58,25.0,Germany,Credit Card,Processing,4.0,1,Arrived late
+11122,2022-04-28,90,Eve Davis,Books,Bluetooth Speaker,1,425.75,5.0,USA,PayPal,Delivered,3.0,0,
+11123,2022-11-25,197,Bob Smith,Home & Garden,Yoga Mat,1,60.28,5.0,France,PayPal,Delivered,3.0,0,
+11124,2022-12-08,130,Alice Johnson,Electronics,Wireless Headset,1,168.19,0.0,Germany,Debit Card,Delivered,,0,
+11125,2022-07-07,80,Carol White,Sports,LED Lamp,5,273.12,10.0,USA,Credit Card,Processing,5.0,1,
+11126,2022-05-23,365,Alice Johnson,Home & Garden,Laptop Pro,3,352.02,5.0,USA,Credit Card,Delivered,3.0,0,Great product!
+11127,2022-08-18,203,Alice Johnson,Toys,Coffee Maker,3,366.37,20.0,USA,Debit Card,Delivered,4.0,0,Great product!
+11128,2022-03-09,231,Bob Smith,Clothing,Wireless Headset,1,130.36,20.0,France,PayPal,Delivered,5.0,0,
+11129,2022-01-11,87,Bob Smith,Electronics,Skincare Set,1,11.87,5.0,Germany,Debit Card,Delivered,,1,
+11130,2022-12-07,227,Dave Brown,Electronics,Coffee Maker,1,348.44,25.0,USA,Debit Card,Delivered,4.0,1,Arrived late
+11131,2022-07-28,6,Dave Brown,Toys,Desk Chair,2,455.02,10.0,USA,Bank Transfer,Processing,5.0,0,
+11132,2022-03-12,357,Dave Brown,Electronics,Running Shoes,2,399.77,0.0,Germany,Debit Card,Delivered,5.0,0,
+11133,2022-09-25,225,Dave Brown,Electronics,Skincare Set,5,313.12,5.0,USA,PayPal,Delivered,,0,Packaging was damaged
+11134,2022-03-13,146,Dave Brown,Electronics,Running Shoes,1,488.9,0.0,Australia,PayPal,Delivered,2.0,1,
+11135,2022-01-14,55,Eve Davis,Home & Garden,Yoga Mat,5,219.39,10.0,UK,Credit Card,Delivered,5.0,0,
+11136,2022-09-23,67,Bob Smith,Toys,Python Book,2,264.9,5.0,Canada,Credit Card,Cancelled,3.0,0,
+11137,2022-02-20,185,Carol White,Sports,Desk Chair,1,11.08,25.0,UK,Debit Card,Processing,4.0,0,Good value for money
+11138,2022-06-06,147,Carol White,Books,Wireless Headset,5,473.25,5.0,USA,Credit Card,Shipped,4.0,0,
+11139,2022-04-11,74,Carol White,Beauty,Bluetooth Speaker,1,293.76,5.0,USA,Debit Card,Processing,,0,
+11140,2022-10-28,139,Carol White,Electronics,Yoga Mat,1,198.45,15.0,India,PayPal,Returned,4.0,0,
+11141,2022-07-15,224,Carol White,Sports,Coffee Maker,5,27.06,5.0,USA,Debit Card,Cancelled,4.0,0,Arrived late
+11142,2022-03-24,232,Eve Davis,Clothing,Coffee Maker,1,184.4,5.0,USA,PayPal,Delivered,4.0,0,"Excellent quality, will buy again"
+11143,2022-06-30,183,Bob Smith,Clothing,LED Lamp,10,6.78,25.0,Germany,Debit Card,Delivered,,0,
+11144,2022-07-08,96,Dave Brown,Electronics,Coffee Maker,3,165.55,10.0,France,Credit Card,Delivered,,0,
+11145,2022-09-13,342,Dave Brown,Electronics,LED Lamp,2,475.97,10.0,USA,Credit Card,Delivered,,0,
+11146,2022-07-29,248,Dave Brown,Clothing,LED Lamp,10,81.36,15.0,UK,Credit Card,Delivered,4.0,0,
+11147,2022-02-15,132,Bob Smith,Electronics,Laptop Pro,1,274.98,,USA,Credit Card,Delivered,,0,
+11148,2022-01-15,13,Bob Smith,Clothing,Python Book,10,97.38,20.0,France,Bank Transfer,Cancelled,,0,
+11149,2022-10-20,70,Eve Davis,Electronics,Bluetooth Speaker,1,392.77,0.0,USA,Debit Card,Processing,4.0,0,Arrived late
+11150,2022-07-28,349,Eve Davis,Electronics,Wireless Headset,1,283.39,25.0,USA,Credit Card,Delivered,2.0,0,
+11151,2022-08-08,256,Dave Brown,Sports,Python Book,10,105.11,5.0,USA,Bank Transfer,Delivered,,0,
+11152,2022-08-01,386,Bob Smith,Toys,Python Book,1,433.79,25.0,Canada,Debit Card,Delivered,5.0,0,
+11153,2022-01-05,188,Dave Brown,Beauty,Laptop Pro,5,393.09,,USA,PayPal,Delivered,3.0,0,
+11154,2022-05-31,89,Eve Davis,Home & Garden,Desk Chair,1,475.89,20.0,UK,PayPal,Delivered,2.0,0,
+11155,2022-01-18,319,Dave Brown,Home & Garden,Desk Chair,1,$132.73,10.0,UK,PayPal,Delivered,4.0,1,Wrong item sent
+11156,2022-06-02,316,Eve Davis,Sports,Skincare Set,10,231.27,0.0,France,PayPal,Processing,2.0,0,
+11157,2022-08-06,154,Alice Johnson,Home & Garden,Laptop Pro,10,499.92,15.0,UK,Debit Card,Processing,,0,Wrong item sent
+11158,2022-09-20,150,Carol White,Clothing,Coffee Maker,10,$388.72,10.0,USA,Credit Card,Delivered,5.0,0,
+11159,2022-09-02,330,Alice Johnson,Electronics,LED Lamp,1,416.49,5.0,USA,Bank Transfer,Delivered,,0,
+11160,2022-12-04,132,Dave Brown,Electronics,Python Book,10,312.46,15.0,Australia,PayPal,Delivered,5.0,0,Good value for money
+11161,2022-04-13,144,Dave Brown,Sports,Coffee Maker,2,357.89,5.0,India,Debit Card,Delivered,5.0,0,Arrived late
+11162,2022-02-15,247,Bob Smith,Home & Garden,Desk Chair,5,403.64,,USA,Credit Card,Delivered,,0,
+11163,2022-02-09,63,Carol White,Clothing,Running Shoes,3,50.68,15.0,Germany,Credit Card,Processing,5.0,0,
+11164,2022-06-05,170,Eve Davis,Electronics,Coffee Maker,3,347.83,5.0,USA,Bank Transfer,Delivered,5.0,0,
+11165,2022-11-29,397,Dave Brown,Electronics,Running Shoes,1,408.63,,France,PayPal,Delivered,,0,
+11166,2022-08-12,302,Eve Davis,Home & Garden,Python Book,2,25.23,25.0,USA,Credit Card,Shipped,,0,
+11167,2022-02-04,236,Eve Davis,Clothing,Running Shoes,2,152.04,10.0,USA,Credit Card,Delivered,,1,
+11168,2022-12-12,397,Eve Davis,Clothing,Coffee Maker,1,165.39,25.0,UK,PayPal,Processing,,0,
+11169,2022-03-18,289,Alice Johnson,Clothing,Wireless Headset,1,428.02,25.0,France,Debit Card,Delivered,4.0,1,
+11170,2022-11-13,123,Eve Davis,Books,Bluetooth Speaker,5,391.27,10.0,France,Credit Card,Delivered,5.0,0,
+11171,2022-12-09,270,Bob Smith,Beauty,Running Shoes,1,329.93,0.0,USA,Debit Card,Processing,2.0,0,
+11172,2022-04-26,8,Alice Johnson,Toys,Desk Chair,5,403.34,,India,Credit Card,Shipped,3.0,0,
+11173,2022-02-16,218,Alice Johnson,Electronics,Laptop Pro,10,229.45,15.0,Canada,Credit Card,Returned,4.0,0,
+11174,2022-12-14,342,Dave Brown,Clothing,Coffee Maker,5,438.07,10.0,Canada,PayPal,Shipped,5.0,0,Wrong item sent
+11175,2022-10-15,174,Carol White,Clothing,Python Book,2,120.94,25.0,France,Debit Card,Delivered,4.0,0,Wrong item sent
+11176,2022-06-09,126,Carol White,Clothing,Wireless Headset,1,353.77,5.0,USA,Debit Card,Delivered,5.0,0,Great product!
+11177,2022-07-23,385,Dave Brown,Books,LED Lamp,2,124.67,15.0,USA,PayPal,Processing,4.0,0,Packaging was damaged
+11178,2022-07-02,315,Carol White,Electronics,Bluetooth Speaker,5,24.73,25.0,India,PayPal,Delivered,,1,"Excellent quality, will buy again"
+11179,2022-12-26,316,Eve Davis,Sports,Yoga Mat,5,145.65,5.0,USA,Credit Card,Delivered,5.0,0,
+11180,2022-06-08,49,Bob Smith,Clothing,LED Lamp,2,248.99,20.0,France,PayPal,Processing,5.0,0,
+11181,2022-07-30,336,Eve Davis,Beauty,Wireless Headset,10,422.5,0.0,France,Credit Card,Shipped,3.0,0,
+11182,2022-07-31,236,Carol White,Electronics,Yoga Mat,5,256.88,15.0,USA,Bank Transfer,Processing,,0,
+11183,2022-08-10,349,Carol White,Electronics,Laptop Pro,1,93.68,15.0,France,PayPal,Delivered,,0,
+11184,2022-09-12,317,Bob Smith,Home & Garden,Desk Chair,5,496.42,5.0,USA,PayPal,Delivered,,0,
+11185,2022-07-15,256,Alice Johnson,Home & Garden,Running Shoes,2,138.69,0.0,Canada,Credit Card,Delivered,4.0,1,
+11186,2022-09-23,116,Alice Johnson,Books,Skincare Set,2,492.72,5.0,USA,Credit Card,Processing,4.0,0,Good value for money
+11187,2022-04-21,279,Bob Smith,Beauty,Laptop Pro,1,468.49,5.0,USA,Debit Card,Delivered,,0,
+11188,2022-08-30,389,Alice Johnson,Clothing,Yoga Mat,3,273.51,,France,Credit Card,Delivered,5.0,0,Good value for money
+11189,2022-09-10,85,Carol White,Clothing,Skincare Set,5,50.52,20.0,UK,Credit Card,Shipped,1.0,0,Wrong item sent
+11190,2022-03-01,120,Alice Johnson,Toys,Running Shoes,1,349.23,10.0,UK,Credit Card,Delivered,4.0,0,
+11191,2022-06-07,384,Carol White,Books,LED Lamp,10,423.63,25.0,France,Debit Card,Returned,2.0,0,Great product!
+11192,2022-04-04,50,Dave Brown,Clothing,LED Lamp,1,225.42,10.0,USA,Bank Transfer,Shipped,5.0,0,Arrived late
+11193,2022-09-04,164,Eve Davis,Home & Garden,Coffee Maker,3,123.33,20.0,UK,Credit Card,Cancelled,,0,Arrived late
+11194,2022-12-26,148,Alice Johnson,Books,Wireless Headset,2,402.4,0.0,France,Debit Card,Shipped,5.0,0,Good value for money
+11195,2022-10-30,43,Dave Brown,Clothing,Wireless Headset,2,274.81,15.0,USA,Credit Card,Delivered,5.0,0,Wrong item sent
+11196,2022-05-11,136,Alice Johnson,Electronics,Coffee Maker,2,102.83,0.0,Germany,PayPal,Delivered,,0,
+11197,2022-04-16,246,Dave Brown,Clothing,Python Book,1,475.02,25.0,UK,Credit Card,Cancelled,3.0,0,
+11198,2022-06-06,218,Bob Smith,Electronics,Python Book,3,474.31,5.0,USA,Debit Card,Delivered,,0,
+11199,2022-07-19,281,Dave Brown,Toys,Coffee Maker,1,186.69,25.0,USA,Debit Card,Delivered,4.0,0,
+11200,2022-10-26,372,Carol White,Electronics,Laptop Pro,10,36.68,0.0,Germany,Credit Card,Delivered,,1,
+11201,2022-06-24,234,Bob Smith,Electronics,Skincare Set,3,317.24,,USA,Credit Card,Delivered,1.0,0,
+11202,2022-09-15,263,Bob Smith,Home & Garden,Running Shoes,1,162.03,15.0,Germany,PayPal,Cancelled,4.0,0,
+11203,2022-12-23,115,Carol White,Home & Garden,Desk Chair,3,37.85,25.0,USA,Debit Card,Delivered,4.0,0,
+11204,2022-10-27,342,Alice Johnson,Home & Garden,Desk Chair,3,446.44,20.0,UK,Debit Card,Delivered,4.0,0,Good value for money
+11205,2022-01-29,189,Bob Smith,Clothing,LED Lamp,3,499.07,0.0,USA,Debit Card,Delivered,,0,
+11206,2022-04-14,197,Alice Johnson,Sports,Bluetooth Speaker,3,178.45,15.0,Germany,Credit Card,Delivered,5.0,0,
+11207,2022-12-11,38,Eve Davis,Books,LED Lamp,3,373.65,25.0,Germany,Credit Card,Delivered,4.0,0,
+11208,2022-10-26,12,Dave Brown,Clothing,Wireless Headset,5,37.56,15.0,Australia,Credit Card,Returned,3.0,0,
+11209,2022-11-28,124,Dave Brown,Sports,Skincare Set,3,188.0,10.0,UK,PayPal,Delivered,5.0,0,
+11210,2022-07-20,44,Carol White,Electronics,Python Book,10,58.83,5.0,USA,PayPal,Delivered,1.0,0,"Excellent quality, will buy again"
+11211,2022-07-26,309,Carol White,Sports,Coffee Maker,5,32.4,15.0,France,Credit Card,Delivered,4.0,1,
+11212,2022-02-13,14,Dave Brown,Books,Desk Chair,1,296.45,15.0,USA,Debit Card,Returned,,0,
+11213,2022-07-07,348,Eve Davis,Toys,Coffee Maker,1,402.01,0.0,France,Credit Card,Delivered,4.0,0,Arrived late
+11214,2022-08-05,52,Carol White,Electronics,Bluetooth Speaker,2,229.22,20.0,India,Debit Card,Delivered,5.0,1,
+11215,2022-04-01,245,Eve Davis,Toys,Wireless Headset,3,264.47,0.0,USA,Debit Card,Cancelled,5.0,0,
+11216,2022-06-16,180,Carol White,Home & Garden,Wireless Headset,1,139.01,10.0,USA,Debit Card,Delivered,,0,
+11217,2022-12-29,302,Bob Smith,Books,Running Shoes,5,369.51,15.0,France,Credit Card,Delivered,5.0,0,
+11218,2022-02-28,130,Alice Johnson,Clothing,Coffee Maker,10,183.73,5.0,France,Credit Card,Delivered,4.0,0,Great product!
+11219,2022-12-22,100,Dave Brown,Beauty,Python Book,1,38.41,15.0,UK,PayPal,Delivered,3.0,0,Packaging was damaged
+11220,2022-06-28,366,Alice Johnson,Clothing,Desk Chair,2,86.93,5.0,France,PayPal,Cancelled,4.0,0,
+11221,2022-04-24,284,Dave Brown,Clothing,Desk Chair,1,68.59,5.0,Australia,Credit Card,Delivered,,0,
+11222,2022-01-10,111,Carol White,Sports,Bluetooth Speaker,5,220.76,25.0,UK,Bank Transfer,Processing,1.0,0,Arrived late
+11223,2022-04-05,288,Alice Johnson,Electronics,Running Shoes,1,37.28,25.0,Canada,PayPal,Delivered,5.0,1,
+11224,2022-07-11,92,Eve Davis,Electronics,Laptop Pro,3,404.21,5.0,Canada,Credit Card,Delivered,,0,
+11225,2022-02-22,76,Carol White,Home & Garden,Coffee Maker,5,454.46,20.0,USA,Crypto,Delivered,5.0,0,
+11226,2022-01-20,205,Bob Smith,Electronics,LED Lamp,1,127.96,0.0,USA,PayPal,Delivered,,1,
+11227,2022-07-23,22,Alice Johnson,Sports,Laptop Pro,5,245.33,25.0,Canada,Bank Transfer,Shipped,5.0,0,
+11228,2022-12-18,170,Alice Johnson,Books,Laptop Pro,1,261.94,10.0,Canada,Credit Card,Delivered,,0,
+11229,2023-01-08,368,Bob Smith,Books,Yoga Mat,2,492.58,25.0,USA,Credit Card,Delivered,,0,
+11230,2022-02-05,157,Dave Brown,Electronics,Skincare Set,5,37.48,20.0,Australia,Debit Card,Shipped,2.0,0,
+11231,2022-11-03,222,Carol White,Sports,LED Lamp,3,335.6,,Germany,PayPal,Delivered,,0,
+11232,2022-07-14,360,Bob Smith,Sports,LED Lamp,2,176.15,5.0,USA,Bank Transfer,Delivered,2.0,0,
+11233,2022-01-05,68,Eve Davis,Clothing,Running Shoes,1,253.39,20.0,USA,PayPal,Shipped,4.0,0,
+11234,2022-05-28,161,Carol White,Clothing,Python Book,2,112.43,10.0,India,Credit Card,Processing,3.0,0,
+11235,2022-07-03,174,Bob Smith,Electronics,Bluetooth Speaker,1,84.32,10.0,USA,Bank Transfer,Processing,4.0,0,
+11236,2022-03-01,393,Bob Smith,Home & Garden,Coffee Maker,3,125.56,,Canada,Debit Card,Processing,5.0,0,Packaging was damaged
+11237,2022-11-14,38,Alice Johnson,Books,Bluetooth Speaker,5,40.27,20.0,USA,Credit Card,Delivered,5.0,0,
+11238,2022-12-10,336,Alice Johnson,Electronics,Coffee Maker,1,142.65,,USA,PayPal,Delivered,,0,
+11239,2022-03-05,26,Alice Johnson,Sports,Coffee Maker,2,346.72,15.0,France,Credit Card,Delivered,,0,Wrong item sent
+11240,2022-02-11,254,Carol White,Toys,Bluetooth Speaker,1,327.48,25.0,UK,Credit Card,Delivered,,0,Arrived late
+11241,2022-08-21,299,Dave Brown,Electronics,Yoga Mat,10,279.48,10.0,France,Debit Card,Delivered,5.0,0,
+11242,2022-01-24,283,Carol White,Home & Garden,Running Shoes,10,5.19,20.0,USA,Bank Transfer,Delivered,5.0,0,Good value for money
+11243,2022-01-13,247,Alice Johnson,Sports,Coffee Maker,5,67.26,5.0,Canada,Debit Card,Processing,3.0,0,
+11244,2022-02-17,11,Alice Johnson,Beauty,Laptop Pro,10,422.22,,USA,Crypto,Processing,4.0,0,Arrived late
+11245,2022-05-05,238,Carol White,Electronics,Bluetooth Speaker,3,139.51,20.0,France,Credit Card,Cancelled,4.0,0,
+11246,2022-05-13,107,Bob Smith,Clothing,Desk Chair,2,456.54,25.0,Australia,Credit Card,Processing,5.0,0,
+11247,2022-07-25,334,Bob Smith,Beauty,Desk Chair,1,437.9,15.0,Canada,Credit Card,Delivered,3.0,0,Good value for money
+11248,2022-09-25,313,Alice Johnson,Electronics,Skincare Set,10,81.69,15.0,USA,Debit Card,Delivered,5.0,0,Packaging was damaged
+11249,2022-09-18,1,Alice Johnson,Books,Laptop Pro,3,449.59,5.0,UK,Bank Transfer,Processing,3.0,0,
+11250,2022-04-12,11,Dave Brown,Clothing,Python Book,5,315.78,15.0,UK,PayPal,Delivered,,0,Wrong item sent
+11251,2022-12-18,158,Bob Smith,Books,Wireless Headset,1,316.99,5.0,France,Debit Card,Shipped,4.0,0,
+11252,2022-05-19,88,Dave Brown,Clothing,Running Shoes,3,$11.99,,UK,Debit Card,Shipped,4.0,0,Good value for money
+11253,2022-04-15,242,Alice Johnson,Toys,Python Book,3,205.5,5.0,USA,Credit Card,Delivered,5.0,1,
+11254,2022-12-11,132,Alice Johnson,Electronics,Wireless Headset,1,368.96,0.0,Canada,Credit Card,Delivered,5.0,0,
+11255,2022-10-16,86,Dave Brown,Home & Garden,Desk Chair,5,335.54,20.0,Canada,Credit Card,Cancelled,,0,
+11256,2022-02-14,110,Dave Brown,Clothing,Laptop Pro,1,386.9,0.0,Germany,PayPal,Delivered,5.0,0,Packaging was damaged
+11257,2022-10-13,328,Alice Johnson,Electronics,Python Book,10,331.79,10.0,Australia,Credit Card,Processing,,0,
+11258,2022-09-06,111,Eve Davis,Electronics,Bluetooth Speaker,10,44.63,25.0,France,PayPal,Delivered,5.0,1,Great product!
+11259,2022-09-10,208,Alice Johnson,Beauty,Bluetooth Speaker,2,149.89,15.0,Canada,Debit Card,Processing,,0,
+11260,2022-04-17,289,Bob Smith,Books,Bluetooth Speaker,5,470.26,0.0,UK,Credit Card,Delivered,4.0,0,
+11261,2022-05-30,74,Alice Johnson,Books,Running Shoes,2,115.6,,Germany,Bank Transfer,Shipped,5.0,0,
+11262,2022-11-05,322,Carol White,Sports,Laptop Pro,5,238.77,10.0,USA,Credit Card,Returned,5.0,0,
+11263,2022-08-02,249,Alice Johnson,Electronics,Laptop Pro,1,181.68,15.0,Germany,Credit Card,Processing,5.0,0,
+11264,2022-06-28,108,Eve Davis,Home & Garden,Running Shoes,2,47.72,5.0,UK,PayPal,Delivered,5.0,1,
+11265,2022-11-26,4,Bob Smith,Electronics,Desk Chair,2,94.69,10.0,USA,Credit Card,Delivered,4.0,0,
+11266,2022-02-12,215,Alice Johnson,Home & Garden,LED Lamp,2,146.9,25.0,Germany,Credit Card,Processing,,0,
+11267,2022-04-17,179,Dave Brown,Electronics,Python Book,3,234.34,0.0,Canada,Credit Card,Delivered,,0,
+11268,2022-06-24,155,Bob Smith,Sports,LED Lamp,5,437.89,15.0,USA,Debit Card,Delivered,,0,Good value for money
+11269,2022-11-15,289,Bob Smith,Home & Garden,Skincare Set,2,260.23,0.0,UK,Bank Transfer,Shipped,1.0,1,Wrong item sent
+11270,2022-01-03,225,Eve Davis,Clothing,LED Lamp,1,327.69,5.0,UK,PayPal,Cancelled,4.0,0,Arrived late
+11271,2022-06-27,105,Dave Brown,Clothing,Wireless Headset,2,215.85,15.0,Canada,Credit Card,Delivered,5.0,0,
+11272,2022-12-12,382,Carol White,Electronics,LED Lamp,2,435.68,10.0,Canada,Debit Card,Delivered,,0,"Excellent quality, will buy again"
+11273,2022-05-17,84,Alice Johnson,Toys,Bluetooth Speaker,5,333.0,0.0,USA,Debit Card,Returned,3.0,0,
+11274,2022-01-26,77,Carol White,Electronics,Desk Chair,2,49.86,25.0,USA,Credit Card,Delivered,2.0,0,
+11275,2022-07-11,203,Dave Brown,Clothing,Yoga Mat,1,241.36,0.0,Germany,Credit Card,Processing,5.0,0,
+11276,2022-09-25,339,Bob Smith,Electronics,Running Shoes,1,414.48,25.0,India,Credit Card,Delivered,,0,
+11277,2022-07-04,241,Eve Davis,Beauty,Skincare Set,2,368.16,10.0,Australia,Bank Transfer,Cancelled,5.0,0,
+11278,2022-02-19,288,Eve Davis,Books,Bluetooth Speaker,3,453.13,10.0,UK,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+11279,2022-10-24,195,Bob Smith,Electronics,LED Lamp,2,117.7,5.0,UK,PayPal,Delivered,4.0,0,Great product!
+11280,2022-08-31,372,Eve Davis,Home & Garden,LED Lamp,5,488.7,,Australia,Credit Card,Delivered,4.0,0,"Excellent quality, will buy again"
+11281,2022-02-12,205,Carol White,Beauty,Skincare Set,1,146.11,10.0,UK,Credit Card,Delivered,5.0,0,
+11282,2022-02-03,214,Bob Smith,Books,Coffee Maker,1,29.84,15.0,USA,Credit Card,Shipped,4.0,0,
+11283,2022-04-10,19,Alice Johnson,Clothing,Wireless Headset,5,250.36,10.0,Canada,Credit Card,Delivered,2.0,0,
+11284,2022-02-02,159,Alice Johnson,Electronics,Coffee Maker,10,59.62,,UK,Credit Card,Delivered,,0,Arrived late
+11285,2022-05-28,212,Dave Brown,Electronics,Coffee Maker,3,342.25,20.0,Germany,Credit Card,Delivered,,0,Wrong item sent
+11286,2022-04-30,53,Bob Smith,Electronics,Wireless Headset,5,450.78,,Germany,PayPal,Delivered,4.0,0,
+11287,2022-05-21,88,Carol White,Books,Desk Chair,5,461.06,15.0,Australia,Credit Card,Processing,,0,
+11288,2022-02-21,160,Bob Smith,Home & Garden,Laptop Pro,5,305.48,25.0,USA,Credit Card,Returned,,0,
+11289,2022-12-27,9,Bob Smith,Sports,Coffee Maker,5,269.96,5.0,UK,Debit Card,Delivered,5.0,0,Packaging was damaged
+11290,2022-11-24,179,Carol White,Sports,Yoga Mat,1,497.03,5.0,Germany,Credit Card,Processing,4.0,0,
+11291,2022-03-12,83,Eve Davis,Electronics,Skincare Set,1,291.82,5.0,USA,Credit Card,Delivered,4.0,1,
+11292,2022-06-12,151,Carol White,Home & Garden,Wireless Headset,1,464.09,0.0,Canada,Credit Card,Returned,,0,Great product!
+11293,2022-03-11,25,Bob Smith,Books,Yoga Mat,5,458.71,15.0,Germany,Bank Transfer,Delivered,5.0,0,
+11294,2022-04-09,225,Bob Smith,Clothing,LED Lamp,1,148.31,20.0,UK,Credit Card,Shipped,,0,
+11295,2022-09-03,194,Bob Smith,Books,Yoga Mat,1,11.81,5.0,USA,Credit Card,Delivered,4.0,1,"Excellent quality, will buy again"
+11296,2022-09-17,118,Bob Smith,Electronics,Running Shoes,2,222.39,,USA,Credit Card,Shipped,4.0,0,
+11297,2022-08-19,323,Dave Brown,Electronics,Running Shoes,5,431.38,5.0,France,Credit Card,Delivered,5.0,0,Good value for money
+11298,2022-05-24,383,Eve Davis,Books,Skincare Set,1,418.89,5.0,Germany,PayPal,Delivered,5.0,0,
+11299,2022-05-14,248,Bob Smith,Electronics,Wireless Headset,3,303.82,5.0,Germany,Bank Transfer,Processing,4.0,0,
+11300,2022-03-21,78,Dave Brown,Books,Running Shoes,3,82.55,0.0,USA,Debit Card,Delivered,3.0,1,Packaging was damaged
+11301,2023-01-10,152,Bob Smith,Clothing,Skincare Set,5,58.26,20.0,UK,Credit Card,Shipped,3.0,0,Arrived late
+11302,2022-03-15,56,Eve Davis,Toys,Bluetooth Speaker,1,477.57,15.0,USA,PayPal,Delivered,5.0,0,Great product!
+11303,2022-01-10,306,Eve Davis,Toys,Laptop Pro,1,213.59,20.0,USA,PayPal,Delivered,5.0,0,
+11304,2022-01-04,357,Carol White,Beauty,Coffee Maker,1,325.84,10.0,USA,Credit Card,Delivered,5.0,0,
+11305,2022-07-03,259,Dave Brown,Toys,Wireless Headset,1,453.4,,USA,PayPal,Delivered,,0,
+11306,2022-02-12,23,Eve Davis,Beauty,Coffee Maker,2,435.6,,USA,Credit Card,Processing,,0,
+11307,2022-11-07,162,Alice Johnson,Home & Garden,Yoga Mat,1,285.62,5.0,France,Credit Card,Cancelled,,0,
+11308,2022-03-15,265,Bob Smith,Beauty,LED Lamp,1,246.51,10.0,India,Credit Card,Processing,5.0,1,
+11309,2022-09-07,82,Eve Davis,Home & Garden,Skincare Set,5,368.95,25.0,USA,Credit Card,Delivered,4.0,0,Wrong item sent
+11310,2022-03-05,59,Dave Brown,Sports,Coffee Maker,2,178.07,10.0,USA,Debit Card,Delivered,,0,"Excellent quality, will buy again"
+11311,2022-04-16,66,Dave Brown,Electronics,Coffee Maker,1,314.57,10.0,Australia,Credit Card,Shipped,5.0,0,Great product!
+11312,2022-09-24,115,Dave Brown,Home & Garden,Wireless Headset,10,16.46,10.0,Australia,PayPal,Cancelled,,0,"Excellent quality, will buy again"
+11313,2022-12-30,291,Carol White,Toys,Yoga Mat,1,413.03,5.0,Canada,Credit Card,Delivered,4.0,0,Packaging was damaged
+11314,2022-06-26,242,Bob Smith,Books,Running Shoes,2,499.03,25.0,USA,Credit Card,Delivered,,0,
+11315,2022-12-25,334,Alice Johnson,Electronics,Yoga Mat,1,477.58,10.0,USA,Credit Card,Delivered,4.0,0,Wrong item sent
+11316,2022-03-24,109,Dave Brown,Books,Running Shoes,1,183.15,,Australia,Credit Card,Shipped,,0,
+11317,2022-01-23,304,Bob Smith,Home & Garden,Wireless Headset,1,267.9,5.0,Australia,Debit Card,Delivered,4.0,0,Great product!
+11318,2022-03-26,309,Dave Brown,Home & Garden,LED Lamp,2,121.93,10.0,Germany,Bank Transfer,Delivered,5.0,0,
+11319,2022-08-17,331,Dave Brown,Books,Python Book,3,154.98,10.0,Australia,PayPal,Delivered,,0,
+11320,2022-06-27,32,Alice Johnson,Electronics,Coffee Maker,5,231.39,,USA,Debit Card,Delivered,,0,Arrived late
+11321,2022-11-18,213,Bob Smith,Toys,Bluetooth Speaker,3,374.81,25.0,USA,PayPal,Delivered,2.0,0,
+11322,2022-09-21,88,Dave Brown,Home & Garden,Python Book,10,13.85,0.0,USA,PayPal,Processing,,0,"Excellent quality, will buy again"
+11323,2022-03-08,396,Carol White,Electronics,Laptop Pro,10,199.92,,USA,PayPal,Delivered,3.0,0,
+11324,2022-03-20,62,Dave Brown,Sports,Yoga Mat,10,280.47,20.0,France,Debit Card,Processing,,0,
+11325,2022-10-29,3,Bob Smith,Clothing,Coffee Maker,1,111.52,25.0,Australia,Bank Transfer,Processing,,0,
+11326,2022-01-16,262,Eve Davis,Clothing,Desk Chair,1,43.85,0.0,USA,Debit Card,Delivered,,1,Packaging was damaged
+11327,2022-10-13,383,Dave Brown,Sports,Running Shoes,2,272.09,15.0,UK,Bank Transfer,Delivered,4.0,0,"Excellent quality, will buy again"
+11328,2022-08-15,112,Carol White,Sports,Coffee Maker,10,320.72,25.0,UK,PayPal,Delivered,3.0,0,Good value for money
+11329,2022-04-10,12,Carol White,Clothing,LED Lamp,1,322.3,15.0,USA,Debit Card,Delivered,,0,
+11330,2022-05-07,53,Dave Brown,Electronics,Laptop Pro,1,$357.78,25.0,France,PayPal,Delivered,5.0,0,
+11331,2022-06-13,148,Bob Smith,Electronics,Python Book,3,122.49,,UK,Debit Card,Processing,2.0,0,
+11332,2022-05-11,134,Dave Brown,Toys,Running Shoes,1,114.09,0.0,UK,Debit Card,Delivered,,0,
+11333,2022-07-07,84,Carol White,Toys,Python Book,10,25.06,15.0,USA,Debit Card,Processing,,0,
+11334,2022-12-07,398,Dave Brown,Clothing,Wireless Headset,1,96.42,15.0,UK,Credit Card,Delivered,3.0,0,
+11335,2022-03-27,184,Carol White,Clothing,Wireless Headset,2,410.21,0.0,Germany,Credit Card,Delivered,5.0,0,
+11336,2023-01-04,169,Eve Davis,Clothing,Wireless Headset,1,6.51,20.0,USA,PayPal,Shipped,2.0,0,"Excellent quality, will buy again"
+11337,2022-11-15,49,Dave Brown,Toys,Running Shoes,2,26.72,25.0,USA,PayPal,Shipped,,0,
+11338,2022-04-20,108,Alice Johnson,Clothing,Bluetooth Speaker,1,67.87,5.0,UK,Debit Card,Delivered,4.0,0,
+11339,2022-11-29,193,Dave Brown,Clothing,Coffee Maker,1,213.02,15.0,Canada,Credit Card,Delivered,,0,
+11340,2022-06-17,340,Carol White,Home & Garden,Python Book,2,170.2,,USA,Bank Transfer,Delivered,3.0,0,Great product!
+11341,2022-11-10,214,Bob Smith,Electronics,Python Book,1,93.03,0.0,USA,Debit Card,Delivered,,0,Arrived late
+11342,2022-04-28,360,Carol White,Electronics,Running Shoes,1,59.92,,USA,Credit Card,Delivered,5.0,0,
+11343,2022-09-26,95,Eve Davis,Clothing,Bluetooth Speaker,3,469.74,5.0,Australia,PayPal,Delivered,5.0,0,
+11344,2022-01-13,31,Bob Smith,Home & Garden,Desk Chair,3,456.07,,USA,Credit Card,Delivered,5.0,0,
+11345,2022-02-01,156,Alice Johnson,Sports,Laptop Pro,2,387.09,10.0,USA,Credit Card,Delivered,5.0,1,
+11346,2022-09-10,12,Alice Johnson,Books,Yoga Mat,3,129.75,,France,Bank Transfer,Processing,,0,
+11347,2022-03-13,272,Eve Davis,Electronics,Python Book,1,$421.85,15.0,Germany,Debit Card,Processing,3.0,0,Arrived late
+11348,2022-03-16,225,Eve Davis,Clothing,LED Lamp,10,334.59,20.0,UK,Credit Card,Delivered,4.0,0,
+11349,2022-03-17,163,Eve Davis,Electronics,Skincare Set,1,149.39,25.0,Germany,Credit Card,Delivered,5.0,0,
+11350,2022-08-02,44,Eve Davis,Electronics,Running Shoes,2,267.66,15.0,USA,Debit Card,Delivered,4.0,0,
+11351,2022-04-28,324,Dave Brown,Books,Coffee Maker,2,327.39,10.0,USA,Debit Card,Shipped,5.0,1,
+11352,2022-02-23,394,Carol White,Beauty,Python Book,1,262.0,5.0,USA,Debit Card,Returned,5.0,0,
+11353,2022-05-16,226,Dave Brown,Sports,Python Book,1,209.58,25.0,UK,PayPal,Delivered,,0,
+11354,2022-04-23,253,Bob Smith,Home & Garden,Desk Chair,1,177.21,10.0,USA,Crypto,Delivered,3.0,0,
+11355,2022-05-08,233,Alice Johnson,Home & Garden,LED Lamp,2,389.99,,USA,Debit Card,Shipped,4.0,0,
+11356,2022-06-23,259,Alice Johnson,Toys,Bluetooth Speaker,3,370.8,15.0,France,PayPal,Processing,,0,Wrong item sent
+11357,2022-05-05,287,Bob Smith,Home & Garden,Python Book,3,349.63,15.0,USA,PayPal,Delivered,,0,Wrong item sent
+11358,2022-06-04,180,Alice Johnson,Books,Wireless Headset,1,190.47,20.0,USA,Credit Card,Delivered,5.0,0,
+11359,2023-01-05,223,Eve Davis,Clothing,Laptop Pro,2,388.99,15.0,France,Bank Transfer,Delivered,,0,
+11360,2022-03-28,116,Eve Davis,Electronics,Desk Chair,1,479.06,,USA,Credit Card,Delivered,5.0,1,
+11361,2022-05-23,5,Eve Davis,Clothing,Python Book,1,346.04,5.0,USA,PayPal,Delivered,,0,Great product!
+11362,2022-05-26,261,Bob Smith,Toys,LED Lamp,1,206.91,25.0,France,PayPal,Delivered,,0,
+11363,2022-10-16,66,Carol White,Books,Coffee Maker,1,399.26,25.0,USA,Credit Card,Delivered,5.0,0,
+11364,2022-12-02,15,Bob Smith,Electronics,Wireless Headset,3,306.6,25.0,Canada,Credit Card,Processing,5.0,0,
+11365,2022-04-02,149,Carol White,Home & Garden,Python Book,1,439.45,20.0,Germany,PayPal,Processing,5.0,0,
+11366,2022-02-11,101,Alice Johnson,Clothing,Python Book,1,358.03,25.0,USA,Bank Transfer,Delivered,4.0,0,"Excellent quality, will buy again"
+11367,2022-03-04,267,Alice Johnson,Toys,Desk Chair,1,386.11,5.0,USA,Debit Card,Delivered,,0,Great product!
+11368,2022-12-18,218,Alice Johnson,Electronics,Coffee Maker,1,335.38,10.0,UK,PayPal,Shipped,5.0,0,Packaging was damaged
+11369,2022-07-22,42,Carol White,Home & Garden,Wireless Headset,1,50.55,0.0,Germany,Credit Card,Delivered,5.0,0,
+11370,2022-08-22,66,Alice Johnson,Home & Garden,Skincare Set,2,245.13,25.0,UK,Bank Transfer,Delivered,,0,
+11371,2022-01-12,350,Bob Smith,Beauty,Coffee Maker,3,32.96,5.0,USA,Credit Card,Processing,,0,
+11372,2022-05-17,317,Carol White,Books,Python Book,3,226.54,,USA,Credit Card,Shipped,5.0,0,
+11373,2022-10-25,316,Eve Davis,Sports,LED Lamp,1,359.63,,USA,Credit Card,Delivered,4.0,0,
+11374,2022-09-28,398,Carol White,Electronics,Wireless Headset,1,213.52,5.0,Germany,Bank Transfer,Delivered,3.0,0,Great product!
+11375,2022-05-12,120,Bob Smith,Electronics,Laptop Pro,10,5.81,,USA,Debit Card,Delivered,5.0,0,Wrong item sent
+11376,2022-12-12,245,Bob Smith,Clothing,Yoga Mat,2,187.8,5.0,Australia,Credit Card,Delivered,,0,
+11377,2022-07-13,389,Bob Smith,Books,Desk Chair,1,38.54,25.0,USA,Credit Card,Delivered,5.0,0,
+11378,2022-11-27,287,Alice Johnson,Clothing,Desk Chair,5,391.4,25.0,USA,Bank Transfer,Delivered,4.0,0,
+11379,2022-02-10,48,Eve Davis,Electronics,LED Lamp,5,392.96,0.0,UK,Credit Card,Delivered,,1,
+11380,2022-08-17,288,Eve Davis,Books,Skincare Set,2,404.16,20.0,USA,PayPal,Delivered,5.0,1,Arrived late
+11381,2022-05-25,313,Dave Brown,Books,Bluetooth Speaker,3,20.01,5.0,Canada,PayPal,Delivered,4.0,1,
+11382,2022-08-25,255,Bob Smith,Books,Laptop Pro,1,20.97,20.0,Australia,Credit Card,Processing,5.0,0,
+11383,2022-01-02,351,Alice Johnson,Electronics,Running Shoes,1,452.21,20.0,Australia,Credit Card,Shipped,4.0,0,
+11384,2022-01-15,155,Carol White,Toys,Bluetooth Speaker,5,66.22,10.0,USA,Bank Transfer,Delivered,5.0,0,
+11385,2023-01-08,338,Alice Johnson,Books,Coffee Maker,1,$381.14,10.0,USA,Debit Card,Delivered,5.0,0,Great product!
+11386,2022-05-21,261,Bob Smith,Electronics,Yoga Mat,1,398.75,,Australia,Credit Card,Delivered,,1,
+11387,2022-11-24,17,Alice Johnson,Home & Garden,Skincare Set,2,226.69,5.0,Germany,Debit Card,Delivered,4.0,0,
+11388,2022-08-06,203,Bob Smith,Clothing,Running Shoes,1,$497.18,25.0,USA,Debit Card,Processing,4.0,0,
+11389,2022-04-22,373,Carol White,Clothing,Skincare Set,5,117.55,25.0,Germany,Credit Card,Delivered,,0,
+11390,2023-01-07,166,Carol White,Clothing,Running Shoes,1,462.18,20.0,Germany,PayPal,Cancelled,,0,
+11391,2022-07-22,379,Eve Davis,Toys,Yoga Mat,5,154.39,10.0,USA,Credit Card,Processing,,0,
+11392,2022-10-27,48,Dave Brown,Beauty,LED Lamp,3,112.82,5.0,Australia,PayPal,Processing,5.0,0,
+11393,2022-10-29,229,Alice Johnson,Electronics,Skincare Set,1,265.07,5.0,USA,PayPal,Shipped,5.0,0,
+11394,2022-12-06,213,Dave Brown,Electronics,Coffee Maker,1,99.3,,UK,PayPal,Delivered,3.0,0,Good value for money
+11395,2022-09-20,216,Alice Johnson,Electronics,Yoga Mat,2,344.91,10.0,Canada,PayPal,Delivered,5.0,0,
+11396,2022-06-17,305,Eve Davis,Books,Python Book,1,259.98,5.0,USA,Credit Card,Shipped,,0,
+11397,2022-08-30,169,Eve Davis,Electronics,Wireless Headset,3,78.16,20.0,Canada,Credit Card,Delivered,,0,Packaging was damaged
+11398,2022-01-21,22,Carol White,Sports,Skincare Set,2,38.29,5.0,Canada,PayPal,Delivered,5.0,0,
+11399,2022-05-04,275,Carol White,Clothing,Python Book,1,72.79,,USA,Bank Transfer,Delivered,4.0,0,
+11400,2022-09-06,113,Carol White,Books,Yoga Mat,1,72.63,,USA,Debit Card,Delivered,1.0,0,Great product!
+11401,2022-10-22,357,Alice Johnson,Clothing,Desk Chair,1,159.86,0.0,Canada,Credit Card,Processing,5.0,0,
+11402,2022-02-02,386,Dave Brown,Toys,Wireless Headset,3,417.47,20.0,Australia,Credit Card,Processing,2.0,0,Arrived late
+11403,2022-07-21,203,Dave Brown,Electronics,Wireless Headset,2,33.36,5.0,France,Credit Card,Delivered,3.0,0,Good value for money
+11404,2022-09-12,33,Carol White,Home & Garden,Yoga Mat,1,68.4,15.0,USA,Debit Card,Delivered,,0,
+11405,2022-01-29,89,Eve Davis,Home & Garden,LED Lamp,2,154.94,10.0,Canada,Bank Transfer,Delivered,4.0,0,
+11406,2023-01-03,134,Dave Brown,Home & Garden,Laptop Pro,10,278.9,20.0,USA,Credit Card,Delivered,5.0,0,
+11407,2022-03-02,11,Eve Davis,Clothing,Desk Chair,1,382.63,20.0,USA,Credit Card,Shipped,3.0,0,
+11408,2022-12-31,27,Carol White,Electronics,Skincare Set,1,460.99,5.0,UK,Bank Transfer,Delivered,2.0,0,Good value for money
+11409,2022-09-27,31,Alice Johnson,Home & Garden,Yoga Mat,3,208.98,10.0,USA,Debit Card,Processing,,0,
+11410,2022-05-25,91,Bob Smith,Sports,Coffee Maker,2,$371.69,5.0,France,Debit Card,Delivered,,1,
+11411,2023-01-01,169,Dave Brown,Electronics,Desk Chair,1,110.69,15.0,France,Credit Card,Processing,5.0,0,
+11412,2022-04-11,47,Carol White,Clothing,LED Lamp,1,147.19,0.0,UK,PayPal,Returned,4.0,0,
+11413,2022-06-30,79,Carol White,Electronics,Laptop Pro,5,394.12,25.0,UK,Credit Card,Delivered,5.0,0,Packaging was damaged
+11414,2022-03-05,2,Dave Brown,Books,Coffee Maker,1,344.89,25.0,France,Credit Card,Processing,5.0,0,
+11415,2022-10-17,399,Bob Smith,Sports,Yoga Mat,1,108.46,10.0,USA,Credit Card,Delivered,4.0,0,
+11416,2022-08-18,20,Alice Johnson,Home & Garden,Python Book,1,420.18,0.0,USA,Bank Transfer,Delivered,,0,
+11417,2022-05-27,387,Dave Brown,Clothing,Desk Chair,3,430.28,15.0,USA,Credit Card,Delivered,,0,
+11418,2023-01-07,106,Alice Johnson,Electronics,Desk Chair,2,441.81,20.0,USA,PayPal,Delivered,5.0,0,
+11419,2022-08-16,295,Carol White,Sports,Wireless Headset,1,141.13,,India,Bank Transfer,Delivered,,0,
+11420,2022-09-08,330,Dave Brown,Clothing,LED Lamp,1,71.2,25.0,USA,Credit Card,Delivered,,0,
+11421,2022-12-15,90,Alice Johnson,Electronics,Coffee Maker,2,56.46,0.0,USA,Debit Card,Delivered,,0,
+11422,2022-01-25,138,Eve Davis,Books,Desk Chair,1,203.04,10.0,France,PayPal,Shipped,4.0,1,"Excellent quality, will buy again"
+11423,2022-02-18,168,Eve Davis,Electronics,Yoga Mat,1,217.52,5.0,Germany,Credit Card,Delivered,4.0,0,
+11424,2022-11-19,141,Eve Davis,Sports,Bluetooth Speaker,2,434.76,0.0,Canada,Credit Card,Shipped,5.0,0,
+11425,2022-06-23,213,Alice Johnson,Electronics,Wireless Headset,2,137.54,10.0,USA,Credit Card,Delivered,4.0,0,
+11426,2022-12-06,300,Eve Davis,Clothing,Coffee Maker,10,315.31,0.0,USA,Credit Card,Shipped,,0,"Excellent quality, will buy again"
+11427,2022-10-15,32,Carol White,Electronics,Laptop Pro,3,395.17,25.0,India,PayPal,Delivered,5.0,0,
+11428,2022-12-13,30,Alice Johnson,Home & Garden,Running Shoes,1,138.23,20.0,USA,Debit Card,Delivered,4.0,0,Packaging was damaged
+11429,2022-07-10,385,Carol White,Books,Yoga Mat,1,137.23,,France,Credit Card,Delivered,5.0,0,
+11430,2022-12-24,309,Bob Smith,Sports,LED Lamp,1,336.23,20.0,France,PayPal,Delivered,,0,Great product!
+11431,2022-12-24,332,Alice Johnson,Clothing,Coffee Maker,2,364.44,,USA,Debit Card,Delivered,4.0,0,
+11432,2022-02-12,44,Eve Davis,Electronics,Python Book,5,480.08,20.0,France,PayPal,Delivered,4.0,0,
+11433,2022-12-04,35,Eve Davis,Electronics,Coffee Maker,2,425.72,15.0,USA,PayPal,Delivered,1.0,0,
+11434,2022-10-03,45,Bob Smith,Beauty,Python Book,1,411.92,25.0,France,PayPal,Delivered,4.0,0,Packaging was damaged
+11435,2022-02-07,380,Dave Brown,Clothing,Wireless Headset,3,347.7,25.0,Canada,Debit Card,Delivered,4.0,0,
+11436,2022-05-13,372,Bob Smith,Books,Laptop Pro,2,63.65,25.0,USA,Credit Card,Delivered,4.0,0,Great product!
+11437,2022-08-13,380,Eve Davis,Toys,LED Lamp,10,405.57,5.0,Germany,PayPal,Delivered,5.0,0,"Excellent quality, will buy again"
+11438,2022-07-09,138,Eve Davis,Electronics,Laptop Pro,1,467.98,,Australia,Bank Transfer,Delivered,3.0,1,
+11439,2022-02-08,47,Dave Brown,Home & Garden,Wireless Headset,2,198.41,0.0,UK,PayPal,Delivered,4.0,0,Arrived late
+11440,2022-08-07,185,Bob Smith,Electronics,Coffee Maker,10,160.26,25.0,Germany,PayPal,Returned,5.0,0,Great product!
+11441,2022-11-02,18,Carol White,Electronics,LED Lamp,5,263.63,15.0,Germany,PayPal,Delivered,2.0,0,
+11442,2022-09-21,185,Bob Smith,Electronics,Desk Chair,1,478.45,10.0,Germany,Credit Card,Shipped,5.0,0,
+11443,2022-01-22,72,Carol White,Sports,Running Shoes,5,30.16,0.0,UK,PayPal,Delivered,,0,"Excellent quality, will buy again"
+11444,2022-05-03,123,Eve Davis,Clothing,Bluetooth Speaker,3,355.9,25.0,Germany,Debit Card,Delivered,5.0,0,
+11445,2022-04-19,171,Eve Davis,Electronics,Yoga Mat,5,408.26,,UK,PayPal,Delivered,4.0,0,Great product!
+11446,2022-02-27,77,Bob Smith,Electronics,Running Shoes,1,395.43,25.0,USA,Credit Card,Delivered,4.0,0,Packaging was damaged
+11447,2022-06-13,398,Eve Davis,Electronics,Desk Chair,2,285.55,20.0,USA,PayPal,Shipped,4.0,0,
+11448,2022-09-09,9,Dave Brown,Toys,Skincare Set,1,460.68,0.0,Australia,Credit Card,Processing,,0,
+11449,2022-12-19,201,Alice Johnson,Clothing,Skincare Set,3,71.59,20.0,USA,Credit Card,Delivered,,0,"Excellent quality, will buy again"
+11450,2022-01-31,243,Carol White,Toys,Skincare Set,1,126.35,15.0,USA,Credit Card,Delivered,3.0,0,Good value for money
+11451,2022-04-14,69,Eve Davis,Sports,Python Book,1,156.94,25.0,USA,Credit Card,Delivered,,0,
+11452,2022-06-10,239,Carol White,Sports,Yoga Mat,5,9.3,15.0,USA,Debit Card,Delivered,5.0,0,Good value for money
+11453,2022-10-02,317,Bob Smith,Electronics,Running Shoes,3,188.48,15.0,USA,Debit Card,Processing,3.0,0,
+11454,2022-12-03,11,Dave Brown,Electronics,Python Book,5,84.53,,USA,PayPal,Delivered,,0,
+11455,2023-01-02,320,Carol White,Books,Running Shoes,10,363.69,5.0,France,Debit Card,Delivered,,0,
+11456,2022-07-14,38,Eve Davis,Clothing,Running Shoes,10,210.4,20.0,USA,Bank Transfer,Returned,5.0,0,Wrong item sent
+11457,2022-05-02,10,Alice Johnson,Clothing,Laptop Pro,1,353.71,0.0,Australia,Credit Card,Delivered,4.0,0,
+11458,2022-04-13,16,Dave Brown,Electronics,Coffee Maker,1,150.36,,USA,Bank Transfer,Returned,,0,
+11459,2022-12-26,325,Bob Smith,Beauty,Running Shoes,2,70.3,0.0,Canada,Credit Card,Delivered,,0,
+11460,2022-04-12,243,Eve Davis,Electronics,Laptop Pro,3,70.33,0.0,Germany,Bank Transfer,Delivered,5.0,0,Good value for money
+11461,2022-08-15,247,Dave Brown,Electronics,Bluetooth Speaker,5,105.62,5.0,Germany,Debit Card,Processing,,0,
+11462,2022-01-09,42,Eve Davis,Home & Garden,Python Book,5,62.03,5.0,USA,Credit Card,Delivered,,0,
+11463,2022-12-30,234,Bob Smith,Electronics,Bluetooth Speaker,3,114.17,20.0,Canada,Credit Card,Processing,5.0,1,
+11464,2022-08-28,44,Bob Smith,Electronics,Wireless Headset,5,291.62,5.0,UK,Debit Card,Delivered,5.0,0,
+11465,2022-10-27,164,Alice Johnson,Electronics,Wireless Headset,3,131.89,,USA,Credit Card,Cancelled,,0,Great product!
+11466,2022-07-08,150,Dave Brown,Electronics,Python Book,1,174.76,15.0,USA,PayPal,Delivered,,0,Packaging was damaged
+11467,2022-06-04,280,Alice Johnson,Electronics,Python Book,1,31.1,0.0,USA,PayPal,Cancelled,,0,
+11468,2022-07-27,204,Alice Johnson,Electronics,Coffee Maker,2,446.64,15.0,USA,Credit Card,Processing,5.0,0,
+11469,2022-11-16,231,Alice Johnson,Clothing,Laptop Pro,1,73.39,5.0,Germany,Credit Card,Delivered,3.0,0,Packaging was damaged
+11470,2022-05-10,396,Carol White,Clothing,Coffee Maker,3,177.59,0.0,India,PayPal,Delivered,,0,
+11471,2022-01-30,291,Bob Smith,Clothing,Desk Chair,5,192.84,10.0,USA,Credit Card,Delivered,4.0,0,
+11472,2022-01-12,306,Alice Johnson,Books,Wireless Headset,1,387.2,15.0,USA,Credit Card,Delivered,4.0,0,Arrived late
+11473,2022-01-18,339,Carol White,Electronics,Coffee Maker,2,244.35,10.0,USA,Debit Card,Cancelled,5.0,0,
+11474,2022-03-10,334,Carol White,Electronics,Desk Chair,1,194.56,20.0,Germany,PayPal,Delivered,,0,
+11475,2022-08-01,296,Carol White,Sports,Desk Chair,1,$450.87,25.0,Australia,PayPal,Delivered,5.0,0,Wrong item sent
+11476,2022-04-03,22,Alice Johnson,Books,Yoga Mat,2,300.52,15.0,USA,Credit Card,Processing,5.0,0,
+11477,2022-03-17,175,Carol White,Electronics,Running Shoes,2,43.68,,Australia,PayPal,Delivered,,0,
+11478,2022-08-23,242,Alice Johnson,Beauty,Python Book,1,159.79,,USA,PayPal,Delivered,,1,
+11479,2022-07-31,331,Dave Brown,Home & Garden,Coffee Maker,1,489.41,25.0,USA,PayPal,Delivered,,0,
+11480,2022-03-02,66,Bob Smith,Electronics,Yoga Mat,10,244.25,10.0,USA,Credit Card,Delivered,5.0,0,Packaging was damaged
+11481,2022-11-07,394,Eve Davis,Beauty,Bluetooth Speaker,2,214.98,,USA,Debit Card,Delivered,,0,
+11482,2022-10-09,94,Alice Johnson,Clothing,Bluetooth Speaker,1,79.21,25.0,USA,Debit Card,Shipped,,0,
+11483,2022-05-21,213,Bob Smith,Beauty,Yoga Mat,3,420.34,15.0,USA,Credit Card,Delivered,,0,
+11484,2022-06-10,241,Alice Johnson,Electronics,Laptop Pro,1,70.99,5.0,Canada,PayPal,Processing,4.0,1,
+11485,2022-11-17,110,Dave Brown,Electronics,Yoga Mat,1,57.02,5.0,USA,Credit Card,Delivered,4.0,0,
+11486,2022-09-24,47,Bob Smith,Home & Garden,Desk Chair,1,$61.53,25.0,USA,Credit Card,Delivered,,1,
+11487,2022-09-15,391,Bob Smith,Electronics,Running Shoes,1,221.14,0.0,USA,Debit Card,Delivered,,0,
+11488,2022-04-17,360,Carol White,Electronics,Coffee Maker,1,490.83,,Germany,Debit Card,Delivered,2.0,0,
+11489,2022-07-11,156,Alice Johnson,Sports,Coffee Maker,1,68.13,15.0,USA,PayPal,Delivered,3.0,0,"Excellent quality, will buy again"
+11490,2022-04-02,80,Alice Johnson,Electronics,Desk Chair,1,244.49,20.0,USA,Debit Card,Processing,4.0,0,
+11491,2022-11-18,45,Eve Davis,Toys,Python Book,1,104.62,10.0,USA,Debit Card,Delivered,4.0,0,
+11492,2022-04-04,357,Carol White,Clothing,Running Shoes,1,352.37,25.0,USA,Debit Card,Delivered,5.0,1,
+11493,2022-11-09,195,Carol White,Sports,Laptop Pro,3,198.89,0.0,UK,Bank Transfer,Delivered,3.0,0,
+11494,2022-07-18,237,Eve Davis,Clothing,Skincare Set,2,325.99,25.0,USA,Debit Card,Delivered,,0,
+11495,2022-07-01,211,Carol White,Books,LED Lamp,3,172.51,10.0,USA,Debit Card,Delivered,3.0,0,
+11496,2022-06-20,268,Carol White,Clothing,Coffee Maker,5,284.45,20.0,France,PayPal,Processing,5.0,0,Packaging was damaged
+11497,2022-04-19,83,Dave Brown,Home & Garden,LED Lamp,1,$452.02,15.0,India,Debit Card,Processing,3.0,0,
+11498,2022-03-08,113,Bob Smith,Clothing,Python Book,10,190.31,20.0,France,Credit Card,Delivered,,0,
+11499,2022-12-21,267,Eve Davis,Electronics,LED Lamp,2,271.07,5.0,Australia,Debit Card,Delivered,5.0,0,
+11500,2022-07-10,131,Dave Brown,Electronics,Running Shoes,2,194.98,20.0,Canada,Debit Card,Shipped,2.0,0,

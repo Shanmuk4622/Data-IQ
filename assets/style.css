@@ -1,0 +1,273 @@
+/* ===== DataIQ Custom CSS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Hide Streamlit defaults */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header { visibility: hidden; }
+
+/* Main container */
+.main .block-container {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 1400px;
+}
+
+/* ===== Metric Cards ===== */
+.metric-card {
+    background: linear-gradient(135deg, rgba(139,92,246,0.15) 0%, rgba(16,185,129,0.08) 100%);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 16px;
+    padding: 1.2rem 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139,92,246,0.25);
+}
+.metric-card .metric-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #A78BFA;
+    margin-bottom: 0.4rem;
+}
+.metric-card .metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F1F5F9;
+    line-height: 1.1;
+}
+.metric-card .metric-sub {
+    font-size: 0.75rem;
+    color: #64748B;
+    margin-top: 0.3rem;
+}
+
+/* ===== Section Headers ===== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid rgba(139,92,246,0.3);
+}
+.section-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #E2E8F0;
+    margin: 0;
+}
+
+/* ===== Health Score Badge ===== */
+.health-badge {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+.health-badge.grade-A { background: rgba(16,185,129,0.2); color: #10B981; border: 1px solid #10B981; }
+.health-badge.grade-B { background: rgba(59,130,246,0.2); color: #3B82F6; border: 1px solid #3B82F6; }
+.health-badge.grade-C { background: rgba(245,158,11,0.2); color: #F59E0B; border: 1px solid #F59E0B; }
+.health-badge.grade-D { background: rgba(239,68,68,0.2);  color: #EF4444; border: 1px solid #EF4444; }
+
+/* ===== Severity Pills ===== */
+.severity-low      { color: #10B981; background: rgba(16,185,129,0.15);  padding: 2px 8px; border-radius: 6px; font-size:0.75rem; font-weight:600; }
+.severity-medium   { color: #F59E0B; background: rgba(245,158,11,0.15);  padding: 2px 8px; border-radius: 6px; font-size:0.75rem; font-weight:600; }
+.severity-high     { color: #F97316; background: rgba(249,115,22,0.15);  padding: 2px 8px; border-radius: 6px; font-size:0.75rem; font-weight:600; }
+.severity-critical { color: #EF4444; background: rgba(239,68,68,0.15);   padding: 2px 8px; border-radius: 6px; font-size:0.75rem; font-weight:600; }
+
+/* ===== Info Box ===== */
+.info-box {
+    background: rgba(59,130,246,0.1);
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+}
+.warning-box {
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+}
+.success-box {
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+}
+.error-box {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+}
+
+/* ===== Sidebar ===== */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0F0F1A 0%, #1A1A2E 100%);
+    border-right: 1px solid rgba(139,92,246,0.2);
+}
+[data-testid="stSidebar"] .stButton > button {
+    width: 100%;
+    background: rgba(139,92,246,0.15);
+    border: 1px solid rgba(139,92,246,0.4);
+    color: #C4B5FD;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: rgba(139,92,246,0.35);
+    border-color: #8B5CF6;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* ===== Buttons ===== */
+.stButton > button {
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+.stButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(139,92,246,0.4);
+}
+
+/* ===== Tabs ===== */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 4px;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px;
+    font-weight: 500;
+    color: #94A3B8;
+    padding: 6px 16px;
+    transition: all 0.2s;
+}
+.stTabs [aria-selected="true"] {
+    background: rgba(139,92,246,0.25) !important;
+    color: #C4B5FD !important;
+}
+
+/* ===== Expander ===== */
+[data-testid="stExpander"] {
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+}
+
+/* ===== Code blocks ===== */
+.stCode {
+    border-radius: 10px;
+    border: 1px solid rgba(139,92,246,0.2);
+}
+
+/* ===== DataFrame ===== */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(139,92,246,0.2);
+}
+
+/* ===== Progress bar ===== */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #8B5CF6, #10B981);
+    border-radius: 999px;
+}
+
+/* ===== Upload box ===== */
+[data-testid="stFileUploader"] {
+    border: 2px dashed rgba(139,92,246,0.4);
+    border-radius: 16px;
+    padding: 1rem;
+    transition: border-color 0.2s;
+}
+[data-testid="stFileUploader"]:hover {
+    border-color: #8B5CF6;
+}
+
+/* ===== Model Card ===== */
+.model-card {
+    background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(139,92,246,0.08));
+    border: 1px solid rgba(16,185,129,0.25);
+    border-radius: 16px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.model-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16,185,129,0.15);
+}
+.model-card .model-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #34D399;
+    margin-bottom: 0.3rem;
+}
+.model-card .model-reason {
+    font-size: 0.85rem;
+    color: #94A3B8;
+}
+
+/* ===== AI Report box ===== */
+.ai-report {
+    background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(16,185,129,0.05));
+    border: 1px solid rgba(139,92,246,0.25);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    line-height: 1.8;
+}
+
+/* ===== Animated gradient title ===== */
+.gradient-title {
+    background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 50%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    animation: gradientShift 4s ease-in-out infinite alternate;
+    background-size: 200% 200%;
+}
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* ===== Welcome state ===== */
+.welcome-container {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.welcome-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1A1A2E; }
+::-webkit-scrollbar-thumb { background: #4C1D95; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7C3AED; }
