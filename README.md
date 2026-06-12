@@ -24,7 +24,7 @@ It combines the automated profiling of tools like `ydata-profiling` and `Sweetvi
 
 ## 🛠️ Technology Stack
 
-*   **Frontend & UI:** [Streamlit](https://streamlit.io/) (featuring a custom dark glassmorphism theme)
+*   **Frontend & UI:** [Streamlit](https://streamlit.io/) (featuring a clean, minimalist Slate/Blue professional theme)
 *   **Data Processing:** [Pandas](https://pandas.pydata.org/) (fully compatible with Pandas 3.x), [NumPy](https://numpy.org/)
 *   **Plotting & Charts:** [Plotly](https://plotly.com/), [Wordcloud](https://github.com/amueller/word_cloud), [Missingno](https://github.com/ResidentMario/missingno)
 *   **Machine Learning:** [Scikit-learn](https://scikit-learn.org/), [XGBoost](https://xgboost.readthedocs.io/), [LightGBM](https://lightgbm.readthedocs.io/), [Imbalanced-learn](https://imbalanced-learn.org/)
@@ -65,6 +65,10 @@ It combines the automated profiling of tools like `ydata-profiling` and `Sweetvi
 
 To launch the Streamlit application:
 ```powershell
+# Activate the conda environment
+conda activate cv_conda
+
+# Run the app
 streamlit run app.py
 ```
 Open your browser and navigate to the local URL (typically `http://localhost:8501`).
@@ -80,7 +84,7 @@ DataIQ/
 ├── app.py                          # Main entry point & sidebar config
 ├── requirements.txt                # Dependency definitions
 ├── assets/
-│   ├── style.css                   # Custom CSS styling (dark glassmorphism)
+│   ├── style.css                   # Custom CSS styling (clean, minimalist Slate/Blue theme)
 │   └── sample_datasets/            # Pre-generated CSV files for testing/demo
 ├── modules/                        # Backend computation and logic
 │   ├── loader.py                   # File parsing and validation
