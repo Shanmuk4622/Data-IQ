@@ -5,33 +5,32 @@ import numpy as np
 
 # ── Color palettes ────────────────────────────────────────────────────────────
 SEVERITY_COLORS = {
-    "low":      "#10B981",
-    "medium":   "#F59E0B",
-    "high":     "#F97316",
-    "critical": "#EF4444",
+    "low":      "#059669",
+    "medium":   "#D97706",
+    "high":     "#EA580C",
+    "critical": "#DC2626",
 }
 
 DTYPE_COLORS = {
-    "numerical":   "#60A5FA",
-    "categorical": "#A78BFA",
-    "boolean":     "#34D399",
-    "datetime":    "#F472B6",
-    "text":        "#FBBF24",
-    "identifier":  "#94A3B8",
-    "mixed":       "#F87171",
+    "numerical":   "#2563EB",
+    "categorical": "#7C3AED",
+    "boolean":     "#059669",
+    "datetime":    "#DB2777",
+    "text":        "#D97706",
+    "identifier":  "#475569",
+    "mixed":       "#DC2626",
 }
 
 GRADE_COLORS = {
-    "A": "#10B981",
-    "B": "#3B82F6",
-    "C": "#F59E0B",
-    "D": "#EF4444",
+    "A": "#059669",
+    "B": "#2563EB",
+    "C": "#D97706",
+    "D": "#DC2626",
 }
 
 CATEGORICAL_PALETTE = [
-    "#8B5CF6", "#06B6D4", "#10B981", "#F59E0B", "#F472B6",
-    "#60A5FA", "#34D399", "#FBBF24", "#A78BFA", "#F87171",
-    "#4ADE80", "#FB923C", "#E879F9", "#38BDF8", "#A3E635",
+    "#2563EB", "#0D9488", "#4F46E5", "#0891B2", "#059669",
+    "#D97706", "#7C3AED", "#DB2777", "#DC2626", "#475569",
 ]
 
 

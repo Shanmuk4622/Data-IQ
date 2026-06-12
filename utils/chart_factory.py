@@ -8,23 +8,23 @@ from plotly.subplots import make_subplots
 from scipy import stats as scipy_stats
 
 
-_TEMPLATE = "plotly_dark"
+_TEMPLATE = "plotly_white"
 _LAYOUT_DEFAULTS = dict(
     height=420,
     margin=dict(l=30, r=20, t=50, b=30),
-    paper_bgcolor="rgba(15,15,26,0.6)",
-    plot_bgcolor="rgba(26,26,46,0.4)",
-    font=dict(family="Inter, sans-serif", color="#E2E8F0"),
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(family="Inter, sans-serif", color="#0F172A"),
 )
 
 CAT_COLORS = [
-    "#8B5CF6", "#06B6D4", "#10B981", "#F59E0B", "#F472B6",
-    "#60A5FA", "#34D399", "#FBBF24", "#A78BFA", "#F87171",
+    "#2563EB", "#0D9488", "#4F46E5", "#0891B2", "#059669",
+    "#D97706", "#7C3AED", "#DB2777", "#DC2626", "#475569",
 ]
 
 
 def _apply_defaults(fig: go.Figure, title: str = "", height: int = 420) -> go.Figure:
-    d = {**_LAYOUT_DEFAULTS, "height": height, "title": dict(text=title, font=dict(size=14, color="#C4B5FD"))}
+    d = {**_LAYOUT_DEFAULTS, "height": height, "title": dict(text=title, font=dict(size=14, color="#0F172A"))}
     fig.update_layout(**d)
     return fig
 
@@ -34,7 +34,7 @@ def _error_fig(msg: str) -> go.Figure:
     fig.add_annotation(
         text=f"Chart unavailable: {msg}",
         xref="paper", yref="paper", x=0.5, y=0.5,
-        showarrow=False, font=dict(size=13, color="#F87171"),
+        showarrow=False, font=dict(size=13, color="#DC2626"),
     )
     _apply_defaults(fig)
     return fig
@@ -49,7 +49,7 @@ def make_histogram(series: pd.Series, title: str = "") -> go.Figure:
         fig = go.Figure()
         fig.add_trace(go.Histogram(
             x=clean, name="Count",
-            marker_color="#8B5CF6", opacity=0.7,
+            marker_color="#2563EB", opacity=0.7,
             histnorm="probability density",
         ))
         # KDE
@@ -58,7 +58,7 @@ def make_histogram(series: pd.Series, title: str = "") -> go.Figure:
         fig.add_trace(go.Scatter(
             x=kde_x, y=kde(kde_x),
             mode="lines", name="KDE",
-            line=dict(color="#10B981", width=2),
+            line=dict(color="#059669", width=2),
         ))
         return _apply_defaults(fig, title or f"Distribution: {series.name}")
     except Exception as e:
@@ -102,7 +102,7 @@ def make_violin(df: pd.DataFrame, col: str, group_col: str = None, title: str = 
             clean = df[col].dropna()
             fig = go.Figure(go.Violin(
                 y=clean, box_visible=True, meanline_visible=True,
-                fillcolor="#8B5CF6", line_color="#8B5CF6", opacity=0.7,
+                fillcolor="#2563EB", line_color="#2563EB", opacity=0.7,
             ))
         return _apply_defaults(fig, title or f"Violin: {col}")
     except Exception as e:
@@ -116,7 +116,7 @@ def make_heatmap(corr_matrix: pd.DataFrame, title: str = "Correlation Matrix") -
         cols = corr_matrix.columns.tolist()
         fig = go.Figure(go.Heatmap(
             z=z, x=cols, y=cols,
-            colorscale=[[0, "#EF4444"], [0.5, "#1A1A2E"], [1, "#8B5CF6"]],
+            colorscale=[[0, "#DC2626"], [0.5, "#F8FAFC"], [1, "#2563EB"]],
             zmid=0, zmin=-1, zmax=1,
             text=np.round(z, 2), texttemplate="%{text}",
             textfont=dict(size=9),
@@ -135,7 +135,7 @@ def make_bar_chart(
     color: str | list = None,
 ) -> go.Figure:
     try:
-        colors = color if isinstance(color, list) else [color or "#8B5CF6"] * len(labels)
+        colors = color if isinstance(color, list) else [color or "#2563EB"] * len(labels)
         if horizontal:
             fig = go.Figure(go.Bar(
                 y=labels, x=values, orientation="h",
@@ -161,13 +161,13 @@ def make_scatter(df: pd.DataFrame, x: str, y: str, color_col: str = None, title:
             fig = px.scatter(
                 sub, x=x, y=y, color=color_col,
                 color_discrete_sequence=CAT_COLORS,
-                template="plotly_dark",
+                template="plotly_white",
             )
         else:
             fig = go.Figure()
             fig.add_trace(go.Scatter(
                 x=sub[x], y=sub[y], mode="markers",
-                marker=dict(color="#8B5CF6", opacity=0.6, size=5),
+                marker=dict(color="#2563EB", opacity=0.6, size=5),
                 hovertemplate=f"{x}: %{{x}}<br>{y}: %{{y}}<extra></extra>",
             ))
             # OLS trend line
@@ -176,14 +176,14 @@ def make_scatter(df: pd.DataFrame, x: str, y: str, color_col: str = None, title:
                 xr = np.linspace(sub[x].min(), sub[x].max(), 100)
                 fig.add_trace(go.Scatter(
                     x=xr, y=m * xr + b, mode="lines",
-                    line=dict(color="#10B981", width=1.5, dash="dash"),
+                    line=dict(color="#059669", width=1.5, dash="dash"),
                     name="OLS trend",
                 ))
                 r = np.corrcoef(sub[x].astype(float), sub[y].astype(float))[0, 1]
                 fig.add_annotation(
                     text=f"r = {r:.3f}", xref="paper", yref="paper",
                     x=0.02, y=0.95, showarrow=False,
-                    font=dict(color="#C4B5FD", size=11),
+                    font=dict(color="#475569", size=11),
                 )
             except Exception:
                 pass
@@ -198,9 +198,9 @@ def make_time_series(df: pd.DataFrame, x: str, y: str, title: str = "") -> go.Fi
         sub = df[[x, y]].dropna().sort_values(x)
         fig = go.Figure(go.Scatter(
             x=sub[x], y=sub[y], mode="lines+markers",
-            line=dict(color="#8B5CF6", width=1.5),
-            marker=dict(size=3, color="#06B6D4"),
-            fill="tozeroy", fillcolor="rgba(139,92,246,0.08)",
+            line=dict(color="#2563EB", width=1.5),
+            marker=dict(size=3, color="#0891B2"),
+            fill="tozeroy", fillcolor="rgba(37,99,235,0.05)",
         ))
         return _apply_defaults(fig, title or f"{y} over time")
     except Exception as e:
@@ -227,7 +227,7 @@ def make_pair_plot(df: pd.DataFrame, columns: list, color_col: str = None, title
         else:
             fig = go.Figure(go.Splom(
                 dimensions=dims,
-                marker=dict(color="#8B5CF6", size=3, opacity=0.5),
+                marker=dict(color="#2563EB", size=3, opacity=0.5),
                 showupperhalf=False,
             ))
         _apply_defaults(fig, title or "Pair Plot", height=600)
@@ -245,7 +245,7 @@ def make_missing_heatmap(df: pd.DataFrame, title: str = "Missing Value Pattern")
             z=z,
             x=[str(i) for i in range(len(sample))],
             y=df.columns.tolist(),
-            colorscale=[[0, "#1A1A2E"], [1, "#EF4444"]],
+            colorscale=[[0, "#F8FAFC"], [1, "#DC2626"]],
             showscale=False,
             hovertemplate="Row %{x}, Col %{y}: %{z}<extra></extra>",
         ))
@@ -259,28 +259,28 @@ def make_missing_heatmap(df: pd.DataFrame, title: str = "Missing Value Pattern")
 def make_health_gauge(score: float, grade: str = "") -> go.Figure:
     try:
         if score >= 85:
-            color = "#10B981"
+            color = "#059669"
         elif score >= 70:
-            color = "#3B82F6"
+            color = "#2563EB"
         elif score >= 55:
-            color = "#F59E0B"
+            color = "#D97706"
         else:
-            color = "#EF4444"
+            color = "#DC2626"
         fig = go.Figure(go.Indicator(
             mode="gauge+number+delta",
             value=score,
             delta={"reference": 70, "valueformat": ".1f"},
             number={"suffix": "", "font": {"size": 42, "color": color}},
             gauge={
-                "axis": {"range": [0, 100], "tickcolor": "#94A3B8"},
+                "axis": {"range": [0, 100], "tickcolor": "#64748B"},
                 "bar": {"color": color, "thickness": 0.25},
-                "bgcolor": "rgba(26,26,46,0.4)",
+                "bgcolor": "rgba(241,245,249,1)",
                 "borderwidth": 0,
                 "steps": [
-                    {"range": [0, 55],  "color": "rgba(239,68,68,0.15)"},
-                    {"range": [55, 70], "color": "rgba(245,158,11,0.15)"},
-                    {"range": [70, 85], "color": "rgba(59,130,246,0.15)"},
-                    {"range": [85, 100],"color": "rgba(16,185,129,0.15)"},
+                    {"range": [0, 55],  "color": "rgba(220,38,38,0.08)"},
+                    {"range": [55, 70], "color": "rgba(217,119,6,0.08)"},
+                    {"range": [70, 85], "color": "rgba(37,99,235,0.08)"},
+                    {"range": [85, 100],"color": "rgba(5,150,105,0.08)"},
                 ],
                 "threshold": {
                     "line": {"color": color, "width": 4},
@@ -288,13 +288,13 @@ def make_health_gauge(score: float, grade: str = "") -> go.Figure:
                     "value": score,
                 },
             },
-            title={"text": f"Dataset Health Score — Grade {grade}", "font": {"size": 14, "color": "#C4B5FD"}},
+            title={"text": f"Dataset Health Score — Grade {grade}", "font": {"size": 14, "color": "#0F172A"}},
         ))
         fig.update_layout(
             height=280,
             margin=dict(l=20, r=20, t=40, b=10),
-            paper_bgcolor="rgba(15,15,26,0.0)",
-            font=dict(family="Inter, sans-serif", color="#E2E8F0"),
+            paper_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Inter, sans-serif", color="#0F172A"),
         )
         return fig
     except Exception as e:
@@ -308,21 +308,21 @@ def make_radar_chart(categories: list, values: list, title: str = "") -> go.Figu
         vals = values + [values[0]]
         fig = go.Figure(go.Scatterpolar(
             r=vals, theta=cats,
-            fill="toself", fillcolor="rgba(139,92,246,0.25)",
-            line=dict(color="#8B5CF6", width=2),
-            marker=dict(color="#06B6D4", size=6),
+            fill="toself", fillcolor="rgba(37,99,235,0.15)",
+            line=dict(color="#2563EB", width=2),
+            marker=dict(color="#0D9488", size=6),
         ))
         fig.update_layout(
             polar=dict(
                 radialaxis=dict(visible=True, range=[0, 100], color="#64748B"),
-                bgcolor="rgba(26,26,46,0.4)",
+                bgcolor="rgba(248,250,252,0.8)",
             ),
             showlegend=False,
             height=380,
             margin=dict(l=40, r=40, t=50, b=30),
-            paper_bgcolor="rgba(15,15,26,0.0)",
-            font=dict(family="Inter, sans-serif", color="#E2E8F0"),
-            title=dict(text=title, font=dict(size=14, color="#C4B5FD")),
+            paper_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Inter, sans-serif", color="#0F172A"),
+            title=dict(text=title, font=dict(size=14, color="#0F172A")),
         )
         return fig
     except Exception as e:
@@ -337,14 +337,14 @@ def make_qq_plot(series: pd.Series, title: str = "") -> go.Figure:
         fig = go.Figure()
         fig.add_trace(go.Scatter(
             x=quantiles, y=values, mode="markers",
-            marker=dict(color="#8B5CF6", size=4, opacity=0.7),
+            marker=dict(color="#2563EB", size=4, opacity=0.7),
             name="Data",
         ))
         line_x = np.array([quantiles.min(), quantiles.max()])
         fig.add_trace(go.Scatter(
             x=line_x, y=slope * line_x + intercept,
             mode="lines", name="Normal",
-            line=dict(color="#10B981", width=2, dash="dash"),
+            line=dict(color="#059669", width=2, dash="dash"),
         ))
         return _apply_defaults(fig, title or f"Q-Q Plot: {series.name}")
     except Exception as e:
@@ -376,7 +376,7 @@ def make_treemap(labels: list, values: list, title: str = "") -> go.Figure:
         parents = [""] * len(labels)
         fig = go.Figure(go.Treemap(
             labels=labels, values=values, parents=parents,
-            marker=dict(colorscale="Purples"),
+            marker=dict(colorscale="Blues"),
             hovertemplate="%{label}: %{value:,}<extra></extra>",
         ))
         _apply_defaults(fig, title)
@@ -390,7 +390,7 @@ def make_pie(labels: list, values: list, title: str = "") -> go.Figure:
     try:
         fig = go.Figure(go.Pie(
             labels=labels, values=values,
-            marker=dict(colors=CAT_COLORS, line=dict(color="#0F0F1A", width=1.5)),
+            marker=dict(colors=CAT_COLORS, line=dict(color="#FFFFFF", width=1.5)),
             hole=0.35,
             hovertemplate="%{label}: %{value:,} (%{percent})<extra></extra>",
         ))
