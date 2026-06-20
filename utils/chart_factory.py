@@ -398,3 +398,185 @@ def make_pie(labels: list, values: list, title: str = "") -> go.Figure:
         return fig
     except Exception as e:
         return _error_fig(str(e))
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  ML result charts (used by pages/10_🛠_Make_ML_Model.py)
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Confusion matrix ──────────────────────────────────────────────────────────
+def make_confusion_matrix(cm, labels: list, title: str = "Confusion Matrix") -> go.Figure:
+    try:
+        z = np.asarray(cm)
+        labels = [str(l) for l in labels]
+        fig = go.Figure(go.Heatmap(
+            z=z, x=labels, y=labels,
+            colorscale=[[0, "#F8FAFC"], [1, "#2563EB"]],
+            text=z, texttemplate="%{text}", textfont=dict(size=13),
+            hovertemplate="Predicted <b>%{x}</b><br>Actual <b>%{y}</b><br>Count: %{z}<extra></extra>",
+            showscale=False,
+        ))
+        fig.update_xaxes(title_text="Predicted")
+        fig.update_yaxes(title_text="Actual", autorange="reversed")
+        _apply_defaults(fig, title, height=max(340, len(labels) * 48))
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── ROC curve ─────────────────────────────────────────────────────────────────
+def make_roc_curve(y_true, y_score, auc: float = None, title: str = "ROC Curve") -> go.Figure:
+    try:
+        from sklearn.metrics import roc_curve
+        fpr, tpr, _ = roc_curve(y_true, y_score)
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=fpr, y=tpr, mode="lines",
+            line=dict(color="#2563EB", width=2.5),
+            fill="tozeroy", fillcolor="rgba(37,99,235,0.08)",
+            name=f"ROC (AUC = {auc:.3f})" if auc is not None else "ROC",
+        ))
+        fig.add_trace(go.Scatter(
+            x=[0, 1], y=[0, 1], mode="lines",
+            line=dict(color="#94A3B8", width=1.5, dash="dash"), name="Chance",
+        ))
+        fig.update_xaxes(title_text="False Positive Rate", range=[0, 1])
+        fig.update_yaxes(title_text="True Positive Rate", range=[0, 1.02])
+        _apply_defaults(fig, title)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Predicted vs actual ───────────────────────────────────────────────────────
+def make_pred_vs_actual(y_true, y_pred, title: str = "Predicted vs Actual") -> go.Figure:
+    try:
+        y_true = np.asarray(y_true, dtype=float)
+        y_pred = np.asarray(y_pred, dtype=float)
+        lo = float(min(y_true.min(), y_pred.min()))
+        hi = float(max(y_true.max(), y_pred.max()))
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=y_true, y=y_pred, mode="markers",
+            marker=dict(color="#2563EB", opacity=0.55, size=6),
+            hovertemplate="Actual: %{x:.3f}<br>Predicted: %{y:.3f}<extra></extra>",
+            name="Predictions",
+        ))
+        fig.add_trace(go.Scatter(
+            x=[lo, hi], y=[lo, hi], mode="lines",
+            line=dict(color="#059669", width=1.5, dash="dash"), name="Perfect fit",
+        ))
+        fig.update_xaxes(title_text="Actual")
+        fig.update_yaxes(title_text="Predicted")
+        _apply_defaults(fig, title)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Residual plot ─────────────────────────────────────────────────────────────
+def make_residual_plot(y_true, y_pred, title: str = "Residuals") -> go.Figure:
+    try:
+        y_true = np.asarray(y_true, dtype=float)
+        y_pred = np.asarray(y_pred, dtype=float)
+        residuals = y_true - y_pred
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=y_pred, y=residuals, mode="markers",
+            marker=dict(color="#7C3AED", opacity=0.55, size=6),
+            hovertemplate="Predicted: %{x:.3f}<br>Residual: %{y:.3f}<extra></extra>",
+        ))
+        fig.add_hline(y=0, line=dict(color="#DC2626", width=1.5, dash="dash"))
+        fig.update_xaxes(title_text="Predicted")
+        fig.update_yaxes(title_text="Residual (actual − predicted)")
+        _apply_defaults(fig, title)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Cluster scatter (2-D PCA projection) ──────────────────────────────────────
+def make_cluster_scatter(pca_x, pca_y, labels, title: str = "Clusters (PCA projection)") -> go.Figure:
+    try:
+        df = pd.DataFrame({"x": pca_x, "y": pca_y, "cluster": [str(l) for l in labels]})
+        fig = px.scatter(
+            df, x="x", y="y", color="cluster",
+            color_discrete_sequence=CAT_COLORS, template="plotly_white",
+        )
+        fig.update_traces(marker=dict(size=6, opacity=0.7))
+        fig.update_xaxes(title_text="PC 1")
+        fig.update_yaxes(title_text="PC 2")
+        _apply_defaults(fig, title, height=460)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Elbow plot ────────────────────────────────────────────────────────────────
+def make_elbow_plot(ks: list, inertias: list, title: str = "Elbow Method (K-Means)") -> go.Figure:
+    try:
+        fig = go.Figure(go.Scatter(
+            x=ks, y=inertias, mode="lines+markers",
+            line=dict(color="#2563EB", width=2),
+            marker=dict(color="#0891B2", size=8),
+            hovertemplate="k = %{x}<br>Inertia: %{y:.0f}<extra></extra>",
+        ))
+        fig.update_xaxes(title_text="Number of clusters (k)", dtick=1)
+        fig.update_yaxes(title_text="Inertia (within-cluster SSE)")
+        _apply_defaults(fig, title)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Forecast plot (history + forecast + confidence band) ──────────────────────
+def make_forecast_plot(
+    history_x, history_y, forecast_x, forecast_y,
+    lower=None, upper=None, title: str = "Forecast",
+) -> go.Figure:
+    try:
+        fig = go.Figure()
+        # Confidence band
+        if lower is not None and upper is not None:
+            fig.add_trace(go.Scatter(
+                x=list(forecast_x) + list(forecast_x)[::-1],
+                y=list(upper) + list(lower)[::-1],
+                fill="toself", fillcolor="rgba(37,99,235,0.12)",
+                line=dict(color="rgba(0,0,0,0)"), hoverinfo="skip",
+                name="95% interval",
+            ))
+        fig.add_trace(go.Scatter(
+            x=history_x, y=history_y, mode="lines",
+            line=dict(color="#475569", width=1.5), name="History",
+        ))
+        fig.add_trace(go.Scatter(
+            x=forecast_x, y=forecast_y, mode="lines",
+            line=dict(color="#2563EB", width=2), name="Forecast",
+        ))
+        fig.update_yaxes(title_text="Value")
+        _apply_defaults(fig, title, height=440)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Cross-validation fold scores ──────────────────────────────────────────────
+def make_cv_scores(scores: list, scoring: str = "score", title: str = "Cross-Validation Scores") -> go.Figure:
+    try:
+        scores = list(scores)
+        folds = [f"Fold {i+1}" for i in range(len(scores))]
+        mean = float(np.mean(scores)) if scores else 0.0
+        fig = go.Figure(go.Bar(
+            x=folds, y=scores,
+            marker_color="#2563EB",
+            hovertemplate="%{x}: %{y:.4f}<extra></extra>",
+        ))
+        fig.add_hline(
+            y=mean, line=dict(color="#059669", width=2, dash="dash"),
+            annotation_text=f"mean = {mean:.4f}", annotation_position="top left",
+        )
+        fig.update_yaxes(title_text=scoring)
+        _apply_defaults(fig, title, height=340)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))

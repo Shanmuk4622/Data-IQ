@@ -41,6 +41,13 @@ _defaults = {
     "demo_mode": False,
     "groq_api_key": "",
     "cleaning_choices": {},
+    # ── Make ML Model section ──
+    "trained_model": None,
+    "training_results": None,
+    "model_chat_history": [],
+    "model_config": {},
+    "leaderboard_results": None,
+    "tuned_params": None,
 }
 
 for key, val in _defaults.items():
@@ -346,8 +353,9 @@ else:
     st.divider()
     st.markdown(
         "**Navigate using the sidebar pages** to explore EDA, statistics, visualisations, "
-        "correlations, preprocessing, ML recommendations, AI explanations, and downloads.",
+        "correlations, preprocessing, ML recommendations, AI explanations, model training, and downloads.",
     )
     st.markdown(
-        "Start with **01 Overview** → **02 Data Quality** → **08 AI Explanation** → **09 Downloads**."
+        "Start with **01 Overview** → **02 Data Quality** → **06 Preprocessing** → "
+        "**10 Make ML Model** → **09 Downloads**."
     )

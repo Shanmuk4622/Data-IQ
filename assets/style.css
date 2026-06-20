@@ -7,9 +7,7 @@ html, body, [class*="css"] {
 }
 
 /* Hide Streamlit branding defaults */
-#MainMenu { visibility: hidden; }
 footer { visibility: hidden; }
-header { visibility: hidden; }
 
 /* Main block layout */
 .main .block-container {

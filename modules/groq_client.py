@@ -121,6 +121,76 @@ Be specific about the numbers. Reference the actual column counts, percentages, 
     return f"⚠️ Groq API error (tried all fallback models): {str(last_error)}\n\nPlease verify your API key or network connection."
 
 
+def chat_with_dataset(
+    messages: list[dict],
+    profile_summary: dict,
+    groq_api_key: str,
+    model_context: dict | None = None,
+) -> str:
+    """Multi-turn chat grounded in the dataset profile + (optional) chosen model.
+
+    `messages` is the running conversation as a list of {"role": "user"|"assistant", "content": str}.
+    Returns the assistant's next reply (markdown), using the same Q&A fallback chain.
+    """
+    try:
+        from groq import Groq
+    except ImportError:
+        return "⚠️ Groq package not installed. Run: pip install groq"
+
+    if not groq_api_key or groq_api_key.strip() == "":
+        return "⚠️ No Groq API key provided. Enter your key in the sidebar to enable the AI chat."
+
+    client = Groq(api_key=groq_api_key.strip())
+
+    context = json.dumps(profile_summary, indent=2, default=str)[:3000]
+    model_line = ""
+    if model_context:
+        model_line = (
+            f"\nThe user is currently working on a "
+            f"{model_context.get('problem_type', 'unknown')} problem"
+            + (f", target column '{model_context['target']}'" if model_context.get("target") else "")
+            + (f", model '{model_context['model_name']}'" if model_context.get("model_name") else "")
+            + "."
+        )
+
+    system_prompt = (
+        "You are a senior data scientist embedded in the DataIQ app, helping the user build an ML "
+        "model on THEIR dataset. Be concrete and reference the dataset's actual numbers from the "
+        "context below. Keep answers focused (2–6 sentences or a short list). Suggest specific models, "
+        "preprocessing, metrics, and hyperparameters. When useful, give a short Python/sklearn snippet."
+        f"{model_line}\n\nDATASET PROFILE (JSON):\n{context}"
+    )
+
+    # Keep only the recent turns to bound the context.
+    history = [
+        {"role": m["role"], "content": str(m["content"])}
+        for m in messages
+        if m.get("role") in ("user", "assistant") and m.get("content")
+    ][-12:]
+
+    api_messages = [{"role": "system", "content": system_prompt}] + history
+
+    models = [
+        "llama-3.1-8b-instant",
+        "groq/compound-mini",
+        "llama-3.3-70b-versatile",
+    ]
+    last_error = None
+    for model in models:
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=api_messages,
+                temperature=0.4,
+                max_tokens=700,
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            last_error = e
+            continue
+    return f"⚠️ Groq API error (tried all fallback models): {last_error}"
+
+
 def get_quick_insight(question: str, profile_summary: dict, groq_api_key: str) -> str:
     """Get a quick one-paragraph insight for a specific question with fallback support."""
     try:

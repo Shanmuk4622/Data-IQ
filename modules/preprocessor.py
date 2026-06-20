@@ -79,39 +79,53 @@ def recommend_preprocessing_all(df: pd.DataFrame, profile: dict) -> dict:
     return result
 
 
-def build_pipeline(df: pd.DataFrame, profile: dict, user_choices: dict):
-    """Build and return a fitted sklearn ColumnTransformer."""
+def build_preprocessor(df: pd.DataFrame, profile: dict, user_choices: dict, target: str | None = None):
+    """
+    Build and return an *unfitted* sklearn ColumnTransformer over the feature columns.
+
+    The `target` column (if given) is always excluded so the same transformer can be
+    embedded in a leak-free Pipeline([preprocessor, estimator]) for training/CV.
+    Returns None if no usable feature columns remain.
+    """
     from sklearn.pipeline import Pipeline
     from sklearn.compose import ColumnTransformer
     from sklearn.impute import SimpleImputer
-    from sklearn.preprocessing import StandardScaler, RobustScaler, OneHotEncoder, OrdinalEncoder
+    from sklearn.preprocessing import (
+        StandardScaler, RobustScaler, MinMaxScaler, OneHotEncoder, OrdinalEncoder,
+    )
 
     columns_profile = profile.get("columns", {})
     preprocessing_recs = profile.get("preprocessing_recommendations", {})
 
-    num_cols = []
     cat_cols_ohe = []
     cat_cols_ord = []
     scale_robust = []
     scale_standard = []
+    scale_minmax = []
 
     for col in df.columns:
+        if target is not None and col == target:
+            continue
         col_choice = user_choices.get(col, preprocessing_recs.get(col, {}))
         if col_choice.get("drop", False):
             continue
         dtype = columns_profile.get(col, {}).get("dtype_class", "unknown")
         if dtype == "numerical":
-            num_cols.append(col)
-            if col_choice.get("scaling") == "robust":
+            scaling = col_choice.get("scaling")
+            if scaling == "robust":
                 scale_robust.append(col)
+            elif scaling == "minmax":
+                scale_minmax.append(col)
             else:
                 scale_standard.append(col)
         elif dtype in ("categorical", "boolean"):
             enc = col_choice.get("encoding", "one_hot")
             if enc == "one_hot":
                 cat_cols_ohe.append(col)
-            else:
+            elif enc in ("ordinal", "frequency"):
                 cat_cols_ord.append(col)
+            else:
+                cat_cols_ohe.append(col)
 
     transformers = []
 
@@ -133,6 +147,16 @@ def build_pipeline(df: pd.DataFrame, profile: dict, user_choices: dict):
                 ("scaler", RobustScaler()),
             ]),
             scale_robust,
+        ))
+
+    if scale_minmax:
+        transformers.append((
+            "num_minmax",
+            Pipeline([
+                ("imputer", SimpleImputer(strategy="mean")),
+                ("scaler", MinMaxScaler()),
+            ]),
+            scale_minmax,
         ))
 
     if cat_cols_ohe:
@@ -158,7 +182,14 @@ def build_pipeline(df: pd.DataFrame, profile: dict, user_choices: dict):
     if not transformers:
         return None
 
-    ct = ColumnTransformer(transformers=transformers, remainder="drop")
+    return ColumnTransformer(transformers=transformers, remainder="drop")
+
+
+def build_pipeline(df: pd.DataFrame, profile: dict, user_choices: dict):
+    """Build and return a *fitted* sklearn ColumnTransformer (backwards-compatible)."""
+    ct = build_preprocessor(df, profile, user_choices, target=None)
+    if ct is None:
+        return None
     ct.fit(df)
     return ct
 
