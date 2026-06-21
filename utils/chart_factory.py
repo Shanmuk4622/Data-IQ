@@ -405,15 +405,27 @@ def make_pie(labels: list, values: list, title: str = "") -> go.Figure:
 # ══════════════════════════════════════════════════════════════════════════════
 
 # ── Confusion matrix ──────────────────────────────────────────────────────────
-def make_confusion_matrix(cm, labels: list, title: str = "Confusion Matrix") -> go.Figure:
+def make_confusion_matrix(cm, labels: list, title: str = "Confusion Matrix", normalize: bool = False) -> go.Figure:
     try:
-        z = np.asarray(cm)
+        z = np.asarray(cm, dtype=float)
         labels = [str(l) for l in labels]
+        if normalize:
+            row_sums = z.sum(axis=1, keepdims=True)
+            row_sums[row_sums == 0] = 1
+            z = z / row_sums
+            text = np.round(z, 2)
+            ttmpl = "%{text}"
+            hover = "Predicted <b>%{x}</b><br>Actual <b>%{y}</b><br>Proportion: %{z:.2f}<extra></extra>"
+        else:
+            z = np.asarray(cm)
+            text = z
+            ttmpl = "%{text}"
+            hover = "Predicted <b>%{x}</b><br>Actual <b>%{y}</b><br>Count: %{z}<extra></extra>"
         fig = go.Figure(go.Heatmap(
             z=z, x=labels, y=labels,
             colorscale=[[0, "#F8FAFC"], [1, "#2563EB"]],
-            text=z, texttemplate="%{text}", textfont=dict(size=13),
-            hovertemplate="Predicted <b>%{x}</b><br>Actual <b>%{y}</b><br>Count: %{z}<extra></extra>",
+            text=text, texttemplate=ttmpl, textfont=dict(size=13),
+            hovertemplate=hover,
             showscale=False,
         ))
         fig.update_xaxes(title_text="Predicted")
@@ -577,6 +589,167 @@ def make_cv_scores(scores: list, scoring: str = "score", title: str = "Cross-Val
         )
         fig.update_yaxes(title_text=scoring)
         _apply_defaults(fig, title, height=340)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Orange-style evaluation charts (Test & Score / Evaluate widgets)
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── ROC overlay (multiple models) ─────────────────────────────────────────────
+def make_roc_overlay(models: list, title: str = "ROC Analysis") -> go.Figure:
+    """models: list of {name, y_true, y_score} (binary). Overlays one ROC per model."""
+    try:
+        from sklearn.metrics import roc_curve, roc_auc_score
+        fig = go.Figure()
+        for i, m in enumerate(models):
+            yt, ys = np.asarray(m["y_true"]), np.asarray(m["y_score"])
+            fpr, tpr, _ = roc_curve(yt, ys)
+            try:
+                auc = roc_auc_score(yt, ys)
+            except Exception:
+                auc = float("nan")
+            fig.add_trace(go.Scatter(
+                x=fpr, y=tpr, mode="lines",
+                line=dict(color=CAT_COLORS[i % len(CAT_COLORS)], width=2),
+                name=f"{m['name']} (AUC={auc:.3f})",
+            ))
+        fig.add_trace(go.Scatter(
+            x=[0, 1], y=[0, 1], mode="lines",
+            line=dict(color="#94A3B8", width=1.5, dash="dash"), name="Chance",
+        ))
+        fig.update_xaxes(title_text="False Positive Rate", range=[0, 1])
+        fig.update_yaxes(title_text="True Positive Rate", range=[0, 1.02])
+        _apply_defaults(fig, title, height=460)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+def _gains_lift(y_true, y_score):
+    order = np.argsort(-np.asarray(y_score))
+    yt = np.asarray(y_true)[order].astype(float)
+    n = len(yt)
+    P = yt.sum()
+    frac = np.arange(1, n + 1) / n
+    gains = np.cumsum(yt) / P if P > 0 else np.zeros(n)
+    lift = np.divide(gains, frac, out=np.ones_like(gains), where=frac > 0)
+    return frac, gains, lift
+
+
+# ── Performance curve: lift / cumulative gains / precision-recall ─────────────
+def make_performance_curve(models: list, kind: str = "lift", title: str = None) -> go.Figure:
+    """models: list of {name, y_true, y_score}. kind in {lift, gains, prec_recall}."""
+    try:
+        fig = go.Figure()
+        for i, m in enumerate(models):
+            yt, ys = np.asarray(m["y_true"]), np.asarray(m["y_score"])
+            c = CAT_COLORS[i % len(CAT_COLORS)]
+            if kind == "prec_recall":
+                from sklearn.metrics import precision_recall_curve
+                prec, rec, _ = precision_recall_curve(yt, ys)
+                fig.add_trace(go.Scatter(x=rec, y=prec, mode="lines",
+                                         line=dict(color=c, width=2), name=m["name"]))
+            else:
+                frac, gains, lift = _gains_lift(yt, ys)
+                y = lift if kind == "lift" else gains
+                fig.add_trace(go.Scatter(x=frac, y=y, mode="lines",
+                                         line=dict(color=c, width=2), name=m["name"]))
+        if kind == "prec_recall":
+            fig.update_xaxes(title_text="Recall", range=[0, 1])
+            fig.update_yaxes(title_text="Precision", range=[0, 1.02])
+            t = title or "Precision-Recall Curve"
+        elif kind == "gains":
+            fig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode="lines",
+                                     line=dict(color="#94A3B8", dash="dash", width=1.5), name="Baseline"))
+            fig.update_xaxes(title_text="Fraction of data (ranked by score)", range=[0, 1])
+            fig.update_yaxes(title_text="Fraction of positives captured", range=[0, 1.02])
+            t = title or "Cumulative Gains"
+        else:  # lift
+            fig.add_hline(y=1.0, line=dict(color="#94A3B8", dash="dash", width=1.5))
+            fig.update_xaxes(title_text="Fraction of data (ranked by score)", range=[0, 1])
+            fig.update_yaxes(title_text="Lift")
+            t = title or "Lift Curve"
+        _apply_defaults(fig, t, height=420)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Calibration plot ──────────────────────────────────────────────────────────
+def make_calibration_plot(models: list, title: str = "Calibration Plot") -> go.Figure:
+    try:
+        from sklearn.calibration import calibration_curve
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode="lines",
+                                 line=dict(color="#94A3B8", dash="dash", width=1.5),
+                                 name="Perfectly calibrated"))
+        for i, m in enumerate(models):
+            yt, ys = np.asarray(m["y_true"]), np.asarray(m["y_score"])
+            try:
+                frac_pos, mean_pred = calibration_curve(yt, ys, n_bins=10, strategy="uniform")
+            except Exception:
+                continue
+            fig.add_trace(go.Scatter(
+                x=mean_pred, y=frac_pos, mode="lines+markers",
+                line=dict(color=CAT_COLORS[i % len(CAT_COLORS)], width=2),
+                marker=dict(size=6), name=m["name"],
+            ))
+        fig.update_xaxes(title_text="Mean predicted probability", range=[0, 1])
+        fig.update_yaxes(title_text="Fraction of positives", range=[0, 1.02])
+        _apply_defaults(fig, title, height=420)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Silhouette plot (per-sample, grouped by cluster) ─────────────────────────
+def make_silhouette_plot(values, labels, title: str = "Silhouette Plot") -> go.Figure:
+    try:
+        vals = np.asarray(values, dtype=float)
+        labs = np.asarray(labels)
+        xs, ys, cols = [], [], []
+        ticks, ticktext = [], []
+        pos = 0
+        for ci, cl in enumerate(sorted(set(labs.tolist()))):
+            cv = np.sort(vals[labs == cl])[::-1]
+            start = pos
+            for v in cv:
+                xs.append(v); ys.append(pos); cols.append(CAT_COLORS[ci % len(CAT_COLORS)]); pos += 1
+            ticks.append((start + pos) / 2); ticktext.append(f"Cluster {cl}"); pos += 3
+        fig = go.Figure(go.Bar(
+            x=xs, y=ys, orientation="h", marker_color=cols, width=1,
+            hovertemplate="silhouette = %{x:.3f}<extra></extra>",
+        ))
+        mean_s = float(np.mean(vals)) if len(vals) else 0.0
+        fig.add_vline(x=mean_s, line=dict(color="#DC2626", dash="dash", width=2),
+                      annotation_text=f"mean = {mean_s:.2f}", annotation_position="top")
+        fig.update_yaxes(tickvals=ticks, ticktext=ticktext, title_text="Cluster")
+        fig.update_xaxes(title_text="Silhouette coefficient")
+        _apply_defaults(fig, title, height=max(360, min(900, pos * 2)))
+        fig.update_layout(showlegend=False)
+        return fig
+    except Exception as e:
+        return _error_fig(str(e))
+
+
+# ── Nomogram (logistic-regression contributions) ─────────────────────────────
+def make_nomogram(features: list, contributions: list,
+                  title: str = "Logistic Regression — feature contributions") -> go.Figure:
+    try:
+        pairs = list(zip(features, contributions))[::-1]  # largest on top in horizontal bar
+        names = [str(p[0]) for p in pairs]
+        vals = [float(p[1]) for p in pairs]
+        colors = ["#2563EB" if v >= 0 else "#DC2626" for v in vals]
+        fig = go.Figure(go.Bar(
+            x=vals, y=names, orientation="h", marker_color=colors,
+            hovertemplate="%{y}: %{x:.3f}<extra></extra>",
+        ))
+        fig.add_vline(x=0, line=dict(color="#64748B", width=1))
+        fig.update_xaxes(title_text="Coefficient (log-odds contribution)")
+        _apply_defaults(fig, title, height=max(320, len(names) * 26))
         return fig
     except Exception as e:
         return _error_fig(str(e))

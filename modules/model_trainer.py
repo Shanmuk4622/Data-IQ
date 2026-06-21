@@ -115,6 +115,164 @@ def _make_dbscan(hp):
     return DBSCAN(eps=float(hp.get("eps", 0.5)), min_samples=int(hp.get("min_samples", 5)))
 
 
+def _make_agglo(hp):
+    from sklearn.cluster import AgglomerativeClustering
+    return AgglomerativeClustering(
+        n_clusters=int(hp.get("n_clusters", 4)), linkage=hp.get("linkage", "ward"),
+    )
+
+
+# ── Extra Orange learners ─────────────────────────────────────────────────────
+def _hidden(val):
+    """Parse a hidden-layer spec like '100' or '100,50' into a tuple."""
+    try:
+        parts = [int(x) for x in str(val).replace(" ", "").split(",") if x]
+        return tuple(parts) if parts else (100,)
+    except Exception:
+        return (100,)
+
+
+def _make_dtree_clf(hp):
+    from sklearn.tree import DecisionTreeClassifier
+    return DecisionTreeClassifier(
+        max_depth=_md(hp, 0), min_samples_split=int(hp.get("min_samples_split", 2)),
+        criterion=hp.get("criterion", "gini"), random_state=RANDOM_STATE,
+    )
+
+
+def _make_knn_clf(hp):
+    from sklearn.neighbors import KNeighborsClassifier
+    return KNeighborsClassifier(
+        n_neighbors=int(hp.get("n_neighbors", 5)), weights=hp.get("weights", "uniform"),
+    )
+
+
+def _make_svm_clf(hp):
+    from sklearn.svm import SVC
+    return SVC(
+        C=float(hp.get("C", 1.0)), kernel=hp.get("kernel", "rbf"),
+        probability=True, random_state=RANDOM_STATE,
+    )
+
+
+def _make_nb_clf(hp):
+    from sklearn.naive_bayes import GaussianNB
+    return GaussianNB()
+
+
+def _make_gb_clf(hp):
+    from sklearn.ensemble import GradientBoostingClassifier
+    return GradientBoostingClassifier(
+        n_estimators=int(hp.get("n_estimators", 100)),
+        learning_rate=float(hp.get("learning_rate", 0.1)),
+        max_depth=int(hp.get("max_depth", 3)), random_state=RANDOM_STATE,
+    )
+
+
+def _make_ada_clf(hp):
+    from sklearn.ensemble import AdaBoostClassifier
+    return AdaBoostClassifier(
+        n_estimators=int(hp.get("n_estimators", 50)),
+        learning_rate=float(hp.get("learning_rate", 1.0)), random_state=RANDOM_STATE,
+    )
+
+
+def _make_mlp_clf(hp):
+    from sklearn.neural_network import MLPClassifier
+    return MLPClassifier(
+        hidden_layer_sizes=_hidden(hp.get("hidden_layer_sizes", "100")),
+        alpha=float(hp.get("alpha", 0.0001)), max_iter=int(hp.get("max_iter", 300)),
+        random_state=RANDOM_STATE,
+    )
+
+
+def _make_const_clf(hp):
+    from sklearn.dummy import DummyClassifier
+    return DummyClassifier(strategy="prior")
+
+
+def _make_dtree_reg(hp):
+    from sklearn.tree import DecisionTreeRegressor
+    return DecisionTreeRegressor(
+        max_depth=_md(hp, 0), min_samples_split=int(hp.get("min_samples_split", 2)),
+        random_state=RANDOM_STATE,
+    )
+
+
+def _make_knn_reg(hp):
+    from sklearn.neighbors import KNeighborsRegressor
+    return KNeighborsRegressor(
+        n_neighbors=int(hp.get("n_neighbors", 5)), weights=hp.get("weights", "uniform"),
+    )
+
+
+def _make_svr(hp):
+    from sklearn.svm import SVR
+    return SVR(C=float(hp.get("C", 1.0)), kernel=hp.get("kernel", "rbf"))
+
+
+def _make_gb_reg(hp):
+    from sklearn.ensemble import GradientBoostingRegressor
+    return GradientBoostingRegressor(
+        n_estimators=int(hp.get("n_estimators", 100)),
+        learning_rate=float(hp.get("learning_rate", 0.1)),
+        max_depth=int(hp.get("max_depth", 3)), random_state=RANDOM_STATE,
+    )
+
+
+def _make_ada_reg(hp):
+    from sklearn.ensemble import AdaBoostRegressor
+    return AdaBoostRegressor(
+        n_estimators=int(hp.get("n_estimators", 50)),
+        learning_rate=float(hp.get("learning_rate", 1.0)), random_state=RANDOM_STATE,
+    )
+
+
+def _make_mlp_reg(hp):
+    from sklearn.neural_network import MLPRegressor
+    return MLPRegressor(
+        hidden_layer_sizes=_hidden(hp.get("hidden_layer_sizes", "100")),
+        alpha=float(hp.get("alpha", 0.0001)), max_iter=int(hp.get("max_iter", 300)),
+        random_state=RANDOM_STATE,
+    )
+
+
+def _make_const_reg(hp):
+    from sklearn.dummy import DummyRegressor
+    return DummyRegressor(strategy="mean")
+
+
+# ── Shared hyperparameter schema fragments for the extra learners ─────────────
+_HP_KNN = [
+    {"name": "n_neighbors", "type": "int", "default": 5, "min": 1, "max": 50, "step": 1},
+    {"name": "weights", "type": "select", "default": "uniform", "options": ["uniform", "distance"]},
+]
+_HP_SVM = [
+    {"name": "C", "type": "float", "default": 1.0, "min": 0.01, "max": 100.0, "step": 0.1},
+    {"name": "kernel", "type": "select", "default": "rbf", "options": ["rbf", "linear", "poly"]},
+]
+_HP_MLP = [
+    {"name": "hidden_layer_sizes", "type": "select", "default": "100",
+     "options": ["50", "100", "100,50", "100,100"]},
+    {"name": "alpha", "type": "float", "default": 0.0001, "min": 0.00001, "max": 0.1, "step": 0.0001},
+    {"name": "max_iter", "type": "int", "default": 300, "min": 100, "max": 1000, "step": 50},
+]
+_HP_GB = [
+    {"name": "n_estimators", "type": "int", "default": 100, "min": 50, "max": 500, "step": 50},
+    {"name": "learning_rate", "type": "float", "default": 0.1, "min": 0.01, "max": 0.5, "step": 0.01},
+    {"name": "max_depth", "type": "int", "default": 3, "min": 1, "max": 10, "step": 1},
+]
+_HP_ADA = [
+    {"name": "n_estimators", "type": "int", "default": 50, "min": 20, "max": 300, "step": 10},
+    {"name": "learning_rate", "type": "float", "default": 1.0, "min": 0.1, "max": 2.0, "step": 0.1},
+]
+_HP_DTREE = [
+    {"name": "max_depth", "type": "int", "default": 0, "min": 0, "max": 50, "step": 1, "help": "0 = no limit"},
+    {"name": "min_samples_split", "type": "int", "default": 2, "min": 2, "max": 20, "step": 1},
+    {"name": "criterion", "type": "select", "default": "gini", "options": ["gini", "entropy"]},
+]
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 #  Model registry — one source of truth for factories + UI schema + tuning grids
 # ══════════════════════════════════════════════════════════════════════════════
@@ -242,6 +400,80 @@ MODEL_REGISTRY: dict[str, list[dict]] = {
 }
 
 
+# ── Extra Orange learners appended to the registry (model column) ─────────────
+MODEL_REGISTRY["classification"].extend([
+    {"name": "Decision Tree", "factory": _make_dtree_clf, "proba": True, "importance": "tree", "viewer": "tree",
+     "hyperparams": _HP_DTREE,
+     "param_distributions": {"model__max_depth": [None, 5, 10, 20], "model__min_samples_split": [2, 5, 10]}},
+    {"name": "k-Nearest Neighbors", "factory": _make_knn_clf, "proba": True, "importance": None,
+     "hyperparams": _HP_KNN,
+     "param_distributions": {"model__n_neighbors": [3, 5, 7, 11, 15], "model__weights": ["uniform", "distance"]}},
+    {"name": "SVM", "factory": _make_svm_clf, "proba": True, "importance": None,
+     "hyperparams": _HP_SVM,
+     "param_distributions": {"model__C": [0.1, 1, 10], "model__kernel": ["rbf", "linear"]}},
+    {"name": "Naive Bayes", "factory": _make_nb_clf, "proba": True, "importance": None,
+     "hyperparams": [], "param_distributions": {}},
+    {"name": "Gradient Boosting", "factory": _make_gb_clf, "proba": True, "importance": "tree", "viewer": "tree",
+     "hyperparams": _HP_GB,
+     "param_distributions": {"model__n_estimators": [50, 100, 200], "model__learning_rate": [0.01, 0.05, 0.1],
+                             "model__max_depth": [2, 3, 5]}},
+    {"name": "AdaBoost", "factory": _make_ada_clf, "proba": True, "importance": "tree",
+     "hyperparams": _HP_ADA,
+     "param_distributions": {"model__n_estimators": [50, 100, 200], "model__learning_rate": [0.5, 1.0]}},
+    {"name": "Neural Network", "factory": _make_mlp_clf, "proba": True, "importance": None,
+     "hyperparams": _HP_MLP,
+     "param_distributions": {"model__alpha": [0.0001, 0.001, 0.01]}},
+    {"name": "Constant (baseline)", "factory": _make_const_clf, "proba": True, "importance": None,
+     "hyperparams": [], "param_distributions": {}},
+])
+
+MODEL_REGISTRY["regression"].extend([
+    {"name": "Decision Tree", "factory": _make_dtree_reg, "proba": False, "importance": "tree", "viewer": "tree",
+     "hyperparams": [
+         {"name": "max_depth", "type": "int", "default": 0, "min": 0, "max": 50, "step": 1, "help": "0 = no limit"},
+         {"name": "min_samples_split", "type": "int", "default": 2, "min": 2, "max": 20, "step": 1},
+     ],
+     "param_distributions": {"model__max_depth": [None, 5, 10, 20], "model__min_samples_split": [2, 5, 10]}},
+    {"name": "k-Nearest Neighbors", "factory": _make_knn_reg, "proba": False, "importance": None,
+     "hyperparams": _HP_KNN,
+     "param_distributions": {"model__n_neighbors": [3, 5, 7, 11, 15], "model__weights": ["uniform", "distance"]}},
+    {"name": "SVM", "factory": _make_svr, "proba": False, "importance": None,
+     "hyperparams": _HP_SVM,
+     "param_distributions": {"model__C": [0.1, 1, 10], "model__kernel": ["rbf", "linear"]}},
+    {"name": "Gradient Boosting", "factory": _make_gb_reg, "proba": False, "importance": "tree", "viewer": "tree",
+     "hyperparams": _HP_GB,
+     "param_distributions": {"model__n_estimators": [50, 100, 200], "model__learning_rate": [0.01, 0.05, 0.1],
+                             "model__max_depth": [2, 3, 5]}},
+    {"name": "AdaBoost", "factory": _make_ada_reg, "proba": False, "importance": "tree",
+     "hyperparams": _HP_ADA,
+     "param_distributions": {"model__n_estimators": [50, 100, 200], "model__learning_rate": [0.5, 1.0]}},
+    {"name": "Neural Network", "factory": _make_mlp_reg, "proba": False, "importance": None,
+     "hyperparams": _HP_MLP,
+     "param_distributions": {"model__alpha": [0.0001, 0.001, 0.01]}},
+    {"name": "Constant (baseline)", "factory": _make_const_reg, "proba": False, "importance": None,
+     "hyperparams": [], "param_distributions": {}},
+])
+
+MODEL_REGISTRY["clustering"].append(
+    {"name": "Hierarchical", "factory": _make_agglo, "proba": False, "importance": None,
+     "hyperparams": [
+         {"name": "n_clusters", "type": "int", "default": 4, "min": 2, "max": 15, "step": 1},
+         {"name": "linkage", "type": "select", "default": "ward",
+          "options": ["ward", "complete", "average", "single"]},
+     ], "param_distributions": {}},
+)
+
+# Viewer tags on pre-existing learners
+for _s in MODEL_REGISTRY["classification"]:
+    if _s["name"] == "Random Forest Classifier":
+        _s["viewer"] = "tree"
+    elif _s["name"] == "Logistic Regression":
+        _s["viewer"] = "nomogram"
+for _s in MODEL_REGISTRY["regression"]:
+    if _s["name"] == "Random Forest Regressor":
+        _s["viewer"] = "tree"
+
+
 def list_models(problem_type: str) -> list[str]:
     return [s["name"] for s in MODEL_REGISTRY.get(problem_type, [])]
 
@@ -271,43 +503,80 @@ def get_estimator(model_name: str, problem_type: str, hyperparams: dict | None =
 # ══════════════════════════════════════════════════════════════════════════════
 #  Metrics
 # ══════════════════════════════════════════════════════════════════════════════
+def _specificity(cm) -> float:
+    """Macro-averaged specificity (TN / (TN + FP)) from a confusion matrix."""
+    cm = np.asarray(cm, dtype=float)
+    total = cm.sum()
+    specs = []
+    for i in range(cm.shape[0]):
+        tp = cm[i, i]
+        fp = cm[:, i].sum() - tp
+        fn = cm[i, :].sum() - tp
+        tn = total - tp - fp - fn
+        denom = tn + fp
+        if denom > 0:
+            specs.append(tn / denom)
+    return float(np.mean(specs)) if specs else 0.0
+
+
 def compute_classification_metrics(y_true, y_pred, y_prob=None) -> dict:
+    """Full Orange-style classification metric set: AUC, CA, F1, Precision, Recall,
+    Specificity, LogLoss, MCC (+ confusion matrix)."""
     from sklearn.metrics import (
         accuracy_score, precision_score, recall_score, f1_score,
-        roc_auc_score, confusion_matrix,
+        roc_auc_score, confusion_matrix, log_loss, matthews_corrcoef,
     )
+    cm = confusion_matrix(y_true, y_pred)
     out = {
         "accuracy": float(accuracy_score(y_true, y_pred)),
         "precision_weighted": float(precision_score(y_true, y_pred, average="weighted", zero_division=0)),
         "recall_weighted": float(recall_score(y_true, y_pred, average="weighted", zero_division=0)),
         "f1_weighted": float(f1_score(y_true, y_pred, average="weighted", zero_division=0)),
         "f1_macro": float(f1_score(y_true, y_pred, average="macro", zero_division=0)),
+        "specificity": _specificity(cm),
         "roc_auc": None,
+        "logloss": None,
+        "mcc": None,
+        "confusion_matrix": cm.tolist(),
     }
-    out["confusion_matrix"] = confusion_matrix(y_true, y_pred).tolist()
+    try:
+        out["mcc"] = float(matthews_corrcoef(y_true, y_pred))
+    except Exception:
+        pass
     try:
         if y_prob is not None:
-            y_prob = np.asarray(y_prob)
+            y_prob = np.asarray(y_prob, dtype=float)
+            n_classes = y_prob.shape[1] if y_prob.ndim == 2 else 2
+            labels = list(range(n_classes))
             if y_prob.ndim == 2 and y_prob.shape[1] == 2:
                 out["roc_auc"] = float(roc_auc_score(y_true, y_prob[:, 1]))
             elif y_prob.ndim == 2 and y_prob.shape[1] > 2:
                 out["roc_auc"] = float(roc_auc_score(y_true, y_prob, multi_class="ovr", average="weighted"))
+            try:
+                out["logloss"] = float(log_loss(y_true, y_prob, labels=labels))
+            except Exception:
+                out["logloss"] = None
     except Exception:
         out["roc_auc"] = None
     return out
 
 
 def compute_regression_metrics(y_true, y_pred) -> dict:
+    """Full Orange-style regression metric set: MSE, RMSE, MAE, MAPE, R², CVRMSE."""
     from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
     y_true = np.asarray(y_true, dtype=float)
     y_pred = np.asarray(y_pred, dtype=float)
-    rmse = float(np.sqrt(mean_squared_error(y_true, y_pred)))
+    mse = float(mean_squared_error(y_true, y_pred))
+    rmse = float(np.sqrt(mse))
     mae = float(mean_absolute_error(y_true, y_pred))
     r2 = float(r2_score(y_true, y_pred))
     # MAPE — guard against division by zero
     denom = np.where(y_true == 0, np.nan, y_true)
     mape = float(np.nanmean(np.abs((y_true - y_pred) / denom)) * 100)
-    return {"rmse": rmse, "mae": mae, "r2": r2, "mape": mape}
+    # CVRMSE — RMSE normalised by mean of actuals
+    mean_true = float(np.mean(y_true))
+    cvrmse = float(rmse / mean_true * 100) if mean_true != 0 else None
+    return {"mse": mse, "rmse": rmse, "mae": mae, "r2": r2, "mape": mape, "cvrmse": cvrmse}
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -617,10 +886,16 @@ def train_clustering(
         n_noise = int((labels == -1).sum())
 
         sil = None
+        sil_samples = None
+        sil_sample_labels = None
         try:
             mask = labels != -1
             if n_clusters >= 2 and mask.sum() > n_clusters:
                 sil = float(silhouette_score(X[mask], labels[mask]))
+                from sklearn.metrics import silhouette_samples
+                vals = silhouette_samples(X[mask], labels[mask])
+                sil_samples = vals.tolist()
+                sil_sample_labels = labels[mask].tolist()
         except Exception:
             sil = None
 
@@ -648,6 +923,7 @@ def train_clustering(
         return {
             "ok": True, "model_name": model_name, "labels": labels.tolist(),
             "n_clusters": n_clusters, "n_noise": n_noise, "silhouette": sil,
+            "sil_samples": sil_samples, "sil_sample_labels": sil_sample_labels,
             "pca_x": pca_x, "pca_y": pca_y, "elbow_k": elbow_k, "elbow_inertias": elbow_inertias,
         }
     except Exception as e:
@@ -831,3 +1107,367 @@ def generate_modeling_guide(profile: dict, target: str | None, problem_type: str
     L.append("")
     L.append("> 💬 Ask the AI chat on the right for anything specific — it can see this dataset's profile.")
     return "\n".join(L)
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Orange-style: Test & Score (multi-learner comparison)
+# ══════════════════════════════════════════════════════════════════════════════
+def _build_xy(df, target, problem_type):
+    """Split off the target; label-encode it for classification. Returns (X, y, label_mapping)."""
+    work = df.dropna(subset=[target]).copy()
+    X = work.drop(columns=[target])
+    label_mapping = None
+    if problem_type == "classification":
+        from sklearn.preprocessing import LabelEncoder
+        le = LabelEncoder()
+        y = le.fit_transform(work[target].astype(str))
+        label_mapping = {int(i): str(c) for i, c in enumerate(le.classes_)}
+    else:
+        y = pd.to_numeric(work[target], errors="coerce").to_numpy(dtype=float)
+        m = ~np.isnan(y)
+        X, y = X.loc[m], y[m]
+    return X, y, label_mapping
+
+
+def _evaluate(pipe, X, y, problem_type, sampling, splitter):
+    """Return pooled (y_true, y_pred, y_prob) for the chosen sampling scheme."""
+    from sklearn.base import clone
+    from sklearn.model_selection import train_test_split, cross_val_predict, LeaveOneOut
+    method = sampling.get("method", "cross_validation")
+    is_clf = problem_type == "classification"
+
+    if method == "test_on_train":
+        p = clone(pipe); p.fit(X, y)
+        y_prob = p.predict_proba(X) if (is_clf and hasattr(p, "predict_proba")) else None
+        return np.asarray(y), np.asarray(p.predict(X)), y_prob
+
+    if method == "random_sampling":
+        repeats = int(sampling.get("repeats", 3))
+        test_pct = float(sampling.get("test_pct", 0.3))
+        stratified = bool(sampling.get("stratified", True))
+        yt, yp, ypr = [], [], []
+        for r in range(repeats):
+            strat = y if (is_clf and stratified) else None
+            Xtr, Xte, ytr, yte = train_test_split(
+                X, y, test_size=test_pct, random_state=RANDOM_STATE + r, stratify=strat)
+            p = clone(pipe); p.fit(Xtr, ytr)
+            yt.append(np.asarray(yte)); yp.append(np.asarray(p.predict(Xte)))
+            if is_clf and hasattr(p, "predict_proba"):
+                ypr.append(np.asarray(p.predict_proba(Xte)))
+        y_prob = np.concatenate(ypr) if (ypr and len(ypr) == repeats) else None
+        return np.concatenate(yt), np.concatenate(yp), y_prob
+
+    if method == "leave_one_out":
+        cv = LeaveOneOut()
+        y_pred = cross_val_predict(pipe, X, y, cv=cv, n_jobs=-1)
+        y_prob = None
+        if is_clf:
+            try:
+                y_prob = cross_val_predict(pipe, X, y, cv=cv, method="predict_proba", n_jobs=-1)
+            except Exception:
+                y_prob = None
+        return np.asarray(y), np.asarray(y_pred), y_prob
+
+    # cross_validation (default)
+    y_pred = cross_val_predict(pipe, X, y, cv=splitter, n_jobs=-1)
+    y_prob = None
+    if is_clf:
+        try:
+            y_prob = cross_val_predict(pipe, X, y, cv=splitter, method="predict_proba", n_jobs=-1)
+        except Exception:
+            y_prob = None
+    return np.asarray(y), np.asarray(y_pred), y_prob
+
+
+def _pairwise_comparison(fold_scores: dict) -> dict:
+    """Approximate Orange's model comparison: P(row score > column score) from paired fold scores."""
+    from scipy.stats import ttest_rel
+    names = list(fold_scores.keys())
+    matrix = {}
+    for a in names:
+        row = {}
+        for b in names:
+            if a == b:
+                row[b] = None
+                continue
+            sa, sb = np.asarray(fold_scores[a]), np.asarray(fold_scores[b])
+            n = min(len(sa), len(sb))
+            try:
+                diff = sa[:n] - sb[:n]
+                if np.allclose(diff, 0):
+                    row[b] = 0.5
+                else:
+                    t, p = ttest_rel(sa[:n], sb[:n])
+                    row[b] = round(float(1 - p / 2 if t > 0 else p / 2), 3)
+            except Exception:
+                row[b] = None
+        matrix[a] = row
+    return {"models": names, "matrix": matrix}
+
+
+def test_and_score(
+    df, target, problem_type, selected_models, hyperparams_map, sampling,
+    profile, user_choices=None,
+) -> dict:
+    """Evaluate several learners under one sampling scheme (Orange's Test & Score)."""
+    from sklearn.base import clone
+    from sklearn.pipeline import Pipeline
+    from sklearn.model_selection import StratifiedKFold, KFold, cross_val_score
+
+    user_choices = user_choices or {}
+    try:
+        if not selected_models:
+            return {"ok": False, "error": "Select at least one model."}
+
+        X, y, label_mapping = _build_xy(df, target, problem_type)
+        if len(y) < 20:
+            return {"ok": False, "error": "Not enough labelled rows (need ≥ 20)."}
+
+        method = sampling.get("method", "cross_validation")
+        if method == "leave_one_out" and len(y) > 1000:
+            return {"ok": False, "error": "Leave-one-out is too slow for >1000 rows — use cross-validation."}
+
+        preprocessor = build_preprocessor(X, profile, user_choices, target=None)
+        if preprocessor is None:
+            return {"ok": False, "error": "No usable feature columns after preprocessing."}
+
+        k = int(sampling.get("k", 5))
+        if problem_type == "classification":
+            splitter = StratifiedKFold(n_splits=k, shuffle=True, random_state=RANDOM_STATE)
+            primary_scoring = "accuracy"
+        else:
+            splitter = KFold(n_splits=k, shuffle=True, random_state=RANDOM_STATE)
+            primary_scoring = "r2"
+
+        results, fold_scores = {}, {}
+        for name in selected_models:
+            try:
+                hp = hyperparams_map.get(name) or get_default_hyperparams(problem_type, name)
+                pipe = Pipeline([("pre", clone(preprocessor)), ("model", get_estimator(name, problem_type, hp))])
+
+                t0 = time.time()
+                y_true, y_pred, y_prob = _evaluate(pipe, X, y, problem_type, sampling, splitter)
+                elapsed = time.time() - t0
+
+                if problem_type == "classification":
+                    metrics = compute_classification_metrics(y_true, y_pred, y_prob)
+                else:
+                    metrics = compute_regression_metrics(y_true, y_pred)
+                metrics["time"] = round(elapsed, 3)
+
+                fitted = Pipeline([("pre", clone(preprocessor)),
+                                   ("model", get_estimator(name, problem_type, hp))])
+                fitted.fit(X, y)
+
+                if method == "cross_validation":
+                    try:
+                        fold_scores[name] = np.asarray(
+                            cross_val_score(pipe, X, y, cv=splitter, scoring=primary_scoring, n_jobs=-1),
+                            dtype=float)
+                    except Exception:
+                        pass
+
+                results[name] = {
+                    "ok": True, "metrics": metrics,
+                    "y_true": np.asarray(y_true), "y_pred": np.asarray(y_pred),
+                    "y_prob": (None if y_prob is None else np.asarray(y_prob)),
+                    "fitted": fitted,
+                }
+            except Exception as e:
+                results[name] = {"ok": False, "error": str(e)}
+
+        comparison = _pairwise_comparison(fold_scores) if len(fold_scores) >= 2 else None
+        classes = [label_mapping[i] for i in sorted(label_mapping)] if label_mapping else None
+
+        return {
+            "ok": True, "problem_type": problem_type, "sampling": sampling, "target": target,
+            "label_mapping": label_mapping, "classes": classes,
+            "models": results, "comparison": comparison, "primary_scoring": primary_scoring,
+        }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Orange-style: Predictions
+# ══════════════════════════════════════════════════════════════════════════════
+def build_predictions_table(
+    fitted_models: dict, df, target, problem_type, label_mapping=None, max_rows: int = 500,
+) -> "pd.DataFrame":
+    """Per-row predictions for each fitted model + probabilities/errors beside the actuals."""
+    sample = df.iloc[:max_rows].copy()
+    out = pd.DataFrame(index=range(len(sample)))
+    has_target = bool(target) and target in sample.columns
+    if has_target:
+        out["actual"] = sample[target].values
+    X = sample.drop(columns=[target]) if has_target else sample
+
+    for name, pipe in fitted_models.items():
+        try:
+            preds = pipe.predict(X)
+            if problem_type == "classification":
+                if label_mapping:
+                    out[f"{name} (pred)"] = [label_mapping.get(int(p), p) for p in preds]
+                else:
+                    out[f"{name} (pred)"] = preds
+                if hasattr(pipe, "predict_proba"):
+                    proba = np.asarray(pipe.predict_proba(X))
+                    for ci in range(proba.shape[1]):
+                        cls = label_mapping.get(int(ci), ci) if label_mapping else ci
+                        out[f"{name} p({cls})"] = np.round(proba[:, ci], 3)
+            else:
+                out[f"{name} (pred)"] = np.round(np.asarray(preds, dtype=float), 4)
+                if has_target:
+                    err = pd.to_numeric(sample[target], errors="coerce").to_numpy(dtype=float) - preds
+                    out[f"{name} (error)"] = np.round(err, 4)
+        except Exception as e:
+            out[f"{name} (pred)"] = f"error: {e}"
+    return out
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Orange-style: Rank (feature scoring)
+# ══════════════════════════════════════════════════════════════════════════════
+RANK_METHODS = {
+    "classification": ["Information Gain", "ANOVA", "Chi²", "Gini (tree)", "Random Forest"],
+    "regression": ["Univariate Regression", "Mutual Information", "Random Forest"],
+}
+
+
+def _score_features(X, y, discrete, problem_type, method):
+    discrete = np.asarray(discrete, dtype=bool)
+    if problem_type == "classification":
+        if method == "ANOVA":
+            from sklearn.feature_selection import f_classif
+            s, _ = f_classif(X, y)
+        elif method == "Chi²":
+            from sklearn.feature_selection import chi2
+            from sklearn.preprocessing import MinMaxScaler
+            s, _ = chi2(MinMaxScaler().fit_transform(X), y)
+        elif method == "Gini (tree)":
+            from sklearn.tree import DecisionTreeClassifier
+            s = DecisionTreeClassifier(random_state=RANDOM_STATE).fit(X, y).feature_importances_
+        elif method == "Random Forest":
+            from sklearn.ensemble import RandomForestClassifier
+            s = RandomForestClassifier(n_estimators=100, random_state=RANDOM_STATE, n_jobs=-1).fit(X, y).feature_importances_
+        else:  # Information Gain
+            from sklearn.feature_selection import mutual_info_classif
+            s = mutual_info_classif(X, y, discrete_features=discrete, random_state=RANDOM_STATE)
+    else:
+        if method == "Mutual Information":
+            from sklearn.feature_selection import mutual_info_regression
+            s = mutual_info_regression(X, y, discrete_features=discrete, random_state=RANDOM_STATE)
+        elif method == "Random Forest":
+            from sklearn.ensemble import RandomForestRegressor
+            s = RandomForestRegressor(n_estimators=100, random_state=RANDOM_STATE, n_jobs=-1).fit(X, y).feature_importances_
+        else:  # Univariate Regression (F-score)
+            from sklearn.feature_selection import f_regression
+            s, _ = f_regression(X, y)
+    return np.nan_to_num(np.asarray(s, dtype=float), nan=0.0)
+
+
+def rank_features(df, target, problem_type, method, profile, top_n: int = 30) -> list[tuple[str, float]]:
+    """Score original feature columns against the target, ranked descending."""
+    try:
+        from sklearn.preprocessing import LabelEncoder
+        cols_profile = profile.get("columns", {})
+        feats = []
+        for c in df.columns:
+            if c == target:
+                continue
+            info = cols_profile.get(c, {})
+            cls = info.get("dtype_class")
+            if cls in ("identifier", "datetime"):
+                continue
+            # Skip ID-like near-unique *non-numeric* columns (they overfit scores like mutual info);
+            # genuine continuous numeric features are naturally near-unique and must be kept.
+            if cls != "numerical" and info.get("unique_pct", 0.0) >= 0.9:
+                continue
+            feats.append(c)
+        if not feats:
+            return []
+
+        work = df.dropna(subset=[target]).copy()
+        X_cols, names, discrete = [], [], []
+        for c in feats:
+            s = work[c]
+            cls = cols_profile.get(c, {}).get("dtype_class")
+            if cls == "numerical":
+                col = pd.to_numeric(s, errors="coerce")
+                col = col.fillna(col.median())
+                X_cols.append(col.to_numpy(dtype=float)); discrete.append(False)
+            else:
+                col = LabelEncoder().fit_transform(s.astype(str).fillna("nan"))
+                X_cols.append(col.astype(float)); discrete.append(True)
+            names.append(c)
+        X = np.column_stack(X_cols)
+
+        if problem_type == "classification":
+            y = LabelEncoder().fit_transform(work[target].astype(str))
+        else:
+            y = pd.to_numeric(work[target], errors="coerce").to_numpy(dtype=float)
+            m = ~np.isnan(y)
+            X, y = X[m], y[m]
+
+        scores = _score_features(X, y, discrete, problem_type, method)
+        pairs = list(zip(names, scores.tolist()))
+        return sorted(pairs, key=lambda x: x[1], reverse=True)[:top_n]
+    except Exception:
+        return []
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Orange-style: model viewers (Tree Viewer, Nomogram)
+# ══════════════════════════════════════════════════════════════════════════════
+def export_tree_dot(fitted_pipeline, class_names=None, max_depth: int = 3) -> str | None:
+    """Graphviz DOT for a single tree from a fitted Pipeline (DecisionTree or first ensemble tree)."""
+    try:
+        from sklearn.tree import export_graphviz, DecisionTreeClassifier, DecisionTreeRegressor
+        model = fitted_pipeline.named_steps.get("model")
+        pre = fitted_pipeline.named_steps.get("pre")
+        try:
+            feat_names = list(pre.get_feature_names_out())
+        except Exception:
+            feat_names = None
+
+        tree = None
+        if isinstance(model, (DecisionTreeClassifier, DecisionTreeRegressor)):
+            tree = model
+        elif hasattr(model, "estimators_"):
+            est0 = model.estimators_[0]
+            if isinstance(est0, np.ndarray):   # GradientBoosting: 2-D array of trees
+                est0 = est0[0]
+            tree = est0
+        if tree is None:
+            return None
+
+        cn = [str(c) for c in class_names] if (class_names and isinstance(tree, DecisionTreeClassifier)) else None
+        return export_graphviz(
+            tree, out_file=None, feature_names=feat_names, class_names=cn,
+            filled=True, rounded=True, max_depth=max_depth, impurity=False,
+            proportion=True, special_characters=True,
+        )
+    except Exception:
+        return None
+
+
+def nomogram_data(fitted_pipeline, top_n: int = 15) -> list[tuple[str, float]] | None:
+    """Per-feature coefficients (contributions) for a fitted Logistic Regression pipeline."""
+    try:
+        model = fitted_pipeline.named_steps.get("model")
+        pre = fitted_pipeline.named_steps.get("pre")
+        if not hasattr(model, "coef_"):
+            return None
+        coef = np.asarray(model.coef_, dtype=float)
+        if coef.ndim > 1:
+            coef = coef[0]
+        try:
+            names = list(pre.get_feature_names_out())
+        except Exception:
+            names = [f"f{i}" for i in range(len(coef))]
+        if len(names) != len(coef):
+            names = [f"f{i}" for i in range(len(coef))]
+        pairs = sorted(zip(names, coef.tolist()), key=lambda x: abs(x[1]), reverse=True)[:top_n]
+        return [(str(n), float(v)) for n, v in pairs]
+    except Exception:
+        return None

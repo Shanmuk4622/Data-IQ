@@ -131,6 +131,103 @@ def test_clustering_kmeans():
     assert res["pca_x"] is not None
 
 
+# ── Orange: expanded registry ─────────────────────────────────────────────────
+def test_new_learners_instantiate():
+    from sklearn.tree import DecisionTreeClassifier
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.naive_bayes import GaussianNB
+    from sklearn.dummy import DummyClassifier, DummyRegressor
+    assert isinstance(mt.get_estimator("Decision Tree", "classification"), DecisionTreeClassifier)
+    assert isinstance(mt.get_estimator("k-Nearest Neighbors", "classification"), KNeighborsClassifier)
+    assert isinstance(mt.get_estimator("Naive Bayes", "classification"), GaussianNB)
+    assert isinstance(mt.get_estimator("Constant (baseline)", "classification"), DummyClassifier)
+    assert isinstance(mt.get_estimator("Constant (baseline)", "regression"), DummyRegressor)
+
+
+# ── Orange: full metric suite ─────────────────────────────────────────────────
+def test_full_metric_keys():
+    df = _make_clf_df()
+    profile = _profile_for(df)
+    res = mt.train_supervised(df, "target", "classification", "Decision Tree",
+                              {"max_depth": 0, "min_samples_split": 2, "criterion": "gini"},
+                              _DEFAULT_OPTS, profile)
+    assert res["ok"], res.get("error")
+    for k in ("specificity", "logloss", "mcc"):
+        assert k in res["metrics"]
+    assert -1.0 <= res["metrics"]["mcc"] <= 1.0
+
+    dfr = _make_reg_df()
+    rr = mt.train_supervised(dfr, "target", "regression", "Linear Regression", {}, _DEFAULT_OPTS,
+                             _profile_for(dfr))
+    assert "mse" in rr["metrics"] and "cvrmse" in rr["metrics"]
+
+
+# ── Orange: Test & Score ──────────────────────────────────────────────────────
+def test_test_and_score_classification():
+    df = _make_clf_df()
+    profile = _profile_for(df)
+    models = ["Logistic Regression", "Decision Tree", "Constant (baseline)"]
+    res = mt.test_and_score(df, "target", "classification", models, {},
+                            {"method": "cross_validation", "k": 3, "stratified": True}, profile)
+    assert res["ok"], res.get("error")
+    assert set(res["models"].keys()) == set(models)
+    for name, r in res["models"].items():
+        assert r["ok"], f"{name}: {r.get('error')}"
+        assert 0.0 <= r["metrics"]["accuracy"] <= 1.0
+        assert r["fitted"] is not None
+    assert res["comparison"] is not None  # CV → pairwise comparison
+
+
+def test_test_and_score_regression():
+    df = _make_reg_df()
+    profile = _profile_for(df)
+    res = mt.test_and_score(df, "target", "regression",
+                            ["Linear Regression", "Random Forest Regressor"], {},
+                            {"method": "cross_validation", "k": 3}, profile)
+    assert res["ok"], res.get("error")
+    assert res["models"]["Linear Regression"]["metrics"]["r2"] > 0.7
+
+
+def test_test_and_score_random_sampling():
+    df = _make_clf_df()
+    res = mt.test_and_score(df, "target", "classification", ["Logistic Regression"], {},
+                            {"method": "random_sampling", "test_pct": 0.3, "repeats": 2,
+                             "stratified": True}, _profile_for(df))
+    assert res["ok"], res.get("error")
+    assert res["models"]["Logistic Regression"]["ok"]
+
+
+# ── Orange: Predictions + viewers ─────────────────────────────────────────────
+def test_predictions_and_tree_dot():
+    df = _make_clf_df()
+    profile = _profile_for(df)
+    res = mt.test_and_score(df, "target", "classification",
+                            ["Random Forest Classifier"], {},
+                            {"method": "cross_validation", "k": 3}, profile)
+    fitted = {n: r["fitted"] for n, r in res["models"].items() if r["ok"]}
+    table = mt.build_predictions_table(fitted, df, "target", "classification",
+                                       res["label_mapping"], max_rows=10)
+    assert len(table) == 10
+    assert "actual" in table.columns
+    dot = mt.export_tree_dot(fitted["Random Forest Classifier"], res["classes"])
+    assert dot and "digraph" in dot
+
+
+# ── Orange: Rank ──────────────────────────────────────────────────────────────
+def test_rank_features_methods():
+    df = _make_clf_df()
+    profile = _profile_for(df)
+    for method in mt.RANK_METHODS["classification"]:
+        ranked = mt.rank_features(df, "target", "classification", method, profile)
+        assert ranked, f"{method} returned nothing"
+        assert all(isinstance(n, str) for n, _ in ranked)
+
+    dfr = _make_reg_df()
+    for method in mt.RANK_METHODS["regression"]:
+        ranked = mt.rank_features(dfr, "target", "regression", method, _profile_for(dfr))
+        assert ranked, f"{method} returned nothing"
+
+
 # ── Modeling guide ────────────────────────────────────────────────────────────
 def test_generate_modeling_guide():
     df = _make_clf_df()

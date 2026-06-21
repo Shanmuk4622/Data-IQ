@@ -48,6 +48,12 @@ _defaults = {
     "model_config": {},
     "leaderboard_results": None,
     "tuned_params": None,
+    # ── Orange-style Test & Score workflow ──
+    "selected_learners": None,
+    "learner_hyperparams": {},
+    "test_score_results": None,
+    "predictions_table": None,
+    "rank_results": None,
 }
 
 for key, val in _defaults.items():
