@@ -54,6 +54,11 @@ _defaults = {
     "test_score_results": None,
     "predictions_table": None,
     "rank_results": None,
+    # ── Drag-and-drop canvas ──
+    "flow_state": None,
+    "flow_pt": None,
+    "flow_nid": 0,
+    "canvas_results": None,
 }
 
 for key, val in _defaults.items():

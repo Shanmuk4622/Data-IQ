@@ -9,6 +9,27 @@ workflow Orange Data Mining is built around:
 📁 Data → ⚙️ Preprocess → 🧠 Models → 🧪 Test & Score → 🔮 Predictions → 📊 Evaluate → 📈 Rank
 ```
 
+## Two workspaces
+
+For classification/regression there's a **Workspace** toggle at the top:
+
+- **🎨 Canvas** — a real drag-and-drop **node editor**. Place widgets, **wire them together**
+  (drag a node's handle to another), drag to rearrange, right-click to delete, click a node to
+  configure it in the inspector, then **▶ Run workflow**. This is the Orange-like canvas.
+- **📑 Tabs** — the same capabilities as guided tabs (below). Use whichever you prefer; they share
+  the same engine.
+
+### Using the Canvas
+1. The canvas opens with a starter graph: `Data → Preprocess → Model ×2 → Test & Score → {Evaluate, Predictions}`.
+2. **Add widgets** with the ➕ buttons (Model, Preprocess, Test & Score, Predictions, Evaluate, Rank).
+3. **Wire** nodes by dragging from the bottom handle of one node to the top handle of another.
+4. **Click a node** → configure it in the **Inspector** (pick a model + hyperparameters, choose the
+   sampling method, set the target, pick a Rank method) → **Apply**.
+5. Click **▶ Run workflow**. Results (score table, ROC/confusion, predictions, rank) appear below.
+
+> The executor is forgiving: every Model node that has a path into a Test & Score node is included.
+> If you haven't wired anything yet, it still runs your Model nodes and hints you to connect them.
+
 ---
 
 ## ⚡ The fast path

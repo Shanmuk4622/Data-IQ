@@ -158,7 +158,259 @@ if mc.get("pt") != problem_type:
 
 pipeline_header(["📁 Data", "⚙️ Preprocess", "🧠 Models", "🧪 Test & Score",
                  "🔮 Predictions", "📊 Evaluate", "📈 Rank"])
+
+# Workspace mode (Canvas only for supervised problems)
+mode = "📑 Tabs"
+if problem_type in ("classification", "regression"):
+    mode = st.radio("Workspace", ["🎨 Canvas", "📑 Tabs"], horizontal=True,
+                    help="Canvas: a drag-and-drop node workflow (Orange-style). Tabs: the guided view.")
 st.divider()
+
+
+def _score_rows(ts, problem_type):
+    rows = []
+    for name, r in ts["models"].items():
+        if not r.get("ok"):
+            rows.append({"Model": name, "error": r.get("error")})
+            continue
+        m = r["metrics"]
+        if problem_type == "classification":
+            rows.append({"Model": name, "AUC": m["roc_auc"], "CA": m["accuracy"], "F1": m["f1_weighted"],
+                         "Precision": m["precision_weighted"], "Recall": m["recall_weighted"],
+                         "Specificity": m["specificity"], "LogLoss": m["logloss"], "MCC": m["mcc"],
+                         "Time(s)": m["time"]})
+        else:
+            rows.append({"Model": name, "R²": m["r2"], "RMSE": m["rmse"], "MAE": m["mae"],
+                         "MAPE": m["mape"], "MSE": m["mse"], "CVRMSE": m["cvrmse"], "Time(s)": m["time"]})
+    return rows
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Canvas mode — real drag-and-drop node editor (Orange-style)
+# ══════════════════════════════════════════════════════════════════════════════
+if problem_type in ("classification", "regression") and mode == "🎨 Canvas":
+    try:
+        from streamlit_flow import streamlit_flow
+        from streamlit_flow.elements import StreamlitFlowNode, StreamlitFlowEdge
+        from streamlit_flow.state import StreamlitFlowState
+        from modules.flow_engine import (
+            STAGE_INFO, ADDABLE_STAGES, node_label, default_pipeline,
+            default_model_names, execute_workflow,
+        )
+        from modules.model_trainer import get_model_spec
+        _flow_ok = True
+    except Exception as e:
+        _flow_ok = False
+        st.warning(f"Canvas component unavailable ({e}). Falling back to the Tabs view — "
+                   "switch the Workspace toggle to 📑 Tabs.")
+
+    if _flow_ok:
+        def _next_id(stage):
+            st.session_state["flow_nid"] = st.session_state.get("flow_nid", 0) + 1
+            return f"{stage}-{st.session_state['flow_nid']}"
+
+        def _default_cfg(stage):
+            if stage == "model":
+                return {"model": default_model_names(problem_type)[0], "hp": {}}
+            if stage == "test_score":
+                return {"sampling": {"method": "cross_validation", "k": 5}}
+            if stage == "rank":
+                return {"method": RANK_METHODS[problem_type][0]}
+            if stage == "data":
+                return {"target": target}
+            return {}
+
+        def _make_node(stage, cfg, pos, nid):
+            info = STAGE_INFO[stage]
+            nt = "input" if stage == "data" else ("output" if info["kind"] == "sink" else "default")
+            return StreamlitFlowNode(
+                id=nid, pos=(float(pos[0]), float(pos[1])),
+                data={"content": node_label(stage, cfg), "stage": stage, "cfg": cfg},
+                node_type=nt, source_position="bottom", target_position="top",
+                draggable=True, connectable=True, selectable=True, deletable=(stage != "data"),
+                style={"background": "#FFFFFF", "border": f"2px solid {info['color']}",
+                       "borderRadius": "8px", "color": "#0F172A", "width": "165px", "fontSize": "12px"},
+            )
+
+        def _build_default_state():
+            st.session_state["flow_nid"] = 0
+            specs, edge_pairs = default_pipeline(problem_type, target)
+            ids, nodes = [], []
+            for stage, cfg, pos in specs:
+                nid = _next_id(stage)
+                ids.append(nid)
+                nodes.append(_make_node(stage, cfg, pos, nid))
+            edges = [StreamlitFlowEdge(id=f"e{i}", source=ids[s], target=ids[t],
+                                       animated=True, deletable=True)
+                     for i, (s, t) in enumerate(edge_pairs)]
+            return StreamlitFlowState(nodes=nodes, edges=edges)
+
+        if st.session_state.get("flow_state") is None or st.session_state.get("flow_pt") != problem_type:
+            st.session_state.flow_state = _build_default_state()
+            st.session_state.flow_pt = problem_type
+
+        # ── Palette + actions ────────────────────────────────────────────────
+        st.markdown("##### 🧩 Add widgets to the canvas")
+        pcols = st.columns(len(ADDABLE_STAGES) + 1)
+        for c, stage in zip(pcols, ADDABLE_STAGES):
+            if c.button(f"➕ {STAGE_INFO[stage]['label']}", key=f"add_{stage}", use_container_width=True):
+                nid = _next_id(stage)
+                st.session_state.flow_state.nodes.append(
+                    _make_node(stage, _default_cfg(stage), (220, 130), nid))
+                st.session_state.flow_state = StreamlitFlowState(
+                    nodes=st.session_state.flow_state.nodes, edges=st.session_state.flow_state.edges)
+                st.rerun()
+        if pcols[-1].button("♻️ Reset", key="reset_canvas", use_container_width=True):
+            st.session_state.flow_state = _build_default_state()
+            st.rerun()
+
+        st.caption("Drag a node's handle to another to **wire** them · drag nodes to move · "
+                   "right-click a node/edge to delete · click a node to **configure** it below.")
+
+        # ── The canvas ───────────────────────────────────────────────────────
+        new_state = streamlit_flow(
+            "ml_canvas", st.session_state.flow_state, height=470,
+            fit_view=True, show_controls=True, allow_new_edges=True, animate_new_edges=True,
+            get_node_on_click=True, enable_node_menu=True, enable_edge_menu=True,
+            hide_watermark=True,
+        )
+        st.session_state.flow_state = new_state
+
+        run_col, insp_col = st.columns([1, 1])
+
+        # ── Inspector for the selected node ──────────────────────────────────
+        with insp_col:
+            sel = getattr(new_state, "selected_id", None)
+            node = next((n for n in new_state.nodes if n.id == sel), None) if sel else None
+            if node is None:
+                st.markdown("##### 🔧 Inspector")
+                st.caption("Click a node on the canvas to configure it.")
+            else:
+                stage = node.data.get("stage")
+                st.markdown(f"##### 🔧 Inspector — {STAGE_INFO.get(stage, {}).get('label', stage)}")
+                cfg = dict(node.data.get("cfg", {}))
+
+                def _apply(new_cfg):
+                    node.data["cfg"] = new_cfg
+                    node.data["content"] = node_label(stage, new_cfg)
+                    st.session_state.flow_state = StreamlitFlowState(
+                        nodes=new_state.nodes, edges=new_state.edges)
+                    st.rerun()
+
+                if stage == "data":
+                    opts = ["None (unsupervised)"] + list(data.columns)
+                    cur = cfg.get("target") or "None (unsupervised)"
+                    sel_t = st.selectbox("Target column", opts,
+                                         index=opts.index(cur) if cur in opts else 0, key=f"d_{node.id}")
+                    if st.button("Apply", key=f"da_{node.id}"):
+                        _apply({"target": None if sel_t.startswith("None") else sel_t})
+                elif stage == "model":
+                    models = list_models(problem_type)
+                    cur = cfg.get("model", models[0])
+                    mc = st.selectbox("Algorithm", models,
+                                      index=models.index(cur) if cur in models else 0, key=f"m_{node.id}")
+                    spec = get_model_spec(problem_type, mc)
+                    with st.form(f"mform_{node.id}"):
+                        hp = render_hyperparams(spec, f"node_{node.id}")
+                        if st.form_submit_button("Apply to node"):
+                            _apply({"model": mc, "hp": hp})
+                elif stage == "test_score":
+                    sm = {"cross_validation": "Cross-validation", "random_sampling": "Random sampling",
+                          "leave_one_out": "Leave-one-out", "test_on_train": "Test on train data"}
+                    s = cfg.get("sampling", {"method": "cross_validation", "k": 5})
+                    meth = st.selectbox("Sampling", list(sm), format_func=lambda x: sm[x],
+                                        index=list(sm).index(s.get("method", "cross_validation")),
+                                        key=f"ts_{node.id}")
+                    new_s = {"method": meth}
+                    if meth == "cross_validation":
+                        new_s["k"] = st.slider("Folds", 2, 10, int(s.get("k", 5)), key=f"k_{node.id}")
+                        new_s["stratified"] = True
+                    elif meth == "random_sampling":
+                        new_s["test_pct"] = st.slider("Test %", 0.1, 0.5, float(s.get("test_pct", 0.3)),
+                                                      0.05, key=f"tp_{node.id}")
+                        new_s["repeats"] = st.slider("Repeats", 1, 10, int(s.get("repeats", 3)),
+                                                     key=f"rp_{node.id}")
+                        new_s["stratified"] = True
+                    if st.button("Apply", key=f"tsa_{node.id}"):
+                        _apply({"sampling": new_s})
+                elif stage == "rank":
+                    methods = RANK_METHODS[problem_type]
+                    cur = cfg.get("method", methods[0])
+                    rm = st.selectbox("Scoring method", methods,
+                                      index=methods.index(cur) if cur in methods else 0, key=f"r_{node.id}")
+                    if st.button("Apply", key=f"ra_{node.id}"):
+                        _apply({"method": rm})
+                else:
+                    st.caption("This widget has no settings — it uses the upstream data / models.")
+
+        # ── Run ──────────────────────────────────────────────────────────────
+        with run_col:
+            st.markdown("##### ▶ Run")
+            st.caption("Executes the wired graph: Models → Test & Score → outputs.")
+            if st.button("▶ Run workflow", type="primary", use_container_width=True):
+                graph = {
+                    "nodes": [{"id": n.id, "stage": n.data.get("stage"), "cfg": n.data.get("cfg", {})}
+                              for n in new_state.nodes],
+                    "edges": [{"source": e.source, "target": e.target} for e in new_state.edges],
+                }
+                with st.spinner("Running workflow…"):
+                    st.session_state["canvas_results"] = execute_workflow(
+                        graph, data, target, profile, user_choices, problem_type)
+
+        # ── Outputs ──────────────────────────────────────────────────────────
+        out = st.session_state.get("canvas_results")
+        if out:
+            st.divider()
+            for msg in out.get("messages", []):
+                st.warning(msg)
+            ts = out.get("test_score")
+            if ts and ts.get("ok"):
+                ok_models = {n: r for n, r in ts["models"].items() if r.get("ok")}
+                st.markdown("#### 🧪 Test & Score")
+                st.dataframe(style_metric_table(_score_rows(ts, problem_type), problem_type),
+                             use_container_width=True, hide_index=True)
+
+                if out.get("want_evaluate"):
+                    st.markdown("#### 📊 Evaluate")
+                    classes = ts.get("classes") or []
+                    if problem_type == "classification":
+                        first = next(iter(ok_models))
+                        cm = ok_models[first]["metrics"]["confusion_matrix"]
+                        labels = classes if classes else list(range(len(cm)))
+                        ev1, ev2 = st.columns(2)
+                        ev1.plotly_chart(make_confusion_matrix(cm, labels, title=f"Confusion — {first}"),
+                                         use_container_width=True)
+                        if len(classes) == 2:
+                            cmods = [{"name": n, "y_true": r["y_true"],
+                                      "y_score": np.asarray(r["y_prob"])[:, 1]}
+                                     for n, r in ok_models.items() if r.get("y_prob") is not None]
+                            if cmods:
+                                ev2.plotly_chart(make_roc_overlay(cmods), use_container_width=True)
+                    else:
+                        first = next(iter(ok_models))
+                        r = ok_models[first]
+                        ev1, ev2 = st.columns(2)
+                        ev1.plotly_chart(make_pred_vs_actual(r["y_true"], r["y_pred"]),
+                                         use_container_width=True)
+                        ev2.plotly_chart(make_residual_plot(r["y_true"], r["y_pred"]),
+                                         use_container_width=True)
+
+                if out.get("want_predictions"):
+                    st.markdown("#### 🔮 Predictions")
+                    fitted = {n: r["fitted"] for n, r in ok_models.items()}
+                    table = build_predictions_table(fitted, data.head(50), ts["target"],
+                                                    problem_type, ts.get("label_mapping"), 50)
+                    st.dataframe(table, use_container_width=True, hide_index=True)
+
+            rk = out.get("rank")
+            if rk and rk.get("ranked"):
+                st.markdown("#### 📈 Rank")
+                top = rk["ranked"][:20][::-1]
+                st.plotly_chart(make_bar_chart([n for n, _ in top], [s for _, s in top],
+                                               title=f"{rk['method']} score", horizontal=True),
+                                use_container_width=True)
+
+        st.stop()
 
 
 # ══════════════════════════════════════════════════════════════════════════════

@@ -19,4 +19,5 @@ missingno>=0.5.2
 xgboost>=2.0.3
 lightgbm>=4.3.0
 kaleido>=0.2.1
+streamlit-flow-component>=1.6.1
 # prophet  # optional: enables the Prophet time-series engine on the Make ML Model page (ARIMA works without it)

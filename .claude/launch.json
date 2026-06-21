@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dataiq",
+      "runtimeExecutable": "conda",
+      "runtimeArgs": ["run", "-n", "cv_conda", "streamlit", "run", "app.py", "--server.port=8545", "--server.headless=true", "--browser.gatherUsageStats=false"],
+      "port": 8545
+    }
+  ]
+}
